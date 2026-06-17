@@ -1,0 +1,276 @@
+Quiero que construyas el prototipo visual de una aplicación web llamada:
+
+"SILMARILLION COMPANION"
+
+OBJETIVO PRINCIPAL
+
+La aplicación NO es una wiki.
+
+La aplicación es un acompañante de lectura para El Silmarillion.
+
+Su propósito es ayudar al lector a entender:
+
+* quién es quién
+* dónde ocurre cada evento
+* cómo se relacionan los personajes
+* qué ha sucedido hasta este punto de la historia
+
+SIN SPOILERS.
+
+La experiencia debe sentirse más como un videojuego de exploración o un árbol de progreso que como una enciclopedia.
+
+---
+
+CONCEPTO CENTRAL
+
+TODO gira alrededor del capítulo actual.
+
+Cuando el usuario selecciona un capítulo:
+
+* aparecen únicamente los personajes relevantes
+* aparecen únicamente los lugares relevantes
+* aparecen únicamente los eventos conocidos hasta ese punto
+* aparecen únicamente las relaciones descubiertas hasta ese punto
+
+Nunca mostrar información futura.
+
+---
+
+LAYOUT PRINCIPAL
+
+Pantalla dividida en 4 zonas.
+
+1. SIDEBAR IZQUIERDA
+
+Progreso de lectura.
+
+Lista completa de capítulos.
+
+Ejemplo:
+
+✓ Ainulindalë
+✓ Valaquenta
+► De la llegada de los Elfos
+○ De Thingol y Melian
+○ De Fëanor
+
+El capítulo actual debe estar resaltado.
+
+Al cambiar de capítulo toda la aplicación se actualiza.
+
+---
+
+2. PANEL CENTRAL (ELEMENTO PRINCIPAL)
+
+Este es el corazón de la aplicación.
+
+Mostrar:
+
+* título del capítulo
+* imagen ilustrativa
+* resumen extremadamente breve
+
+Debajo:
+
+"LO QUE NECESITAS SABER"
+
+Máximo 5 puntos.
+
+No mostrar bloques largos de texto.
+
+El objetivo es que el usuario pueda leer este panel en menos de 1 minuto.
+
+---
+
+3. PANEL DE PERSONAJES
+
+Mostrar únicamente personajes relevantes para el capítulo.
+
+Cada personaje aparece como tarjeta.
+
+La tarjeta incluye:
+
+* nombre
+* raza
+* importancia en este capítulo
+
+Al pulsar un personaje:
+
+abrir panel lateral.
+
+Mostrar:
+
+* descripción corta
+* relaciones conocidas hasta este capítulo
+* lugares asociados
+* eventos asociados
+
+Nunca mostrar información futura.
+
+---
+
+4. PANEL VISUAL DINÁMICO
+
+Este panel tiene tres pestañas.
+
+A) GENEALOGÍA
+
+Usar React Flow.
+
+Mostrar árbol genealógico interactivo.
+
+Resaltar visualmente los personajes importantes del capítulo actual.
+
+Permitir:
+
+* zoom
+* mover nodos
+* colapsar ramas
+
+Ejemplo:
+
+Finwë
+├── Fëanor
+├── Fingolfin
+└── Finarfin
+
+Sólo mostrar ramas conocidas hasta el capítulo actual.
+
+---
+
+B) MAPA
+
+Usar Leaflet.
+
+Mostrar mapa estilizado de Tolkien.
+
+Sólo mostrar:
+
+* regiones descubiertas
+* ciudades conocidas
+* rutas relevantes
+
+El mapa debe actualizarse automáticamente al cambiar de capítulo.
+
+Ejemplo:
+
+Capítulo Ainulindalë:
+
+* Arda
+* Valinor
+
+Capítulo Beren y Lúthien:
+
+* Doriath
+* Nargothrond
+* Tol Sirion
+
+Cada marcador debe abrir una tarjeta contextual.
+
+---
+
+C) CRONOLOGÍA
+
+Mostrar línea temporal visual.
+
+Sólo eventos conocidos.
+
+Eventos futuros bloqueados.
+
+Ejemplo:
+
+✓ Creación de Arda
+✓ Despertar de los Elfos
+✓ Creación de los Silmarils
+🔒 Evento futuro
+🔒 Evento futuro
+
+---
+
+SISTEMA ANTI-SPOILERS
+
+Elemento fundamental del producto.
+
+Cada entidad debe tener:
+
+* firstChapter
+* lastChapter
+
+La interfaz sólo muestra contenido permitido para el capítulo actual.
+
+Ejemplo:
+
+Galadriel existe en la base de datos.
+
+Pero si el lector está en Ainulindalë:
+
+Galadriel no debe existir visualmente.
+
+---
+
+ESTRUCTURA DE DATOS
+
+Diseñar el frontend pensando en estas entidades:
+
+Character
+Location
+Event
+Chapter
+Relationship
+
+Cada entidad debe tener un campo:
+
+firstChapter
+
+para controlar spoilers.
+
+---
+
+ESTÉTICA
+
+Inspiración:
+
+* Atlas históricos
+* Tolkien
+* Civilization VI Civilopedia
+* Notion
+* Obsidian
+* Árboles tecnológicos de videojuegos
+
+Paleta:
+
+Fondo oscuro elegante.
+
+Detalles dorados.
+
+Tipografía refinada.
+
+Sensación de estar explorando un libro antiguo.
+
+---
+
+TECNOLOGÍAS
+
+Next.js
+React
+TypeScript
+TailwindCSS
+React Flow
+Leaflet
+
+---
+
+ENTREGABLE
+
+Generar:
+
+* estructura completa del proyecto
+* componentes React
+* diseño responsive
+* datos mock
+* navegación por capítulos
+* genealogía mock
+* mapa mock
+* timeline mock
+
+El foco principal debe ser el seguimiento visual de personajes, relaciones, mapas y eventos a medida que el lector avanza capítulo por capítulo.
