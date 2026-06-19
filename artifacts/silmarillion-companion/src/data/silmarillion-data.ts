@@ -9,23 +9,31 @@ export type Chapter = {
 export type Character = {
   id: string;
   name: string;
+  aliases?: string[];
   race: string;
   alignment: 'good' | 'evil' | 'neutral';
   role: string;
   description: string;
+  importance: 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
   firstChapter: number;
-  relationships: { name: string; type: string }[];
+  lastChapter?: number;
+  relationships: { characterId: string; type: 'father' | 'mother' | 'spouse' | 'sibling' | 'child' | 'enemy' | 'ally' }[];
   locations: string[];
   events: string[];
+  greatTales: string[];
 };
 
 export type Location = {
   id: string;
   name: string;
   description: string;
+  importance: 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
+  status: 'Active' | 'Destroyed' | 'Hidden' | 'Abandoned' | 'Legendary';
   firstChapter: number;
+  lastChapter?: number;
   lat: number;
   lng: number;
+  greatTales: string[];
 };
 
 export type TimelineEvent = {
@@ -34,6 +42,19 @@ export type TimelineEvent = {
   title: string;
   description: string;
   firstChapter: number;
+};
+
+export type GreatTale = {
+  id: string;
+  title: string;
+  description: string;
+  protagonists: string[];
+  keyCharacters: string[];
+  relatedLocations: string[];
+  themes: string[];
+  needToKnow: string[];
+  startChapter: number;
+  endChapter: number;
 };
 
 export type FlowNode = {
@@ -73,43 +94,43 @@ export const chaptersData: Chapter[] = [
   { id: 20, title: "Quenta Silmarillion XIX", subtitle: "De Beren y Lúthien", description: "La más grande historia de amor de la Primera Edad, de mortales y elfos, y de una joya robada a la oscuridad.", needToKnow: ["Beren, un Hombre proscrito, se enamoró de Lúthien, princesa Elfa.", "Thingol exigió un Silmaril como precio por la mano de su hija.", "Finrod murió protegiendo a Beren.", "Beren y Lúthien lograron arrebatar un Silmaril de la corona de Morgoth.", "Lúthien eligió volverse mortal para compartir el destino de Beren."] },
   { id: 21, title: "Quenta Silmarillion XX", subtitle: "De la quinta Batalla", description: "La Nirnaeth Arnoediad, la Batalla de las Lágrimas Innumerables.", needToKnow: ["Maedhros organizó una gran unión de Elfos, Hombres y Enanos.", "Una traición de los Hombres del Este arruinó la victoria inminente.", "Glaurung y los Balrogs destrozaron las huestes élficas.", "Húrin cubrió la retirada de Turgon hacia Gondolin.", "Morgoth logró el dominio casi total del norte de Beleriand."] },
   { id: 22, title: "Quenta Silmarillion XXI", subtitle: "De Túrin Turambar", description: "El hijo de Húrin lucha contra la maldición de Morgoth y el dragón Glaurung.", needToKnow: ["Morgoth maldijo a la familia de Húrin.", "Túrin fue un gran guerrero, pero la tragedia le seguía.", "Provocó la caída de Nargothrond.", "Logró matar a Glaurung, el padre de los dragones.", "Se suicidó tras descubrir que se había casado con su propia hermana bajo el hechizo del dragón."] },
-  { id: 23, title: "Quenta Silmarillion XXII", subtitle: "De la ruina de Doriath", description: "La codicia por el Silmaril destruye el Reino Escondido.", needToería: ["Los Enanos asesinaron a Thingol por el collar Nauglamír y el Silmaril.", "Doriath fue saqueada, aunque Beren recuperó la joya temporalmente.", "Melian abandonó la Tierra Media en su dolor.", "Más tarde, los Hijos de Fëanor atacaron Doriath para recuperar el Silmaril.", "Doriath fue destruida para siempre."] },
+  { id: 23, title: "Quenta Silmarillion XXII", subtitle: "De la ruina de Doriath", description: "La codicia por el Silmaril destruye el Reino Escondido.", needToKnow: ["Los Enanos asesinaron a Thingol por el collar Nauglamír y el Silmaril.", "Doriath fue saqueada, aunque Beren recuperó la joya temporalmente.", "Melian abandonó la Tierra Media en su dolor.", "Más tarde, los Hijos de Fëanor atacaron Doriath para recuperar el Silmaril.", "Doriath fue destruida para siempre."] },
   { id: 24, title: "Quenta Silmarillion XXIII", subtitle: "De Tuor y la Caída de Gondolin", description: "La última fortaleza de los Noldor es traicionada desde dentro, pero de sus cenizas nace una estrella.", needToKnow: ["Tuor, un Hombre mortal, fue guiado por Ulmo a Gondolin.", "Se casó con Idril, hija de Turgon, y tuvieron a Eärendil.", "Maeglin traicionó a Gondolin revelando su ubicación a Morgoth.", "La ciudad cayó en una batalla épica con dragones y Balrogs.", "Tuor, Idril y Eärendil escaparon hacia el mar."] }
 ];
 
 export const charactersData: Character[] = [
-  { id: "iluvatar", name: "Eru Ilúvatar", race: "Eru", alignment: "good", role: "El Único, fuente de todo ser", description: "El Ser Supremo que creó a los Ainur y propuso los Grandes Temas de la Música.", firstChapter: 0, relationships: [], locations: ["Timeless Halls"], events: ["La creación de los Ainur", "La Música de los Ainur"] },
-  { id: "manwe", name: "Manwë", race: "Vala", alignment: "good", role: "Rey de Arda, Señor de los Vientos", description: "El más querido por Ilúvatar, comprende mejor que nadie sus propósitos.", firstChapter: 0, relationships: [{name: "Varda", type: "spouse"}], locations: ["Valinor", "Taniquetil"], events: ["Descenso a Arda"] },
-  { id: "melkor", name: "Melkor / Morgoth", race: "Vala corrompido", alignment: "evil", role: "Señor Oscuro, el más poderoso de los Ainur", description: "El que se alzó en orgullo, deseando crear cosas propias, y trajo el mal al mundo.", firstChapter: 0, relationships: [], locations: ["Utumno", "Angband"], events: ["La Discordia en la Música", "Destrucción de las Lámparas", "Robo de los Silmarils"] },
-  { id: "varda", name: "Varda", race: "Vala", alignment: "good", role: "Reina de las Estrellas", description: "La más reverenciada por los Elfos, hacedora de las estrellas.", firstChapter: 0, relationships: [{name: "Manwe", type: "spouse"}], locations: ["Valinor"], events: ["Creación de las estrellas"] },
-  { id: "aule", name: "Aulë", race: "Vala", alignment: "good", role: "Forjador, creador de los Enanos", description: "Señor de las sustancias de las que está hecha la tierra.", firstChapter: 1, relationships: [{name: "Yavanna", type: "spouse"}], locations: ["Valinor"], events: ["Creación de los Enanos"] },
-  { id: "yavanna", name: "Yavanna", race: "Vala", alignment: "good", role: "Dadora de Frutos", description: "Amante de todas las cosas que crecen en la tierra.", firstChapter: 1, relationships: [{name: "Aule", type: "spouse"}], locations: ["Valinor"], events: ["Creación de los Dos Árboles", "Petición de los Ents"] },
-  { id: "ulmo", name: "Ulmo", race: "Vala", alignment: "good", role: "Señor de las Aguas", description: "Vive en el Océano Exterior y ama a los Elfos y los Hombres, guiándolos en secreto.", firstChapter: 1, relationships: [], locations: ["Ekkaia"], events: ["Guía a Turgon", "Guía a Tuor"] },
-  { id: "finwe", name: "Finwë", race: "Elfo Noldor", alignment: "good", role: "Primer Rey de los Noldor", description: "Lideró a su pueblo a Valinor, su asesinato precipitó la rebelión de los Noldor.", firstChapter: 4, relationships: [{name: "Feanor", type: "parent"}, {name: "Fingolfin", type: "parent"}, {name: "Finarfin", type: "parent"}], locations: ["Valinor", "Tirion"], events: ["Llegada a Valinor", "Asesinato en Formenos"] },
-  { id: "thingol", name: "Elwë / Thingol", race: "Elfo Sindar", alignment: "good", role: "Rey de Doriath", description: "Vio la Luz de los Árboles pero se quedó en la Tierra Media por amor.", firstChapter: 5, relationships: [{name: "Melian", type: "spouse"}, {name: "Luthien", type: "parent"}], locations: ["Doriath", "Menegroth"], events: ["Encuentro con Melian", "Demanda del Silmaril"] },
-  { id: "melian", name: "Melian", race: "Maia", alignment: "good", role: "Reina de Doriath", description: "Espíritu de gran poder que protegió su reino con una cintura de encantamiento.", firstChapter: 5, relationships: [{name: "Thingol", type: "spouse"}, {name: "Luthien", type: "parent"}], locations: ["Doriath"], events: ["La Cintura de Melian"] },
-  { id: "luthien", name: "Lúthien Tinúviel", race: "Elfo/Maia", alignment: "good", role: "Hija de Thingol y Melian", description: "La más hermosa de todos los Hijos de Ilúvatar.", firstChapter: 5, relationships: [{name: "Beren", type: "spouse"}], locations: ["Doriath", "Tol Galen"], events: ["Robo del Silmaril", "Renuncia a la inmortalidad"] },
-  { id: "feanor", name: "Fëanor", race: "Elfo Noldor", alignment: "neutral", role: "Creador de los Silmarils", description: "Su ardiente espíritu consumió su vida. Hacedor de grandes obras y de grandes males.", firstChapter: 7, relationships: [{name: "Finwe", type: "child"}], locations: ["Valinor", "Formenos", "Losgar"], events: ["Creación de los Silmarils", "Juramento de Fëanor", "Muerte en la Dagor-nuin-Giliath"] },
-  { id: "fingolfin", name: "Fingolfin", race: "Elfo Noldor", alignment: "good", role: "Rey Supremo de los Noldor en el exilio", description: "Valeroso rey que cruzó el hielo y desafió a Morgoth a duelo singular.", firstChapter: 7, relationships: [{name: "Finwe", type: "child"}], locations: ["Hithlum"], events: ["El cruce del Helcaraxë", "Duelo con Morgoth"] },
-  { id: "finarfin", name: "Finarfin", race: "Elfo Noldor", alignment: "good", role: "Rey de los Noldor en Aman", description: "El único de los hijos de Finwë que regresó al arrepentirse de la rebelión.", firstChapter: 7, relationships: [{name: "Finwe", type: "child"}, {name: "Galadriel", type: "parent"}], locations: ["Tirion"], events: ["Arrepentimiento de Finarfin"] },
-  { id: "galadriel", name: "Galadriel", race: "Elfo Noldor", alignment: "good", role: "Una de los líderes de la rebelión", description: "Deseaba ver la Tierra Media y gobernar un reino allí.", firstChapter: 7, relationships: [{name: "Finarfin", type: "child"}], locations: ["Doriath", "Nargothrond"], events: ["El cruce del Helcaraxë"] },
-  { id: "beren", name: "Beren Erchamion", race: "Hombre", alignment: "good", role: "El único mortal amado por un Elfo en la Primera Edad", description: "Proscrito valeroso que logró lo imposible por amor.", firstChapter: 20, relationships: [{name: "Luthien", type: "spouse"}], locations: ["Dorthonion", "Doriath", "Angband"], events: ["Búsqueda del Silmaril"] },
-  { id: "turin", name: "Túrin Turambar", race: "Hombre", alignment: "neutral", role: "Portador de la maldición de Morgoth", description: "Trágico héroe humano. Matador de Glaurung.", firstChapter: 22, relationships: [], locations: ["Doriath", "Nargothrond", "Brethil"], events: ["Caída de Nargothrond", "Muerte de Glaurung"] },
-  { id: "earendil", name: "Eärendil", race: "Medio-elfo", alignment: "good", role: "El marinero estrella", description: "Navegó a Valinor para pedir ayuda a los Valar por las Dos Razas.", firstChapter: 24, relationships: [], locations: ["Gondolin", "Puertos del Sirion"], events: ["Navegación a Aman", "Guerra de la Cólera"] }
+  { id: "iluvatar", name: "Eru Ilúvatar", race: "Eru", alignment: "good", role: "El Único, fuente de todo ser", description: "El Ser Supremo que creó a los Ainur y propuso los Grandes Temas de la Música.", importance: "CRITICAL", firstChapter: 0, relationships: [], locations: ["Timeless Halls"], events: ["La creación de los Ainur", "La Música de los Ainur"], greatTales: [] },
+  { id: "manwe", name: "Manwë", race: "Vala", alignment: "good", role: "Rey de Arda, Señor de los Vientos", description: "El más querido por Ilúvatar, comprende mejor que nadie sus propósitos.", importance: "CRITICAL", firstChapter: 0, relationships: [{characterId: "varda", type: "spouse"}], locations: ["Valinor", "Taniquetil"], events: ["Descenso a Arda"], greatTales: [] },
+  { id: "melkor", name: "Melkor / Morgoth", aliases: ["Melkor", "Morgoth", "El Enemigo", "El Señor Oscuro"], race: "Vala corrompido", alignment: "evil", role: "Señor Oscuro, el más poderoso de los Ainur", description: "El que se alzó en orgullo, deseando crear cosas propias, y trajo el mal al mundo.", importance: "CRITICAL", firstChapter: 0, relationships: [], locations: ["Utumno", "Angband"], events: ["La Discordia en la Música", "Destrucción de las Lámparas", "Robo de los Silmarils"], greatTales: ["beren-luthien", "turin", "fall-gondolin"] },
+  { id: "varda", name: "Varda", race: "Vala", alignment: "good", role: "Reina de las Estrellas", description: "La más reverenciada por los Elfos, hacedora de las estrellas.", importance: "HIGH", firstChapter: 0, relationships: [{characterId: "manwe", type: "spouse"}], locations: ["Valinor"], events: ["Creación de las estrellas"], greatTales: [] },
+  { id: "aule", name: "Aulë", race: "Vala", alignment: "good", role: "Forjador, creador de los Enanos", description: "Señor de las sustancias de las que está hecha la tierra.", importance: "HIGH", firstChapter: 1, relationships: [{characterId: "yavanna", type: "spouse"}], locations: ["Valinor"], events: ["Creación de los Enanos"], greatTales: [] },
+  { id: "yavanna", name: "Yavanna", race: "Vala", alignment: "good", role: "Dadora de Frutos", description: "Amante de todas las cosas que crecen en la tierra.", importance: "HIGH", firstChapter: 1, relationships: [{characterId: "aule", type: "spouse"}], locations: ["Valinor"], events: ["Creación de los Dos Árboles", "Petición de los Ents"], greatTales: [] },
+  { id: "ulmo", name: "Ulmo", race: "Vala", alignment: "good", role: "Señor de las Aguas", description: "Vive en el Océano Exterior y ama a los Elfos y los Hombres, guiándolos en secreto.", importance: "HIGH", firstChapter: 1, relationships: [], locations: ["Ekkaia"], events: ["Guía a Turgon", "Guía a Tuor"], greatTales: ["fall-gondolin", "earendil"] },
+  { id: "finwe", name: "Finwë", race: "Elfo Noldor", alignment: "good", role: "Primer Rey de los Noldor", description: "Lideró a su pueblo a Valinor, su asesinato precipitó la rebelión de los Noldor.", importance: "HIGH", firstChapter: 4, relationships: [{characterId: "feanor", type: "child"}, {characterId: "fingolfin", type: "child"}, {characterId: "finarfin", type: "child"}], locations: ["Valinor", "Tirion"], events: ["Llegada a Valinor", "Asesinato en Formenos"], greatTales: [] },
+  { id: "thingol", name: "Elwë / Thingol", aliases: ["Elwë", "Thingol", "Singollo"], race: "Elfo Sindar", alignment: "good", role: "Rey de Doriath", description: "Vio la Luz de los Árboles pero se quedó en la Tierra Media por amor.", importance: "CRITICAL", firstChapter: 5, lastChapter: 23, relationships: [{characterId: "melian", type: "spouse"}, {characterId: "luthien", type: "child"}], locations: ["Doriath", "Menegroth"], events: ["Encuentro con Melian", "Demanda del Silmaril"], greatTales: ["beren-luthien"] },
+  { id: "melian", name: "Melian", race: "Maia", alignment: "good", role: "Reina de Doriath", description: "Espíritu de gran poder que protegió su reino con una cintura de encantamiento.", importance: "HIGH", firstChapter: 5, relationships: [{characterId: "thingol", type: "spouse"}, {characterId: "luthien", type: "child"}], locations: ["Doriath"], events: ["La Cintura de Melian"], greatTales: ["beren-luthien"] },
+  { id: "luthien", name: "Lúthien Tinúviel", aliases: ["Lúthien", "Tinúviel", "Nightingale"], race: "Elfo/Maia", alignment: "good", role: "Hija de Thingol y Melian", description: "La más hermosa de todos los Hijos de Ilúvatar.", importance: "CRITICAL", firstChapter: 5, relationships: [{characterId: "beren", type: "spouse"}, {characterId: "thingol", type: "father"}, {characterId: "melian", type: "mother"}], locations: ["Doriath", "Tol Galen"], events: ["Robo del Silmaril", "Renuncia a la inmortalidad"], greatTales: ["beren-luthien"] },
+  { id: "feanor", name: "Fëanor", aliases: ["Fëanor", "Phëanor"], race: "Elfo Noldor", alignment: "neutral", role: "Creador de los Silmarils", description: "Su ardiente espíritu consumió su vida. Hacedor de grandes obras y de grandes males.", importance: "CRITICAL", firstChapter: 7, relationships: [{characterId: "finwe", type: "father"}], locations: ["Valinor", "Formenos", "Losgar"], events: ["Creación de los Silmarils", "Juramento de Fëanor", "Muerte en la Dagor-nuin-Giliath"], greatTales: ["beren-luthien", "turin", "fall-gondolin"] },
+  { id: "fingolfin", name: "Fingolfin", aliases: ["Fingolfin", "Aran Gwarth"], race: "Elfo Noldor", alignment: "good", role: "Rey Supremo de los Noldor en el exilio", description: "Valeroso rey que cruzó el hielo y desafió a Morgoth a duelo singular.", importance: "CRITICAL", firstChapter: 7, lastChapter: 19, relationships: [{characterId: "finwe", type: "father"}], locations: ["Hithlum"], events: ["El cruce del Helcaraxë", "Duelo con Morgoth"], greatTales: [] },
+  { id: "finarfin", name: "Finarfin", race: "Elfo Noldor", alignment: "good", role: "Rey de los Noldor en Aman", description: "El único de los hijos de Finwë que regresó al arrepentirse de la rebelión.", importance: "MEDIUM", firstChapter: 7, relationships: [{characterId: "finwe", type: "father"}, {characterId: "galadriel", type: "child"}], locations: ["Tirion"], events: ["Arrepentimiento de Finarfin"], greatTales: [] },
+  { id: "galadriel", name: "Galadriel", aliases: ["Galadriel", "Alatáriel"], race: "Elfo Noldor", alignment: "good", role: "Una de los líderes de la rebelión", description: "Deseaba ver la Tierra Media y gobernar un reino allí.", importance: "HIGH", firstChapter: 7, relationships: [{characterId: "finarfin", type: "father"}], locations: ["Doriath", "Nargothrond"], events: ["El cruce del Helcaraxë"], greatTales: [] },
+  { id: "beren", name: "Beren Erchamion", aliases: ["Beren", "Erchamion"], race: "Hombre", alignment: "good", role: "El único mortal amado por un Elfo en la Primera Edad", description: "Proscrito valeroso que logró lo imposible por amor.", importance: "CRITICAL", firstChapter: 20, relationships: [{characterId: "luthien", type: "spouse"}], locations: ["Dorthonion", "Doriath", "Angband"], events: ["Búsqueda del Silmaril"], greatTales: ["beren-luthien"] },
+  { id: "turin", name: "Túrin Turambar", aliases: ["Túrin", "Turambar", "Mormegil"], race: "Hombre", alignment: "neutral", role: "Portador de la maldición de Morgoth", description: "Trágico héroe humano. Matador de Glaurung.", importance: "CRITICAL", firstChapter: 22, relationships: [], locations: ["Doriath", "Nargothrond", "Brethil"], events: ["Caída de Nargothrond", "Muerte de Glaurung"], greatTales: ["turin"] },
+  { id: "earendil", name: "Eärendil", aliases: ["Eärendil", "El Marinero Estrella"], race: "Medio-elfo", alignment: "good", role: "El marinero estrella", description: "Navegó a Valinor para pedir ayuda a los Valar por las Dos Razas.", importance: "CRITICAL", firstChapter: 24, relationships: [], locations: ["Gondolin", "Puertos del Sirion"], events: ["Navegación a Aman", "Guerra de la Cólera"], greatTales: ["fall-gondolin", "earendil"] }
 ];
 
 export const locationsData: Location[] = [
-  { id: "valinor", name: "Valinor", description: "El Reino Bendecido en el continente de Aman, hogar de los Valar y los Elfos de la Luz.", firstChapter: 1, lat: 20, lng: -60 },
-  { id: "angband", name: "Angband", description: "La fortaleza secundaria y luego principal de Morgoth en el norte de Beleriand.", firstChapter: 3, lat: 60, lng: -10 },
-  { id: "doriath", name: "Doriath", description: "El Reino Escondido de Thingol y Melian en los bosques centrales de Beleriand.", firstChapter: 5, lat: 45, lng: -15 },
-  { id: "tirion", name: "Tirion", description: "La gran ciudad de los Elfos Noldor y Vanyar sobre la colina de Túna en Aman.", firstChapter: 6, lat: 15, lng: -55 },
-  { id: "formenos", name: "Formenos", description: "Fortaleza de Fëanor en el norte de Valinor.", firstChapter: 8, lat: 25, lng: -58 },
-  { id: "helcaraxe", name: "Helcaraxë", description: "El Hielo Crujiente, el estrecho estrecho en el extremo norte que conectaba Aman y la Tierra Media.", firstChapter: 14, lat: 75, lng: -40 },
-  { id: "hithlum", name: "Hithlum", description: "Región del norte de Beleriand, feudo principal de Fingolfin y los Altos Reyes.", firstChapter: 15, lat: 55, lng: -20 },
-  { id: "nargothrond", name: "Nargothrond", description: "Reino subterráneo fundado por Finrod Felagund cerca del río Narog.", firstChapter: 15, lat: 40, lng: -25 },
-  { id: "gondolin", name: "Gondolin", description: "La Ciudad Oculta de Turgon, rodeada por las Montañas Circundantes.", firstChapter: 16, lat: 52, lng: -12 },
-  { id: "tolgalen", name: "Tol Galen", description: "La Isla Verde en Adurant, donde vivieron Beren y Lúthien.", firstChapter: 20, lat: 35, lng: -10 },
-  { id: "brethil", name: "Brethil", description: "El bosque de los Hombres de Haleth, escenario del fin trágico de Túrin.", firstChapter: 18, lat: 48, lng: -18 }
+  { id: "valinor", name: "Valinor", description: "El Reino Bendecido en el continente de Aman, hogar de los Valar y los Elfos de la Luz.", importance: "CRITICAL", status: "Active", firstChapter: 1, lat: 20, lng: -60, greatTales: [] },
+  { id: "angband", name: "Angband", description: "La fortaleza secundaria y luego principal de Morgoth en el norte de Beleriand.", importance: "CRITICAL", status: "Active", firstChapter: 3, lat: 60, lng: -10, greatTales: ["beren-luthien", "turin", "fall-gondolin"] },
+  { id: "doriath", name: "Doriath", description: "El Reino Escondido de Thingol y Melian en los bosques centrales de Beleriand.", importance: "CRITICAL", status: "Destroyed", lastChapter: 23, firstChapter: 5, lat: 45, lng: -15, greatTales: ["beren-luthien"] },
+  { id: "tirion", name: "Tirion", description: "La gran ciudad de los Elfos Noldor y Vanyar sobre la colina de Túna en Aman.", importance: "HIGH", status: "Active", firstChapter: 6, lat: 15, lng: -55, greatTales: [] },
+  { id: "formenos", name: "Formenos", description: "Fortaleza de Fëanor en el norte de Valinor.", importance: "MEDIUM", status: "Destroyed", firstChapter: 8, lat: 25, lng: -58, greatTales: [] },
+  { id: "helcaraxe", name: "Helcaraxë", description: "El Hielo Crujiente, el estrecho estrecho en el extremo norte que conectaba Aman y la Tierra Media.", importance: "HIGH", status: "Legendary", firstChapter: 14, lat: 75, lng: -40, greatTales: [] },
+  { id: "hithlum", name: "Hithlum", description: "Región del norte de Beleriand, feudo principal de Fingolfin y los Altos Reyes.", importance: "HIGH", status: "Destroyed", firstChapter: 15, lat: 55, lng: -20, greatTales: [] },
+  { id: "nargothrond", name: "Nargothrond", description: "Reino subterráneo fundado por Finrod Felagund cerca del río Narog.", importance: "HIGH", status: "Destroyed", lastChapter: 22, firstChapter: 15, lat: 40, lng: -25, greatTales: ["turin"] },
+  { id: "gondolin", name: "Gondolin", description: "La Ciudad Oculta de Turgon, rodeada por las Montañas Circundantes.", importance: "CRITICAL", status: "Destroyed", lastChapter: 24, firstChapter: 16, lat: 52, lng: -12, greatTales: ["fall-gondolin"] },
+  { id: "tolgalen", name: "Tol Galen", description: "La Isla Verde en Adurant, donde vivieron Beren y Lúthien.", importance: "MEDIUM", status: "Legendary", firstChapter: 20, lat: 35, lng: -10, greatTales: ["beren-luthien"] },
+  { id: "brethil", name: "Brethil", description: "El bosque de los Hombres de Haleth, escenario del fin trágico de Túrin.", importance: "MEDIUM", status: "Active", firstChapter: 18, lat: 48, lng: -18, greatTales: ["turin"] }
 ];
 
 export const timelineData: TimelineEvent[] = [
@@ -130,6 +151,81 @@ export const timelineData: TimelineEvent[] = [
   { id: "t15", year: "Años del Sol, 495", title: "Caída de Nargothrond", description: "Glaurung destruye el reino subterráneo debido al orgullo de Túrin.", firstChapter: 22 },
   { id: "t16", year: "Años del Sol, 503", title: "Muerte de Thingol", description: "Ruina de Doriath a manos de los Enanos.", firstChapter: 23 },
   { id: "t17", year: "Años del Sol, 510", title: "Caída de Gondolin", description: "Morgoth destruye el último gran reino noldorin.", firstChapter: 24 }
+];
+
+export const greatTalesData: GreatTale[] = [
+  {
+    id: "beren-luthien",
+    title: "Beren y Lúthien",
+    description: "La historia más grande de la Primera Edad: un mortal proscrito y una princesa elfa desafían a Morgoth mismo. Su amor es tan poderoso que trasciende la frontera entre razas, y juntos logran arrebatar un Silmaril de la corona del Señor Oscuro.",
+    protagonists: ["beren", "luthien"],
+    keyCharacters: ["thingol", "melian", "finrod", "melkor"],
+    relatedLocations: ["doriath", "angband", "tolgalen"],
+    themes: ["love conquers all", "sacrifice", "impossible quests", "mortality vs immortality"],
+    needToKnow: [
+      "Thingol exige un Silmaril como dote de Lúthien",
+      "Beren y Finrod son capturados pero Lúthien los rescata",
+      "Logran arrebatar un Silmaril de la corona de Morgoth",
+      "Lúthien elige la mortalidad para estar con Beren",
+      "Su hijo Eärendil es el marinero estrella"
+    ],
+    startChapter: 20,
+    endChapter: 20
+  },
+  {
+    id: "turin",
+    title: "Túrin Turambar",
+    description: "La maldición de Morgoth sobre Húrin se cierne como una sombra sobre su hijo Túrin. A través de traiciones, batallas perdidas y amores destruidos, Túrin busca redención, solo para encontrar tragedia en su victoria final.",
+    protagonists: ["turin"],
+    keyCharacters: ["hurin", "glaurung", "melkor"],
+    relatedLocations: ["nargothrond", "brethil", "doriath"],
+    themes: ["curse and fate", "warrior's honor", "internal struggle", "tragic hero"],
+    needToKnow: [
+      "Morgoth maldice a Húrin y su familia",
+      "Túrin es un gran guerrero pero la tragedia lo persigue",
+      "Causa la caída de Nargothrond con su orgullo",
+      "Mata a Glaurung, el padre de los dragones",
+      "Se suicida al descubrir que se casó con su hermana bajo hechizo"
+    ],
+    startChapter: 22,
+    endChapter: 22
+  },
+  {
+    id: "fall-gondolin",
+    title: "La Caída de Gondolin",
+    description: "La última y más gloriosa de las ciudades elfas es traicionada desde dentro. En una batalla épica con dragones y Balrogs, Gondolin cae, pero de sus cenizas emerge una nueva esperanza en el marinero Eärendil.",
+    protagonists: ["turgon", "earendil", "tuor"],
+    keyCharacters: ["idril", "maeglin", "ulmo", "melkor"],
+    relatedLocations: ["gondolin", "angband"],
+    themes: ["betrayal", "last stand", "redemption from ashes", "sacrifice for future"],
+    needToKnow: [
+      "Gondolin fue construida en secreto por Turgon",
+      "Maeglin traiciona su ubicación a Morgoth",
+      "Cae en un asalto con fuego y dragones",
+      "Tuor y su familia escapan, llevando el Silmaril recuperado de Beren",
+      "Eärendil, su hijo, navegará a Valinor para buscar ayuda"
+    ],
+    startChapter: 24,
+    endChapter: 24
+  },
+  {
+    id: "earendil",
+    title: "Eärendil el Marinero",
+    description: "El último acto de la Primera Edad. Eärendil, portador de un Silmaril en su frente, navega a Valinor para implorar a los Valar. Su viaje es el preludio a la Guerra de la Cólera que finalmente derrota a Morgoth.",
+    protagonists: ["earendil"],
+    keyCharacters: ["elwing", "manwe", "ulmo", "melkor"],
+    relatedLocations: ["gondolin", "valinor"],
+    themes: ["hope and light", "intercession", "final battle", "stars and eternity"],
+    needToKnow: [
+      "Eärendil porpora un Silmaril en su frente como estrella",
+      "Viaja a Valinor a pesar del Prohibición sobre los Hombres",
+      "Los Valar le conceden la carga de llevar la luz",
+      "Se convierte en una estrella visible: Gil-Eärendil",
+      "Su llegada es el señal para la Guerra de la Cólera que destruye a Morgoth"
+    ],
+    startChapter: 24,
+    endChapter: 24
+  }
 ];
 
 export const flowNodesData: FlowNode[] = [
