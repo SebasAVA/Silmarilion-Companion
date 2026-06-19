@@ -10,110 +10,12 @@ import {
   ChevronRight, Circle, Check
 } from "lucide-react";
 import { useSilmarillion } from "@/context/SilmarillionContext";
+import { CharacterGrid } from "@/components/CharacterGrid";
 
 type Props = {
   onClose: () => void;
 };
 
-function alignmentColor(a: Character["alignment"]) {
-  if (a === "good") return "border-amber-600/60 text-amber-400";
-  if (a === "evil") return "border-red-800/60 text-red-400";
-  return "border-stone-600/60 text-stone-400";
-}
-
-function alignmentLabel(a: Character["alignment"]) {
-  if (a === "good") return "Bien";
-  if (a === "evil") return "Mal";
-  return "Neutral";
-}
-
-function CharacterWikiCard({ char }: { char: Character }) {
-  const [expanded, setExpanded] = useState(false);
-  return (
-    <div
-      data-testid={`compendium-char-${char.id}`}
-      className={cn(
-        "border border-border bg-card rounded-sm transition-all duration-200 cursor-pointer",
-        expanded ? "border-primary/50" : "hover:border-border/80 hover:bg-card/80"
-      )}
-      onClick={() => setExpanded((v) => !v)}
-    >
-      <div className="flex items-start gap-3 p-4">
-        <div className="w-9 h-9 rounded-sm bg-muted flex items-center justify-center shrink-0 border border-border">
-          <span className="font-serif text-primary text-sm font-bold">
-            {char.name.charAt(0)}
-          </span>
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="font-serif text-sm text-foreground font-semibold leading-tight">{char.name}</h3>
-            <ChevronRight
-              className={cn("w-3.5 h-3.5 text-muted-foreground shrink-0 mt-0.5 transition-transform", expanded && "rotate-90")}
-            />
-          </div>
-          <p className="text-xs text-muted-foreground mt-0.5">{char.race}</p>
-          <p className="text-xs text-primary/80 mt-1 leading-snug">{char.role}</p>
-        </div>
-      </div>
-
-      {expanded && (
-        <div className="px-4 pb-4 border-t border-border/50 pt-3 space-y-3" onClick={(e) => e.stopPropagation()}>
-          <p className="text-xs text-foreground/80 leading-relaxed">{char.description}</p>
-
-          <div className="flex flex-wrap gap-1.5">
-            <Badge variant="outline" className={cn("text-[10px] border", alignmentColor(char.alignment))}>
-              {alignmentLabel(char.alignment)}
-            </Badge>
-            <Badge variant="outline" className="text-[10px] border border-border text-muted-foreground">
-              Cap. {char.firstChapter === 0 ? "Prólogo" : char.firstChapter}
-            </Badge>
-          </div>
-
-          {char.relationships.length > 0 && (
-            <div>
-              <p className="text-[10px] uppercase tracking-widest text-primary/60 mb-1.5 font-medium">Relaciones</p>
-              <div className="space-y-1">
-                {char.relationships.map((r, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs">
-                    <span className="text-muted-foreground capitalize">{r.type}:</span>
-                    <span className="text-foreground/90">{r.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {char.locations.length > 0 && (
-            <div>
-              <p className="text-[10px] uppercase tracking-widest text-primary/60 mb-1.5 font-medium">Lugares</p>
-              <div className="flex flex-wrap gap-1">
-                {char.locations.map((loc) => (
-                  <span key={loc} className="text-[11px] px-2 py-0.5 bg-muted rounded-sm text-muted-foreground border border-border">
-                    {loc}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {char.events.length > 0 && (
-            <div>
-              <p className="text-[10px] uppercase tracking-widest text-primary/60 mb-1.5 font-medium">Eventos clave</p>
-              <ul className="space-y-1">
-                {char.events.map((ev) => (
-                  <li key={ev} className="text-xs text-foreground/80 flex gap-1.5 items-start">
-                    <span className="text-primary mt-0.5 shrink-0">—</span>
-                    {ev}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
 
 export function CompendiumPanel({ onClose }: Props) {
   const [search, setSearch] = useState("");
@@ -233,16 +135,7 @@ export function CompendiumPanel({ onClose }: Props) {
 
         {/* PERSONAJES */}
         <TabsContent value="characters" className="flex-1 min-h-0 m-0 mt-3 outline-none">
-          <ScrollArea className="h-full">
-            <div className="px-5 pb-6 grid gap-2">
-              {filteredChars.length === 0 && (
-                <p className="text-sm text-muted-foreground py-8 text-center">Sin resultados.</p>
-              )}
-              {filteredChars.map((char) => (
-                <CharacterWikiCard key={char.id} char={char} />
-              ))}
-            </div>
-          </ScrollArea>
+          <CharacterGrid />
         </TabsContent>
 
         {/* LUGARES */}
