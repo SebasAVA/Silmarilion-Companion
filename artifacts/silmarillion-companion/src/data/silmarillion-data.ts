@@ -38,6 +38,8 @@ export type Location = {
   aliases?: string[];
   description: string;
   importance: 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
+  type: 'City' | 'Kingdom' | 'Fortress' | 'Forest' | 'Mountain' | 'Region' | 'Realm' | 'Other';
+  region: 'Aman' | 'Beleriand' | 'Este' | 'Mar' | 'Legendario';
   status: 'Active' | 'Destroyed' | 'Hidden' | 'Abandoned' | 'Legendary';
   firstChapter: number;
   lastChapter?: number;
@@ -45,6 +47,8 @@ export type Location = {
     characterId: string;
     period?: string;
   };
+  relatedCharacters?: string[];
+  relatedEvents?: string[];
   lat: number;
   lng: number;
   greatTales: string[];
@@ -67,11 +71,15 @@ export type GreatTale = {
   id: string;
   title: string;
   description: string;
+  details: string;
   protagonists: string[];
+  antagonists: string[];
   keyCharacters: string[];
   relatedLocations: string[];
+  relatedEvents: string[];
   themes: string[];
   needToKnow: string[];
+  afterReadingShouldKnow: string[];
   startChapter: number;
   endChapter: number;
 };
@@ -147,17 +155,17 @@ export const charactersData: Character[] = [
 ];
 
 export const locationsData: Location[] = [
-  { id: "valinor", name: "Valinor", description: "El Reino Bendecido en el continente de Aman, hogar de los Valar y los Elfos de la Luz.", importance: "CRITICAL", status: "Active", firstChapter: 1, lat: 20, lng: -60, greatTales: [] },
-  { id: "angband", name: "Angband", description: "La fortaleza secundaria y luego principal de Morgoth en el norte de Beleriand.", importance: "CRITICAL", status: "Active", firstChapter: 3, lat: 60, lng: -10, greatTales: ["beren-luthien", "turin", "fall-gondolin"] },
-  { id: "doriath", name: "Doriath", aliases: ["El Reino Escondido", "Menegroth"], description: "El Reino Escondido de Thingol y Melian en los bosques centrales de Beleriand.", importance: "CRITICAL", status: "Destroyed", lastChapter: 23, firstChapter: 5, ruler: { characterId: "thingol", period: "Capítulos 5-23" }, lat: 45, lng: -15, greatTales: ["beren-luthien"] },
-  { id: "tirion", name: "Tirion", description: "La gran ciudad de los Elfos Noldor y Vanyar sobre la colina de Túna en Aman.", importance: "HIGH", status: "Active", firstChapter: 6, lat: 15, lng: -55, greatTales: [] },
-  { id: "formenos", name: "Formenos", description: "Fortaleza de Fëanor en el norte de Valinor.", importance: "MEDIUM", status: "Destroyed", firstChapter: 8, lat: 25, lng: -58, greatTales: [] },
-  { id: "helcaraxe", name: "Helcaraxë", description: "El Hielo Crujiente, el estrecho estrecho en el extremo norte que conectaba Aman y la Tierra Media.", importance: "HIGH", status: "Legendary", firstChapter: 14, lat: 75, lng: -40, greatTales: [] },
-  { id: "hithlum", name: "Hithlum", description: "Región del norte de Beleriand, feudo principal de Fingolfin y los Altos Reyes.", importance: "HIGH", status: "Destroyed", firstChapter: 15, lat: 55, lng: -20, greatTales: [] },
-  { id: "nargothrond", name: "Nargothrond", aliases: ["Fortaleza de Narog", "Castillo Subterráneo"], description: "Reino subterráneo fundado por Finrod Felagund cerca del río Narog.", importance: "HIGH", status: "Destroyed", lastChapter: 22, firstChapter: 15, lat: 40, lng: -25, greatTales: ["turin"] },
-  { id: "gondolin", name: "Gondolin", aliases: ["La Ciudad Oculta", "Roca Oculta", "Ciudad de Turgon"], description: "La Ciudad Oculta de Turgon, rodeada por las Montañas Circundantes.", importance: "CRITICAL", status: "Destroyed", lastChapter: 24, firstChapter: 16, lat: 52, lng: -12, greatTales: ["fall-gondolin"] },
-  { id: "tolgalen", name: "Tol Galen", description: "La Isla Verde en Adurant, donde vivieron Beren y Lúthien.", importance: "MEDIUM", status: "Legendary", firstChapter: 20, lat: 35, lng: -10, greatTales: ["beren-luthien"] },
-  { id: "brethil", name: "Brethil", description: "El bosque de los Hombres de Haleth, escenario del fin trágico de Túrin.", importance: "MEDIUM", status: "Active", firstChapter: 18, lat: 48, lng: -18, greatTales: ["turin"] }
+  { id: "valinor", name: "Valinor", description: "El Reino Bendecido en el continente de Aman, hogar de los Valar y los Elfos de la Luz.", importance: "CRITICAL", type: "Realm", region: "Aman", status: "Active", firstChapter: 1, lat: 20, lng: -60, relatedCharacters: ["manwe", "varda", "aule", "yavanna", "ulmo"], relatedEvents: ["t1", "t2", "t7"], greatTales: [] },
+  { id: "angband", name: "Angband", description: "La fortaleza secundaria y luego principal de Morgoth en el norte de Beleriand.", importance: "CRITICAL", type: "Fortress", region: "Beleriand", status: "Active", firstChapter: 3, lat: 60, lng: -10, ruler: { characterId: "melkor", period: "Capítulos 3-24" }, relatedCharacters: ["melkor", "beren", "luthien", "turin"], relatedEvents: ["t12", "t13"], greatTales: ["beren-luthien", "turin", "fall-gondolin"] },
+  { id: "doriath", name: "Doriath", aliases: ["El Reino Escondido", "Menegroth"], description: "El Reino Escondido de Thingol y Melian en los bosques centrales de Beleriand.", importance: "CRITICAL", type: "Kingdom", region: "Beleriand", status: "Destroyed", lastChapter: 23, firstChapter: 5, ruler: { characterId: "thingol", period: "Capítulos 5-23" }, relatedCharacters: ["thingol", "melian", "luthien", "beren"], relatedEvents: ["t4", "t16"], lat: 45, lng: -15, greatTales: ["beren-luthien"] },
+  { id: "tirion", name: "Tirion", description: "La gran ciudad de los Elfos Noldor y Vanyar sobre la colina de Túna en Aman.", importance: "HIGH", type: "City", region: "Aman", status: "Active", firstChapter: 6, lat: 15, lng: -55, relatedCharacters: ["feanor", "fingolfin", "finarfin"], relatedEvents: ["t6", "t8"], greatTales: [] },
+  { id: "formenos", name: "Formenos", description: "Fortaleza de Fëanor en el norte de Valinor.", importance: "MEDIUM", type: "Fortress", region: "Aman", status: "Destroyed", firstChapter: 8, lat: 25, lng: -58, relatedCharacters: ["feanor", "finwe"], relatedEvents: ["t7"], greatTales: [] },
+  { id: "helcaraxe", name: "Helcaraxë", description: "El Hielo Crujiente, el estrecho estrecho en el extremo norte que conectaba Aman y la Tierra Media.", importance: "HIGH", type: "Other", region: "Mar", status: "Legendary", firstChapter: 14, lat: 75, lng: -40, relatedCharacters: ["fingolfin", "finarfin", "galadriel"], relatedEvents: ["t8"], greatTales: [] },
+  { id: "hithlum", name: "Hithlum", description: "Región del norte de Beleriand, feudo principal de Fingolfin y los Altos Reyes.", importance: "HIGH", type: "Region", region: "Beleriand", status: "Destroyed", firstChapter: 15, lat: 55, lng: -20, ruler: { characterId: "fingolfin", period: "Capítulos 15-19" }, relatedCharacters: ["fingolfin"], relatedEvents: ["t12"], greatTales: [] },
+  { id: "nargothrond", name: "Nargothrond", aliases: ["Fortaleza de Narog", "Castillo Subterráneo"], description: "Reino subterráneo fundado por Finrod Felagund cerca del río Narog.", importance: "HIGH", type: "Fortress", region: "Beleriand", status: "Destroyed", lastChapter: 22, firstChapter: 15, relatedCharacters: ["turin"], relatedEvents: ["t15"], lat: 40, lng: -25, greatTales: ["turin"] },
+  { id: "gondolin", name: "Gondolin", aliases: ["La Ciudad Oculta", "Roca Oculta", "Ciudad de Turgon"], description: "La Ciudad Oculta de Turgon, rodeada por las Montañas Circundantes.", importance: "CRITICAL", type: "City", region: "Beleriand", status: "Destroyed", lastChapter: 24, firstChapter: 16, relatedCharacters: ["earendil", "tuor", "idril"], relatedEvents: ["t11", "t17"], lat: 52, lng: -12, greatTales: ["fall-gondolin"] },
+  { id: "tolgalen", name: "Tol Galen", description: "La Isla Verde en Adurant, donde vivieron Beren y Lúthien.", importance: "MEDIUM", type: "Other", region: "Beleriand", status: "Legendary", firstChapter: 20, lat: 35, lng: -10, relatedCharacters: ["beren", "luthien"], relatedEvents: ["t13"], greatTales: ["beren-luthien"] },
+  { id: "brethil", name: "Brethil", description: "El bosque de los Hombres de Haleth, escenario del fin trágico de Túrin.", importance: "MEDIUM", type: "Forest", region: "Beleriand", status: "Active", firstChapter: 18, lat: 48, lng: -18, relatedCharacters: ["turin"], relatedEvents: ["t15"], greatTales: ["turin"] }
 ];
 
 export const timelineData: TimelineEvent[] = [
@@ -185,9 +193,12 @@ export const greatTalesData: GreatTale[] = [
     id: "beren-luthien",
     title: "Beren y Lúthien",
     description: "La historia más grande de la Primera Edad: un mortal proscrito y una princesa elfa desafían a Morgoth mismo. Su amor es tan poderoso que trasciende la frontera entre razas, y juntos logran arrebatar un Silmaril de la corona del Señor Oscuro.",
+    details: "Beren, perseguido y maldito, llegó a Doriath donde conoció a Lúthien, la princesa más hermosa del mundo. Su amor fue instantáneo pero imposible: Thingol exigió un Silmaril como prueba. Con ayuda de Finrod, Beren fue capturado por Morgoth, pero Lúthien lo rescató con su magia. Juntos lograron lo que nadie creía posible: arrebatar un Silmaril de la corona del Señor Oscuro. La maldición persiguió su amor, pero su legado fue inmortal. Lúthien eligió la mortalidad, y de su unión nació Eärendil, quien se convertiría en la Estrella de la Mañana.",
     protagonists: ["beren", "luthien"],
-    keyCharacters: ["thingol", "melian", "finrod", "melkor"],
+    antagonists: ["melkor"],
+    keyCharacters: ["thingol", "melian", "finrod"],
     relatedLocations: ["doriath", "angband", "tolgalen"],
+    relatedEvents: ["t13"],
     themes: ["love conquers all", "sacrifice", "impossible quests", "mortality vs immortality"],
     needToKnow: [
       "Thingol exige un Silmaril como dote de Lúthien",
@@ -196,6 +207,13 @@ export const greatTalesData: GreatTale[] = [
       "Lúthien elige la mortalidad para estar con Beren",
       "Su hijo Eärendil es el marinero estrella"
     ],
+    afterReadingShouldKnow: [
+      "El amor puede desafiar el destino, pero no lo anula completamente",
+      "La maldición de Morgoth persigue incluso los actos más gloriosos",
+      "La mortalidad no es debilidad: es libertad y dignidad",
+      "Un Silmaril fue recuperado, pero dos permanecen perdidos en las tinieblas",
+      "De esta unión nació la esperanza del mundo: Eärendil"
+    ],
     startChapter: 20,
     endChapter: 20
   },
@@ -203,9 +221,12 @@ export const greatTalesData: GreatTale[] = [
     id: "turin",
     title: "Túrin Turambar",
     description: "La maldición de Morgoth sobre Húrin se cierne como una sombra sobre su hijo Túrin. A través de traiciones, batallas perdidas y amores destruidos, Túrin busca redención, solo para encontrar tragedia en su victoria final.",
+    details: "Túrin fue marcado desde el nacimiento por la maldición de Morgoth sobre su padre Húrin. El Señor Oscuro juró que la familia sufriría dolor infinito. A pesar de ser un guerrero sin igual, Túrin traía consigo la maldición. En Nargothrond, su orgullo causó la caída del reino. Perseguido por Glaurung, el padre de los dragones, Túrin logró matarlo en un acto de heroísmo extremo. Pero el dragón vengador lo hechizó, causando que se casara con su propia hermana sin saberlo. Al descubrir la verdad, incapaz de soportar el horror, Túrin se suicidó. Su historia es la más trágica del Silmarillion: ni siquiera la victoria puede redimir una vida marcada por la maldición.",
     protagonists: ["turin"],
-    keyCharacters: ["hurin", "glaurung", "melkor"],
+    antagonists: ["melkor"],
+    keyCharacters: ["glaurung"],
     relatedLocations: ["nargothrond", "brethil", "doriath"],
+    relatedEvents: ["t15"],
     themes: ["curse and fate", "warrior's honor", "internal struggle", "tragic hero"],
     needToKnow: [
       "Morgoth maldice a Húrin y su familia",
@@ -214,6 +235,13 @@ export const greatTalesData: GreatTale[] = [
       "Mata a Glaurung, el padre de los dragones",
       "Se suicida al descubrir que se casó con su hermana bajo hechizo"
     ],
+    afterReadingShouldKnow: [
+      "La maldición de Morgoth es más poderosa que el heroísmo individual",
+      "La victoria puede venir acompañada de traición y horror",
+      "Incluso los más valientes pueden ser vencidos por el destino",
+      "El libre albedrío existe, pero hay fuerzas que condenan nuestras elecciones",
+      "La tragedia personal de Túrin es el corazón oscuro del Silmarillion"
+    ],
     startChapter: 22,
     endChapter: 22
   },
@@ -221,9 +249,12 @@ export const greatTalesData: GreatTale[] = [
     id: "fall-gondolin",
     title: "La Caída de Gondolin",
     description: "La última y más gloriosa de las ciudades elfas es traicionada desde dentro. En una batalla épica con dragones y Balrogs, Gondolin cae, pero de sus cenizas emerge una nueva esperanza en el marinero Eärendil.",
-    protagonists: ["turgon", "earendil", "tuor"],
-    keyCharacters: ["idril", "maeglin", "ulmo", "melkor"],
+    details: "Gondolin fue construida en secreto por Turgon en un valle escondido, protegida por montañas impenetrables. Durante siglos fue un faro de belleza y poder, inexpugnable frente a los ataques de Morgoth. Pero la traición llegó desde dentro: Maeglin, ambicioso hijo de Eöl, reveló la ubicación de la ciudad al Señor Oscuro. Morgoth envió su ejército final: dragones, Balrogs, y hordas de Orcos. En la batalla resultante, la Ciudad Oculta fue destruida. Sin embargo, Tuor y su familia escaparon, llevando el Silmaril de Beren y Lúthien. Su hijo Eärendil llevaría este tesoro a Valinor como imploración final. De la ruina de Gondolin nació la guerra que finalmente derrotaría a Morgoth.",
+    protagonists: ["earendil", "tuor"],
+    antagonists: ["melkor", "maeglin"],
+    keyCharacters: ["turgon", "idril", "ulmo"],
     relatedLocations: ["gondolin", "angband"],
+    relatedEvents: ["t17"],
     themes: ["betrayal", "last stand", "redemption from ashes", "sacrifice for future"],
     needToKnow: [
       "Gondolin fue construida en secreto por Turgon",
@@ -232,6 +263,13 @@ export const greatTalesData: GreatTale[] = [
       "Tuor y su familia escapan, llevando el Silmaril recuperado de Beren",
       "Eärendil, su hijo, navegará a Valinor para buscar ayuda"
     ],
+    afterReadingShouldKnow: [
+      "Incluso la ciudad más bella y protegida puede caer por traición interior",
+      "La lealtad de unos (Tuor, Idril) contrarresta la traición de otros (Maeglin)",
+      "De la derrota nace la esperanza: Eärendil es el resultado",
+      "Morgoth logra destruir los reinos élficos, pero no puede destruir el futuro",
+      "Esta es la última batalla de la Primera Edad; lo que sigue es la venganza de los Valar"
+    ],
     startChapter: 24,
     endChapter: 24
   },
@@ -239,9 +277,12 @@ export const greatTalesData: GreatTale[] = [
     id: "earendil",
     title: "Eärendil el Marinero",
     description: "El último acto de la Primera Edad. Eärendil, portador de un Silmaril en su frente, navega a Valinor para implorar a los Valar. Su viaje es el preludio a la Guerra de la Cólera que finalmente derrota a Morgoth.",
+    details: "Eärendil nació en Gondolin, hijo de Tuor y la princesa Idril. Cuando la ciudad cayó, escapó con sus padres llevando el Silmaril de Beren y Lúthien. Creció en los Puertos del Sirion, oyendo historias de la lucha interminable contra Morgoth. Los Años del Sol avanzaban, y la esperanza menguaba. Eärendil decidió hacer lo imposible: navegar a Valinor y implorar a los Valar que intervinieron. Contra toda probabilidad, logró llegar. Los Valar le concedieron una tarea sin precedentes: portar el Silmaril en su frente como una estrella que brilla eternamente en el cielo de Arda. Se convirtió en Gil-Eärendil, símbolo de esperanza inmortal. Su viaje marcó el fin de la Primera Edad y el comienzo de la Guerra de la Cólera que destruyó a Morgoth.",
     protagonists: ["earendil"],
-    keyCharacters: ["elwing", "manwe", "ulmo", "melkor"],
+    antagonists: ["melkor"],
+    keyCharacters: ["tuor", "idril", "elwing", "manwe"],
     relatedLocations: ["gondolin", "valinor"],
+    relatedEvents: ["t17"],
     themes: ["hope and light", "intercession", "final battle", "stars and eternity"],
     needToKnow: [
       "Eärendil porpora un Silmaril en su frente como estrella",
@@ -249,6 +290,13 @@ export const greatTalesData: GreatTale[] = [
       "Los Valar le conceden la carga de llevar la luz",
       "Se convierte en una estrella visible: Gil-Eärendil",
       "Su llegada es el señal para la Guerra de la Cólera que destruye a Morgoth"
+    ],
+    afterReadingShouldKnow: [
+      "La esperanza puede ser forjada en el acto de sacrificio",
+      "Los Valar pueden ser movidos por la fe y la desesperación de los mortales",
+      "Eärendil es el punto de giro: su victoria no es personal sino cósmica",
+      "Un Silmaril escapa a las tinieblas y se convierte en luz eterna",
+      "La Primera Edad termina con un acto de redención que trasciende el tiempo"
     ],
     startChapter: 24,
     endChapter: 24
