@@ -28,6 +28,11 @@ export function CharacterDetailCard({ characterId, onCharacterSelect }: Characte
   const isCharacterIntroduced = currentChapterIndex >= character.firstChapter;
   const hasDeathInfoAvailable = character.deathInfo && currentChapterIndex >= character.deathInfo.chapter;
 
+  const knownTitles = (character.titles ?? []).filter((t) => t.chapter <= currentChapterIndex);
+  const lockedTitlesCount = (character.titles?.length ?? 0) - knownTitles.length;
+  const knownDeeds = (character.notableDeeds ?? []).filter((d) => d.chapter <= currentChapterIndex);
+  const lockedDeedsCount = (character.notableDeeds?.length ?? 0) - knownDeeds.length;
+
   const importanceColors = {
     CRITICAL: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100",
     HIGH: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-100",
@@ -132,8 +137,8 @@ export function CharacterDetailCard({ characterId, onCharacterSelect }: Characte
               </div>
 
               {character.details && isCharacterIntroduced && (
-                <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-md border border-slate-200 dark:border-slate-700">
-                  <p className="text-sm leading-relaxed">{character.details}</p>
+                <div className="bg-muted p-4 rounded-md border border-slate-200 dark:border-slate-700">
+                  <p className="text-sm leading-relaxed text-foreground">{character.details}</p>
                 </div>
               )}
 
@@ -157,17 +162,24 @@ export function CharacterDetailCard({ characterId, onCharacterSelect }: Characte
 
           {/* TITLES Tab */}
           <TabsContent value="titles" className="mt-4">
-            {character.titles && character.titles.length > 0 ? (
+            {knownTitles.length > 0 ? (
               <div className="space-y-2">
-                {character.titles.map((title, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-2 bg-slate-50 dark:bg-slate-900 rounded">
+                {knownTitles.map((title, idx) => (
+                  <div key={idx} className="flex items-start gap-3 p-2 bg-muted rounded">
                     <Sword className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
-                    <span className="text-sm">{title}</span>
+                    <span className="text-sm text-foreground">{title.text}</span>
                   </div>
                 ))}
+                {lockedTitlesCount > 0 && (
+                  <p className="text-xs text-muted-foreground italic pt-1">
+                    +{lockedTitlesCount} título{lockedTitlesCount > 1 ? "s" : ""} aún por descubrir a medida que avances.
+                  </p>
+                )}
               </div>
             ) : (
-              <p className="text-sm text-muted-foreground">Sin títulos registrados.</p>
+              <p className="text-sm text-muted-foreground">
+                {lockedTitlesCount > 0 ? "Aún no se conocen títulos de este personaje." : "Sin títulos registrados."}
+              </p>
             )}
           </TabsContent>
 
@@ -180,11 +192,11 @@ export function CharacterDetailCard({ characterId, onCharacterSelect }: Characte
                   return (
                     <div
                       key={idx}
-                      className="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-900 rounded cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                      className="flex items-center justify-between p-2 bg-muted rounded cursor-pointer hover:bg-muted/80 transition-colors"
                       onClick={() => onCharacterSelect?.(rel.characterId)}
                     >
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium truncate">{relatedChar?.name || rel.characterId}</p>
+                        <p className="text-sm font-medium truncate text-foreground">{relatedChar?.name || rel.characterId}</p>
                         <p className="text-xs text-muted-foreground capitalize">{rel.type}</p>
                       </div>
                       <Badge variant="secondary" className="ml-2 shrink-0">
@@ -203,17 +215,26 @@ export function CharacterDetailCard({ characterId, onCharacterSelect }: Characte
           <TabsContent value="details" className="mt-4">
             <div className="space-y-4">
               {/* Notable Deeds */}
-              {character.notableDeeds && character.notableDeeds.length > 0 && (
+              {(knownDeeds.length > 0 || lockedDeedsCount > 0) && (
                 <div>
                   <h4 className="font-semibold text-sm mb-2">Logros Notables</h4>
-                  <div className="space-y-1">
-                    {character.notableDeeds.map((deed, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-sm">
-                        <span className="text-amber-600 dark:text-amber-400 font-bold">★</span>
-                        <span>{deed}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {knownDeeds.length > 0 ? (
+                    <div className="space-y-1">
+                      {knownDeeds.map((deed, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-sm">
+                          <span className="text-amber-600 dark:text-amber-400 font-bold">★</span>
+                          <span>{deed.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-sm text-muted-foreground">Aún no se conocen logros de este personaje.</p>
+                  )}
+                  {lockedDeedsCount > 0 && (
+                    <p className="text-xs text-muted-foreground italic pt-1">
+                      +{lockedDeedsCount} logro{lockedDeedsCount > 1 ? "s" : ""} aún por descubrir a medida que avances.
+                    </p>
+                  )}
                 </div>
               )}
 

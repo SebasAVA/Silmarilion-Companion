@@ -3,12 +3,13 @@ import { useSilmarillion } from "@/context/SilmarillionContext";
 import { charactersData } from "@/data/silmarillion-data";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { CharacterDrawer } from "./CharacterDrawer";
+import { CharacterDetailSheet } from "./CharacterDetailSheet";
 import { Badge } from "@/components/ui/badge";
 
 export function ChapterPanel() {
   const { currentChapter, currentChapterIndex } = useSilmarillion();
   const [selectedCharacterId, setSelectedCharacterId] = useState<string | null>(null);
+  const [revealedSpoilers, setRevealedSpoilers] = useState(false);
 
   const unlockedCharacters = charactersData.filter(c => c.firstChapter <= currentChapterIndex);
 
@@ -45,6 +46,32 @@ export function ChapterPanel() {
               </ul>
             </div>
 
+            {currentChapter.shouldKnowAfter && currentChapter.shouldKnowAfter.length > 0 && (
+              <div className="space-y-4 pt-4 border-t border-border">
+                <div className="flex items-center justify-between gap-2">
+                  <h3 className="font-serif text-sm font-semibold tracking-wider text-primary uppercase">
+                    Deberías Saber Después
+                  </h3>
+                  {!revealedSpoilers && (
+                    <button
+                      onClick={() => setRevealedSpoilers(true)}
+                      className="text-xs px-2 py-1 rounded bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+                    >
+                      Revelar
+                    </button>
+                  )}
+                </div>
+                <ul className={`space-y-3 transition-all ${revealedSpoilers ? "" : "blur-sm"}`}>
+                  {currentChapter.shouldKnowAfter.map((point, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-card-foreground">
+                      <span className="text-primary mt-1 text-[10px]">★</span>
+                      <span className="leading-snug">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="space-y-4 pt-4">
               <h3 className="font-serif text-sm font-semibold tracking-wider text-primary uppercase border-b border-border pb-2">
                 Personajes Conocidos
@@ -74,9 +101,10 @@ export function ChapterPanel() {
         </ScrollArea>
       </div>
 
-      <CharacterDrawer 
-        characterId={selectedCharacterId} 
-        onClose={() => setSelectedCharacterId(null)} 
+      <CharacterDetailSheet
+        characterId={selectedCharacterId}
+        onClose={() => setSelectedCharacterId(null)}
+        onCharacterSelect={setSelectedCharacterId}
       />
     </>
   );

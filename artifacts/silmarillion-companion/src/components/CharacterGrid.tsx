@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { CharacterDetailCard } from "@/components/CharacterDetailCard";
+import { CharacterDetailSheet } from "@/components/CharacterDetailSheet";
 import {
   Select,
   SelectContent,
@@ -13,7 +13,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Search, X } from "lucide-react";
 
 export function CharacterGrid() {
@@ -248,22 +247,11 @@ export function CharacterGrid() {
         </div>
       </ScrollArea>
 
-      {/* Character Detail Sheet */}
-      <Sheet open={!!selectedDetailCharacterId} onOpenChange={(open) => !open && setSelectedDetailCharacterId(null)}>
-        <SheetContent className="w-full sm:max-w-2xl overflow-y-auto">
-          <SheetHeader>
-            <SheetTitle>Detalle del Personaje</SheetTitle>
-          </SheetHeader>
-          {selectedDetailCharacterId && (
-            <div className="mt-6">
-              <CharacterDetailCard
-                characterId={selectedDetailCharacterId}
-                onCharacterSelect={setSelectedDetailCharacterId}
-              />
-            </div>
-          )}
-        </SheetContent>
-      </Sheet>
+      <CharacterDetailSheet
+        characterId={selectedDetailCharacterId}
+        onClose={() => setSelectedDetailCharacterId(null)}
+        onCharacterSelect={setSelectedDetailCharacterId}
+      />
     </div>
   );
 }

@@ -5,8 +5,9 @@ import { GenealogyPanel } from "@/components/GenealogyPanel";
 import { MapPanel } from "@/components/MapPanel";
 import { TimelinePanel } from "@/components/TimelinePanel";
 import { CompendiumPanel } from "@/components/CompendiumPanel";
+import { CharacterGrid } from "@/components/CharacterGrid";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Network, Map, Clock } from "lucide-react";
+import { Network, Map, Clock, Users } from "lucide-react";
 
 export default function Companion() {
   const [showCompendium, setShowCompendium] = useState(false);
@@ -35,6 +36,13 @@ export default function Companion() {
               <div className="h-14 border-b border-border bg-card flex items-center px-4 shrink-0">
                 <TabsList className="bg-background/50 border border-border h-9">
                   <TabsTrigger
+                    value="characters"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground font-serif tracking-widest text-xs uppercase gap-2"
+                  >
+                    <Users className="w-3.5 h-3.5" />
+                    Personajes
+                  </TabsTrigger>
+                  <TabsTrigger
                     value="genealogy"
                     className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground font-serif tracking-widest text-xs uppercase gap-2"
                   >
@@ -59,6 +67,13 @@ export default function Companion() {
               </div>
 
               <div className="flex-1 relative min-h-0">
+                <TabsContent
+                  value="characters"
+                  className="h-full w-full m-0 p-0 border-0 data-[state=inactive]:hidden outline-none"
+                >
+                  <CharacterGrid />
+                </TabsContent>
+
                 <TabsContent
                   value="genealogy"
                   className="h-full w-full m-0 p-0 border-0 data-[state=inactive]:hidden outline-none"

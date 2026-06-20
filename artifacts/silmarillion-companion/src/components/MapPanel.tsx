@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
@@ -31,17 +31,22 @@ export function MapPanel() {
   
   const visibleLocations = locationsData.filter(loc => loc.firstChapter <= currentChapterIndex);
 
+  // Bounds for the Beleriand map image (adjusted for aspect ratio)
+  // [[south, west], [north, east]]
+  const beleriandBounds = [[0, -90], [75, 90]];
+
   return (
     <div className="w-full h-full relative z-0">
-      <MapContainer 
-        center={[45, -20]} 
-        zoom={4} 
+      <MapContainer
+        center={[37.5, 0]}
+        zoom={1.5}
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
+        bounds={beleriandBounds}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+        <ImageOverlay
+          url="/maps/beleriand.jpg"
+          bounds={beleriandBounds}
         />
         
         {visibleLocations.map(loc => (

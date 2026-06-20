@@ -59,17 +59,15 @@ export function ChapterSidebar({ showCompendium, onToggleCompendium }: Props) {
           {chaptersData.map((chapter, index) => {
             const isCompleted = index < currentChapterIndex;
             const isCurrent = index === currentChapterIndex;
-            const isLocked = index > currentChapterIndex;
+            const isLocked = false;
 
             return (
               <button
                 key={chapter.id}
                 data-testid={`chapter-btn-${index}`}
                 onClick={() => {
-                  if (!isLocked) {
-                    setCurrentChapterIndex(index);
-                    if (showCompendium) onToggleCompendium();
-                  }
+                  setCurrentChapterIndex(index);
+                  if (showCompendium) onToggleCompendium();
                 }}
                 disabled={isLocked}
                 className={cn(

@@ -35,17 +35,17 @@ export function GenealogyPanel() {
       .map(n => {
         const char = charactersData.find(c => c.id === n.characterId)!;
         const isActive = char.firstChapter === currentChapterIndex;
-        
+
         return {
           id: n.id,
           position: n.position,
-          data: { 
+          data: {
             label: (
               <div className="flex flex-col items-center">
                 <span className="font-serif font-bold text-sm mb-1">{char.name}</span>
                 <span className="text-[10px] uppercase tracking-wider text-muted-foreground">{char.race}</span>
               </div>
-            ) 
+            )
           },
           style: isActive ? activeNodeStyle : nodeStyle,
         };
@@ -60,17 +60,31 @@ export function GenealogyPanel() {
         const targetVisible = nodes.some(n => n.id === e.target);
         return sourceVisible && targetVisible;
       })
-      .map(e => ({
-        id: e.id,
-        source: e.source,
-        target: e.target,
-        label: e.label,
-        type: 'smoothstep',
-        animated: false,
-        style: { stroke: 'hsl(var(--primary))', strokeWidth: 1.5 },
-        labelStyle: { fill: 'hsl(var(--muted-foreground))', fontSize: 10, fontFamily: 'Inter' },
-        labelBgStyle: { fill: 'hsl(var(--background))', fillOpacity: 0.8 },
-      }));
+      .map(e => {
+        const isSpouseEdge = e.label === 'esposos';
+        return {
+          id: e.id,
+          source: e.source,
+          target: e.target,
+          sourcePosition: isSpouseEdge ? 'top' : 'bottom',
+          targetPosition: isSpouseEdge ? 'top' : 'top',
+          label: e.label,
+          type: isSpouseEdge ? 'straight' : 'smoothstep',
+          animated: false,
+          style: {
+            stroke: isSpouseEdge ? 'hsl(var(--primary) / 0.8)' : 'hsl(var(--primary))',
+            strokeWidth: isSpouseEdge ? 2.5 : 1.5,
+            strokeDasharray: isSpouseEdge ? '5,5' : 'none'
+          },
+          labelStyle: {
+            fill: 'hsl(var(--foreground))',
+            fontSize: 11,
+            fontFamily: 'Inter',
+            fontWeight: 600
+          },
+          labelBgStyle: { fill: 'hsl(var(--card))', fillOpacity: 1, stroke: 'hsl(var(--primary))', strokeWidth: 1 },
+        };
+      });
   }, [nodes]);
 
   return (
