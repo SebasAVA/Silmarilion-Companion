@@ -33,13 +33,13 @@ export function MapPanel() {
 
   // Bounds for the complete Middle-earth map image
   // [[south, west], [north, east]] - adjusted for the full map canvas
-  const middleEarthBounds = [[-10, -100], [100, 100]];
+  const middleEarthBounds = [[-100, -240], [100, 340]];
 
   return (
     <div className="w-full h-full relative z-0">
       <MapContainer
-        center={[60, -35]}
-        zoom={2}
+        center={[65, -120]}
+        zoom={2.5}
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
         bounds={middleEarthBounds}
