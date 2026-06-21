@@ -28,25 +28,27 @@ const goldIcon = new L.DivIcon({
 
 export function MapPanel() {
   const { currentChapterIndex } = useSilmarillion();
-  
+
   const visibleLocations = locationsData.filter(loc => loc.firstChapter <= currentChapterIndex);
 
-  // Bounds for the Beleriand map image (adjusted for aspect ratio)
-  // [[south, west], [north, east]]
-  const beleriandBounds = [[0, -90], [75, 90]];
+  // Bounds for the complete Middle-earth map image
+  // [[south, west], [north, east]] - adjusted for the full map canvas
+  const middleEarthBounds = [[-100, -240], [100, 340]];
 
   return (
     <div className="w-full h-full relative z-0">
       <MapContainer
-        center={[37.5, 0]}
-        zoom={1.5}
+        center={[65, -120]}
+        zoom={2.5}
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
-        bounds={beleriandBounds}
+        bounds={middleEarthBounds}
+        maxBounds={middleEarthBounds}
+        maxBoundsViscosity={1.0}
       >
         <ImageOverlay
-          url="/maps/beleriand.jpg"
-          bounds={beleriandBounds}
+          url="/maps/middleearth.jpg"
+          bounds={middleEarthBounds}
         />
         
         {visibleLocations.map(loc => (
