@@ -106,55 +106,9 @@ export type FlowEdge = {
   label: string;
 };
 
-// ==================== CHAPTERS ====================
 export const chaptersData: Chapter[] = [
-  {
-    id: 0,
-    title: "Ainulindalë",
-    subtitle: "La Música de los Ainur",
-    description: "En el principio, Ilúvatar el Único creó a los Ainur de su pensamiento. Juntos cantaron una Gran Música que dio forma a la visión del mundo. Melkor, ambicioso, introdujo discordia en la música, pero Ilúvatar incorporó incluso su desarmonia en un propósito mayor. Tras la visión, algunos Ainur descendieron a Eä para darle forma.",
-    needToKnow: [
-      "Ilúvatar es el Creador Único, eterno y todopoderoso.",
-      "Los Ainur son seres angelicales creados de los pensamientos de Ilúvatar antes de la existencia de todas las cosas.",
-      "La creación ocurre a través de música: Ilúvatar propone temas, los Ainur cantan.",
-      "Melkor es el Ainur más grande en poder, pero ambicioso, envidioso y rebelde.",
-      "Melkor introduce discordia tres veces en la Música (tres temas), causando conflicto.",
-      "Ilúvatar lidera cada intento de Melkor en un tema más grande, incorporando la discordia a Su propósito.",
-      "Manwë es hermano de Melkor en el pensamiento y primer instrumento del segundo tema.",
-      "Ulmo recibe instrucción especial de Ilúvatar y sus pensamientos se vuelven al agua.",
-      "Aulë el Creador reflexiona sobre la materia de la Tierra con poder casi igual al de Melkor.",
-      "La música causa que el mundo sea visto en una Visión: Ilúvatar muestra a los Ainur qué han creado.",
-      "Los Hijos de Ilúvatar (Elfos y Hombres) aparecen en la Visión como criaturas nuevas y libres.",
-      "Todos los Ainur, incluso Melkor, aman a los Hijos al verlos en la Visión.",
-      "Ilúvatar convierte la Visión en realidad: declara 'Eä' (Que Sea) y el Mundo Es.",
-      "Los Ainur que descienden a Eä se limitan al Mundo y se llaman los Valar.",
-      "Algunos Ainur permanecen con Ilúvatar más allá de los confines del Mundo.",
-      "Melkor comienza inmediatamente a interferir y destruir los trabajos de los otros Ainur en Arda.",
-      "La Primera Batalla de los Valar comienza: Melkor vs. los otros Ainur por el dominio de Arda.",
-      "El conflicto entre el bien y el mal es fundamental al mundo desde su creación misma.",
-      "Este capítulo es la introducción a toda la mitología: nada en el Silmarillion puede entenderse sin él."
-    ],
-    shouldKnowAfter: [
-      "La discordia de Melkor NO fue un error sino prevista por Ilúvatar.",
-      "Incluso la rebelión y el mal son permitidos por el Creador como parte de Su propósito mayor.",
-      "El conflicto cósmico que durará toda la Primera Edad fue sembrado en la Música misma.",
-      "Melkor se convierte en 'Morgoth' (El Enemigo Negro), el antagonista primario de toda la historia.",
-      "Los Ainur nombrados (Manwë, Ulmo, Aulë) serán figuras centrales en el resto del Silmarillion.",
-      "La visión del mundo fue incompleta: los Valar no vieron el fin de la Tercera Edad.",
-      "La Llama Imperecedera en el corazón del Mundo es la fuente de toda vida y poder.",
-      "El concepto de libre albedrío existe incluso para seres tan grandes: Melkor eligió su rebelión.",
-      "La música es tanto literal como metafórica: los eventos del mundo continúan la música de la creación.",
-      "Eä (el Mundo Que Es) es tanto físico como espiritual: Arda es el reino material, pero hay más allá.",
-      "Este es un cuento de CREACIÓN que prepara para un cuento de CAÍDA: todo lo hermoso será destruido.",
-      "El tema del 'dolor en la belleza' aparece ya aquí: incluso la Música de Ilúvatar contiene 'dolor sin medida'.",
-      "Los Hijos de Ilúvatar son el PROPÓSITO del mundo: todo existe para ellos.",
-      "El riesgo de la libertad es real incluso en el universo de Tolkien: los seres libres pueden rechazar a su Creador.",
-      "Esto NO es una cosmología simple de bien vs. mal, sino una reflexión teológica compleja.",
-      "La esperanza reside en que incluso la maldad será usada para fines mayores que la maldad misma.",
-      "El lector debe entender que NADA de lo que sigue puede ser entendido sin esta base cosmológica."
-    ]
-  },
-  { id: 1, title: "Valaquenta", subtitle: "Historia de los Valar", description: "Los nombres y naturalezas de los Valar y los Maiar, los grandes poderes que rigen el mundo.", needToKnow: ["Los Valar son los mayores de los Ainur que entraron en Arda.", "Manwë es el Rey de Arda, señor del aire.", "Ulmo domina las aguas y Aulë es el gran forjador.", "Melkor perdió su estatus como Vala debido a su orgullo.", "Los Maiar son espíritus de menor poder que sirven a los Valar."] },
+  { id: 0, title: "Ainulindalë", subtitle: "La Música de los Ainur", description: "En el principio, Ilúvatar el Único creó a los Ainur de su pensamiento. Juntos cantaron la Gran Música que contenía la historia de Arda. Ilúvatar levantó tres temas contra la discordancia de Melkor, y en la Visión mostró a los Ainur todo cuanto acontecería. Cuando pronunció 'Eä', la Música se hizo real.", needToKnow: ["Eru Ilúvatar es el creador supremo, fuente de todo ser.", "Los Ainur son seres angelicales creados del pensamiento divino.", "La Gran Música de los Ainur fue el acto de creación, conteniendo toda la historia.", "Melkor introdujo disonancia en tres ocasiones; Ilúvatar la incorporó al propósito supremo.", "Ilúvatar levantó tres temas contrapuestos que Manwë llevó adelante.", "La Visión de Arda fue mostrada a los Ainur, revelando cuanto sucedería.", "Los Hijos de Ilúvatar (Elfos y Hombres) fueron previstos, dotados de libertad verdadera.", "Cuando Ilúvatar pronunció 'Eä', la Música se convirtió en realidad: nació Arda.", "Los Valar descendieron a Arda para completar su formación según la Visión.", "Manwë se convirtió en el instrumento principal de Ilúvatar en la Tierra Media."], shouldKnowAfter: ["La disonancia de Melkor no fue un error sino que fue prevista y permitida por Ilúvatar como parte de Su plan eterno.", "La soberanía absoluta de Ilúvatar implica que incluso el mal sirve a Sus propósitos.", "Los Hijos de Ilúvatar poseen libertad verdadera que ni los Ainur ni los Valar pueden coaccionar.", "La creación es dual: primero la Música en potencia, luego la Visión reveladora, finalmente 'Eä' como realidad.", "Los Valar aceptaron limitaciones voluntarias al descender a Arda, sometiéndose al orden creado.", "Las intenciones malignas de Melkor eran visibles desde el principio; su envidia es su característica definitoria.", "Ilúvatar promete que al final habrá una Música más grande que la primera, vindicando Su propósito.", "El mundo es precantado, es decir, su historia está tejida en la Música desde la eternidad.", "La Historia de Arda es la manifestación gradual de la Música ya existente.", "El conflicto entre el bien y el mal es fundamental y necesario en el plan divino."] },
+  { id: 1, title: "Valaquenta", subtitle: "Historia de los Valar", description: "Registro de los catorce Valar (siete Señores y siete Reinas) que gobiernan Arda bajo la autoridad de Ilúvatar a través de Manwë. Incluye los ocho Aratar, los Maiar principales que los sirven, sus dominios y naturaleza. Termina con la expulsión de Melkor de la cuenta de los Valar.", needToKnow: ["Los Valar son catorce: siete Señores y siete Reinas, los más poderosos de los Ainur.", "Manwë es el Rey de Arda designado por Ilúvatar, Señor del Aire.", "Ulmo es el segundo en poder, Señor de todas las aguas, y nunca abandona Arda ni a sus habitantes.", "Aulë es el Herrero, Señor de la materia de Arda; los Noldor aprendieron más de él.", "Los ocho Aratar (Manwë, Varda, Ulmo, Yavanna, Aulë, Mandos, Nienna, Oromë) son los más poderosos de los Valar."], shouldKnowAfter: ["Las formas visibles de los Valar son como vestiduras, no su verdadera esencia; pueden ir sin forma.", "Los Maiar son espíritus menores que sirven a los Valar, algunos de los cuales tendrán papeles cruciales en la historia.", "Ulmo nunca participó plenamente en los edictos de los Valar que abandonaron Arda; siempre ama a Elfos y Hombres.", "Olórin (futuro Gandalf) aprendió de Nienna la piedad y la paciencia en las adversidades.", "Sauron fue en un principio Maia de Aulë antes de ser corrompido por Melkor; los Balrogs son Valaraukar, Maiar corrompidos."] },
   { id: 2, title: "Quenta Silmarillion I", subtitle: "Del comienzo de los días", description: "La conformación inicial de Arda, las Primeras Guerras con Melkor y la destrucción de las Lámparas.", needToKnow: ["Los Valar dieron forma al mundo pese a los ataques de Melkor.", "Se crearon las Grandes Lámparas, Illuin y Ormal.", "Melkor destruyó las lámparas, arruinando la simetría original.", "Los Valar se retiraron a Aman, en el oeste.", "Allí fundaron el reino bendecido de Valinor."] },
   { id: 3, title: "Quenta Silmarillion II", subtitle: "De Aulë y Yavanna", description: "La creación secreta de los Enanos y el despertar de los Ents.", needToKnow: ["Aulë creó a los Enanos impaciente por tener a quién enseñar.", "Ilúvatar les dio vida verdadera, pero ordenó que durmieran hasta el Despertar de los Elfos.", "Yavanna temió por los bosques ante los futuros Enanos y Hombres.", "A petición de Yavanna, surgieron los Ents (Pastores de Árboles).", "El equilibrio entre la piedra y el bosque fue establecido."] },
   { id: 4, title: "Quenta Silmarillion III", subtitle: "Del advenimiento de los Elfos", description: "Bajo las estrellas, despiertan los Primeros Nacidos en Cuiviénen.", needToKnow: ["Los Elfos despertaron junto al lago Cuiviénen.", "Fueron encontrados primero por Melkor y luego por Oromë.", "Los Valar hicieron la guerra a Melkor para proteger a los Elfos.", "Melkor fue encadenado y llevado a Valinor.", "Los Valar invitaron a los Elfos a vivir con ellos en Aman."] },
@@ -163,814 +117,451 @@ export const chaptersData: Chapter[] = [
   { id: 7, title: "Quenta Silmarillion VI", subtitle: "De Fëanor", description: "Nace el más grande y trágico de los Elfos, y se siembra la discordia en la casa de Finwë.", needToKnow: ["Fëanor nació de Míriel, quien murió de cansancio al darle a luz.", "Finwë volvió a casarse con Indis y tuvo a Fingolfin y Finarfin.", "Fëanor se convirtió en el herrero y erudito más talentoso.", "Inventó las letras Tengwar.", "La relación entre Fëanor y sus medios hermanos era tensa."] },
   { id: 8, title: "Quenta Silmarillion VII", subtitle: "De los Silmarils", description: "Fëanor encierra la luz de los Dos Árboles en tres joyas inigualables.", needToKnow: ["Fëanor forjó los tres Silmarils.", "Estas joyas contenían la luz pura de Laurelin y Telperion.", "Melkor, liberado de sus cadenas, empezó a codiciar las joyas.", "Esparció mentiras para enemistar a los Noldor con los Valar.", "Fëanor desenvainó su espada contra Fingolfin y fue exiliado."], shouldKnowAfter: ["La creación de los Silmarils, aunque hermosa, fue lo que atrajo la atención de Morgoth.", "El orgullo de Fëanor en su obra lo hizo vulnerable a la manipulación de Morgoth.", "Este es el momento en que la tragedia de los Elfos realmente comienza.", "El juramento de recuperar los Silmarils traerá infinito dolor a los Noldor durante edades."] },
   { id: 9, title: "Quenta Silmarillion VIII", subtitle: "Del oscurecimiento de Valinor", description: "La venganza de Melkor trae la oscuridad al Reino Bendecido.", needToKnow: ["Melkor se alió con Ungoliant, una criatura en forma de araña gigante.", "Juntos destruyeron los Dos Árboles de Valinor.", "Oscuridad total cayó sobre Aman.", "Melkor asesinó al Rey Finwë en Formenos.", "Melkor robó los Silmarils y huyó hacia la Tierra Media."] },
-  { id: 10, title: "Quenta Silmarillion IX", subtitle: "De la fuga de los Noldor", description: "Fëanor encabeza la rebelión de los Noldor para recuperar los Silmarils y vengar la muerte de su padre.", needToKnow: ["Fëanor levantó a los Noldor en armas contra Morgoth.", "Jura un terrible juramento de recuperar los Silmarils a cualquier precio.", "Los Noldor se dividen entre los hijos de Finwë: Fingolfin y Finarfin.", "Finarfin se arrepiente y vuelve, pero sus hijos continúan.", "Los Noldor navegan hacia la Tierra Media en los barcos de los Teleri."] },
-  { id: 11, title: "Quenta Silmarillion X", subtitle: "De Mithrim", description: "Llegada de los Noldor a la Tierra Media y primeros enfrentamientos con Morgoth.", needToKnow: ["Los Noldor llegan a las costas de Mithrim en el norte de Beleriand.", "Fingolfin aún estaba en Aman cuando Fëanor huyó, lo que causó divisiones.", "Los Noldor establecen sus primeros asentamientos en tierras hostiles.", "Morgoth envía orcos para atacarlos, pero los Noldor prevalecen inicialmente.", "Fëanor es mortalmente herido en batalla y muere poco después."] },
-  { id: 12, title: "Quenta Silmarillion XI", subtitle: "El Cuento de los Hijos de Húrin", description: "Una de las mayores tragedias del Silmarillion: la maldición de Túrin Turambar.", needToKnow: ["Túrin es el hijo de Húrin, guerrero famoso de los Noldor.", "Morgoth pone una maldición sobre Túrin que lo persigue toda su vida.", "Su vida está marcada por tragedias y amores imposibles.", "Sus actos, aunque valientes, traen ruina a sus aliados.", "Su historia es la más trágica de la Primera Edad."] },
-  { id: 13, title: "Quenta Silmarillion XII", subtitle: "De Beren y Lúthien", description: "La historia de un Hombre y una Elfa que desafían a los poderes del mal.", needToKnow: ["Beren es un Hombre que se enamora de Lúthien, hija del Rey Thingol.", "Thingol impone una prueba imposible: traer un Silmaril de la corona de Morgoth.", "Con la ayuda de Lúthien y su magia, Beren logra lo imposible.", "Ambos sufren grandes sufrimientos pero su amor los transciende.", "Esta es la historia de mayor belleza del Silmarillion."] },
-  { id: 14, title: "Quenta Silmarillion XIII", subtitle: "De Nargothrond y su ruina", description: "El reino subterráneo de los Elfos es construido y destruido por orgullo y traición.", needToKnow: ["Nargothrond fue fundada por Finrod Felagund en el río Narog.", "Finrod fue honesto pero no lo suficientemente astuto.", "Túrin vino a Nargothrond y causó división entre sus elfos.", "El dragón Glaurung fue enviado por Morgoth y destruyó el reino.", "Los sobrevivientes huyeron, algunos hacia el este."] },
-  { id: 15, title: "Quenta Silmarillion XIV", subtitle: "De Beleriand y sus Reinos", description: "Una descripción del mapa político y geográfico de Beleriand durante la Primera Edad.", needToKnow: ["Beleriand se divide en varios reinos entre los Elfos.", "El norte está bajo el dominio de Fingolfin y sus hijos.", "El sur tiene reinos como Nargothrond y Doriath.", "Cada reino tiene su propia historia y destino.", "El mapa es complejo pero crucial para entender la Primera Edad."] },
-  { id: 16, title: "Quenta Silmarillion XV", subtitle: "De la Segunda y Tercera Edad", description: "El fin de la Primera Edad y el comienzo de nuevas épocas.", needToKnow: ["La Primera Edad termina con la Guerra de la Cólera.", "Los Valar finalmente intervienen directamente contra Morgoth.", "La mayoría de los Elfos parten hacia el Occidente.", "Algunos Elfos permanecen en la Tierra Media.", "Comienza la Segunda Edad con nuevas civilizaciones."] },
+  { id: 10, title: "Quenta Silmarillion IX", subtitle: "De la huida de los Noldor", description: "El Juramento de Fëanor y la rebelión contra los Valar.", needToKnow: ["Fëanor maldijo a Melkor llamándolo 'Morgoth'.", "Él y sus siete hijos hicieron un juramento inquebrantable de recuperar las joyas.", "Los Noldor se rebelaron y abandonaron Valinor.", "Ocurrió la Matanza de los Hermanos en Alqualondë por robar los barcos.", "El Hado de Mandos profetizó dolor y traición para los exiliados."], shouldKnowAfter: ["El Juramento de Fëanor es solemne y maldito - sus palabras en realidad tienen poder mágico.", "Los siete hijos de Fëanor están ahora vinculados a este juramento irromible.", "Matar a sus propios hermanos (los Teleri) en Alqualondë fue el primer crimen gracias al juramento.", "Mandos no predijo simplemente - su Hado es una maldición que se cumplirá sin remedio.", "Este es el momento definitivo en que los Noldor se condenan a sí mismos al exilio y al sufrimiento."] },
+  { id: 11, title: "Quenta Silmarillion X", subtitle: "De los Sindar", description: "Mientras los Elfos de Valinor prosperaban, Beleriand se preparaba bajo las estrellas.", needToKnow: ["Thingol y Melian gobernaban a los Sindar (Elfos Grises) en Beleriand.", "Melian creó un cerco mágico (la Cintura de Melian) para proteger Doriath.", "Los Enanos forjaron armas para Thingol.", "Los Orcos comenzaron a multiplicarse en la Tierra Media.", "Los Sindar desarrollaron su propia lengua y cultura."] },
+  { id: 12, title: "Quenta Silmarillion XI", subtitle: "Del Sol y la Luna", description: "La última flor y el último fruto de los Árboles traen nueva luz al mundo.", needToKnow: ["Los Valar lograron rescatar una flor de Telperion y un fruto de Laurelin.", "Arien guio al Sol y Tilion a la Luna.", "Morgoth se ocultó en las profundidades de Angband ante la nueva luz.", "El inicio de los Años del Sol marcó un cambio de era.", "Se despertaron nuevas formas de vida en la Tierra Media."] },
+  { id: 13, title: "Quenta Silmarillion XII", subtitle: "De los Hombres", description: "Con la salida del Sol, despiertan los Segundos Nacidos en Hildórien.", needToKnow: ["Los Hombres, el pueblo menor de Eru, despertaron en el este.", "Tienen el don (o maldición) de la mortalidad.", "Su destino no está ligado a Arda como el de los Elfos.", "Morgoth pronto encontró a los Hombres y sembró el miedo entre ellos.", "Algunos Hombres empezaron a migrar hacia el oeste."] },
+  { id: 14, title: "Quenta Silmarillion XIII", subtitle: "De la vuelta de los Noldor", description: "Los exiliados llegan a Beleriand y la guerra se enciende.", needToKnow: ["Fëanor murió en batalla poco después de llegar a Beleriand.", "Fingolfin y su hueste cruzaron el peligroso hielo crujiente del Helcaraxë.", "Maedhros (hijo de Fëanor) fue capturado por Morgoth.", "Fingon rescató a Maedhros de Thangorodrim.", "Los Noldor establecieron sus reinos rodeando la fortaleza de Morgoth."] },
+  { id: 15, title: "Quenta Silmarillion XIV", subtitle: "De Beleriand y sus Reinos", description: "La geografía política de las tierras del norte donde se librarán las grandes batallas.", needToKnow: ["Fingolfin gobernaba Hithlum en el noroeste.", "Los hijos de Fëanor protegían la frontera oriental.", "Finrod fundó Nargothrond en el sur.", "Turgon descubrió el valle oculto de Tumladen.", "Doriath se mantenía aislado bajo la protección de Melian."] },
+  { id: 16, title: "Quenta Silmarillion XV", subtitle: "De los Noldor en Beleriand", description: "Cuatrocientos años de paz armada durante el Sitio de Angband.", needToKnow: ["Turgon construyó en secreto la gloriosa ciudad de Gondolin.", "Finrod se hizo amigo de los primeros Hombres que llegaron a Beleriand.", "Galadriel vivió en Doriath aprendiendo de Melian.", "Glaurung, el primer dragón, hizo una aparición prematura y fue repelido.", "Fue una época de esplendor y esperanza cautelosa."] },
+  { id: 17, title: "Quenta Silmarillion XVI", subtitle: "De Maeglin", description: "Traición y oscuridad nacen del amor prohibido de Eöl.", needToKnow: ["Aredhel, hermana de Turgon, se perdió en los bosques.", "Se casó con Eöl el Elfo Oscuro y tuvieron a Maeglin.", "Aredhel y Maeglin huyeron a Gondolin.", "Eöl los persiguió y asesinó accidentalmente a Aredhel.", "Maeglin se crió en Gondolin, con semillas de amargura en su corazón."] },
+  { id: 18, title: "Quenta Silmarillion XVII", subtitle: "Del advenimiento de los Hombres", description: "Los Edain llegan a Beleriand y se alían con los Reyes Elfos.", needToKnow: ["Los Edain eran las Tres Casas de los Hombres amigos de los Elfos.", "La Casa de Bëor se alió con Finrod.", "La Casa de Haleth se asentó en el bosque de Brethil.", "La Casa de Hador se alió con Fingolfin.", "Demostraron ser guerreros valientes, aunque de vida efímera."] },
+  { id: 19, title: "Quenta Silmarillion XVIII", subtitle: "De la ruina de Beleriand", description: "El asedio se rompe en ríos de fuego durante la Batalla de la Llama Súbita.", needToKnow: ["Morgoth rompió el sitio de Angband en la Dagor Bragollach.", "Ríos de fuego destruyeron las llanuras verdes.", "Fingolfin, desesperado, retó a Morgoth a combate singular.", "Fingolfin hirió a Morgoth siete veces antes de caer.", "La alianza de los Elfos quedó fragmentada."] },
+  { id: 20, title: "Quenta Silmarillion XIX", subtitle: "De Beren y Lúthien", description: "La más grande historia de amor de la Primera Edad, de mortales y elfos, y de una joya robada a la oscuridad.", needToKnow: ["Beren, un Hombre proscrito, se enamoró de Lúthien, princesa Elfa.", "Thingol exigió un Silmaril como precio por la mano de su hija.", "Finrod murió protegiendo a Beren.", "Beren y Lúthien lograron arrebatar un Silmaril de la corona de Morgoth.", "Lúthien eligió volverse mortal para compartir el destino de Beren."], shouldKnowAfter: ["Beren y Lúthien fueron los únicos que lograron recuperar un Silmaril de las manos de Morgoth.", "Su victoria probó que incluso el poder de Morgoth podía ser desafiado.", "Lúthien abandonó su inmortalidad y se convirtió en la primera Elfa en elegir la mortalidad de los Hombres.", "Eöl, el padre de Maeglin, obtuvo el Silmaril de sus manos y lo perdió a los Enanos, iniciando una cadena de tragedias.", "El amor entre Beren y Lúthien es la única historia de redención en la Primera Edad."] },
+  { id: 21, title: "Quenta Silmarillion XX", subtitle: "De la quinta Batalla", description: "La Nirnaeth Arnoediad, la Batalla de las Lágrimas Innumerables.", needToKnow: ["Maedhros organizó una gran unión de Elfos, Hombres y Enanos.", "Una traición de los Hombres del Este arruinó la victoria inminente.", "Glaurung y los Balrogs destrozaron las huestes élficas.", "Húrin cubrió la retirada de Turgon hacia Gondolin.", "Morgoth logró el dominio casi total del norte de Beleriand."] },
+  { id: 22, title: "Quenta Silmarillion XXI", subtitle: "De Túrin Turambar", description: "El hijo de Húrin lucha contra la maldición de Morgoth y el dragón Glaurung.", needToKnow: ["Morgoth maldijo a la familia de Húrin.", "Túrin fue un gran guerrero, pero la tragedia le seguía.", "Provocó la caída de Nargothrond.", "Logró matar a Glaurung, el padre de los dragones.", "Se suicidó tras descubrir que se había casado con su propia hermana bajo el hechizo del dragón."] },
+  { id: 23, title: "Quenta Silmarillion XXII", subtitle: "De la ruina de Doriath", description: "La codicia por el Silmaril destruye el Reino Escondido.", needToKnow: ["Los Enanos asesinaron a Thingol por el collar Nauglamír y el Silmaril.", "Doriath fue saqueada, aunque Beren recuperó la joya temporalmente.", "Melian abandonó la Tierra Media en su dolor.", "Más tarde, los Hijos de Fëanor atacaron Doriath para recuperar el Silmaril.", "Doriath fue destruida para siempre."] },
+  { id: 24, title: "Quenta Silmarillion XXIII", subtitle: "De Tuor y la Caída de Gondolin", description: "La última fortaleza de los Noldor es traicionada desde dentro, pero de sus cenizas nace una estrella.", needToKnow: ["Tuor, un Hombre mortal, fue guiado por Ulmo a Gondolin.", "Se casó con Idril, hija de Turgon, y tuvieron a Eärendil.", "Maeglin traicionó a Gondolin revelando su ubicación a Morgoth.", "La ciudad cayó en una batalla épica con dragones y Balrogs.", "Tuor, Idril y Eärendil escaparon hacia el mar."] }
 ];
 
-// ==================== CHARACTERS ====================
 export const charactersData: Character[] = [
-  {
-    id: "iluvatar",
-    name: "Ilúvatar",
-    aliases: ["Eru", "El Único", "Padre de Todos"],
-    race: "Divino",
-    alignment: "good",
-    role: "Creador Supremo",
-    description: "El Creador Único y eterno. Propone la Música de los Ainur mediante la cual el mundo es creado.",
-    importance: "CRITICAL",
-    firstChapter: 0,
-    relationships: [
-      { characterId: "melkor", type: "enemy" },
-      { characterId: "manwe", type: "ally" }
-    ],
-    locations: [],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "melkor",
-    name: "Melkor",
-    aliases: ["El Enemigo", "Morgoth", "El Enemigo Negro"],
-    race: "Ainur",
-    alignment: "evil",
-    role: "Antagonista Principal",
-    description: "El Ainur más poderoso después de Ilúvatar. Ambicioso y rebelde, introduce discordia en la Música y después en Arda. Más tarde conocido como Morgoth.",
-    importance: "CRITICAL",
-    firstChapter: 0,
-    lastChapter: 24,
-    relationships: [
-      { characterId: "iluvatar", type: "enemy" },
-      { characterId: "manwe", type: "enemy" },
-      { characterId: "aule", type: "enemy" },
-      { characterId: "ulmo", type: "enemy" }
-    ],
-    locations: ["arda", "angband"],
-    events: [],
-    greatTales: ["beren-luthien", "turin", "fall-gondolin"]
-  },
-  {
-    id: "manwe",
-    name: "Manwë",
-    aliases: ["Súlimo", "Señor del Aire", "Rey de Arda"],
-    race: "Ainur / Vala",
-    alignment: "good",
-    role: "Líder de los Valar",
-    description: "El más noble de los Ainur. Hermano de Melkor en el pensamiento, pero opuesto en propósito. Líder de la resistencia contra Melkor y futuro Rey de Arda.",
-    importance: "CRITICAL",
-    firstChapter: 0,
-    lastChapter: 24,
-    relationships: [
-      { characterId: "iluvatar", type: "ally" },
-      { characterId: "melkor", type: "enemy" },
-      { characterId: "ulmo", type: "ally" },
-      { characterId: "aule", type: "ally" }
-    ],
-    locations: ["aman", "valinor"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "ulmo",
-    name: "Ulmo",
-    aliases: ["Señor de las Aguas", "Rey del Mar"],
-    race: "Ainur / Vala",
-    alignment: "good",
-    role: "Señor de las Aguas",
-    description: "El Ainur cuyo pensamiento se vuelve al agua. Recibe instrucción especial de Ilúvatar. Protector de la belleza acuática.",
-    importance: "HIGH",
-    firstChapter: 0,
-    lastChapter: 24,
-    relationships: [
-      { characterId: "iluvatar", type: "ally" },
-      { characterId: "manwe", type: "ally" },
-      { characterId: "melkor", type: "enemy" }
-    ],
-    locations: ["aman", "arda"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "aule",
-    name: "Aulë",
-    aliases: ["El Forjador", "Señor de la Tierra"],
-    race: "Ainur / Vala",
-    alignment: "good",
-    role: "Creador de Formas",
-    description: "El Ainur cuyo pensamiento reflexiona sobre la materia. Creador de obras bellas y duraderas. Poder casi igual a Melkor pero dedicado al bien.",
-    importance: "HIGH",
-    firstChapter: 0,
-    lastChapter: 24,
-    relationships: [
-      { characterId: "iluvatar", type: "ally" },
-      { characterId: "manwe", type: "ally" },
-      { characterId: "melkor", type: "enemy" }
-    ],
-    locations: ["aman", "arda"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "finwe",
-    name: "Finwë",
-    aliases: ["Rey de los Noldor"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Rey de los Noldor",
-    description: "Primer Rey de los Noldor en Aman. Padre de Fëanor, Fingolfin y Finarfin.",
-    importance: "HIGH",
-    firstChapter: 6,
-    relationships: [
-      { characterId: "feanor", type: "child" },
-      { characterId: "fingolfin", type: "child" },
-      { characterId: "finarfin", type: "child" }
-    ],
-    locations: ["valinor"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "feanor",
-    name: "Fëanor",
-    aliases: ["El Mayor de los Elfos", "Creador de los Silmarils"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Maestro Artesano y Rebelde",
-    description: "El más talentoso de los Elfos. Creador de los Silmarils. Su orgullo y obsesión con sus creaciones lo llevan a la rebelión.",
-    importance: "CRITICAL",
-    firstChapter: 6,
-    deathInfo: {
-      chapter: 10,
-      description: "Muere de sus heridas en batalla contra Morgoth"
-    },
-    relationships: [
-      { characterId: "finwe", type: "child" },
-      { characterId: "fingolfin", type: "sibling" },
-      { characterId: "finarfin", type: "sibling" }
-    ],
-    locations: ["valinor", "beleriand"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "fingolfin",
-    name: "Fingolfin",
-    aliases: ["Segundo Rey de los Noldor"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Rey de los Noldor",
-    description: "Hijo de Finwë y medio hermano de Fëanor. Más cuerdo y menos arrogante. Líder noble de los Noldor en la Tierra Media.",
-    importance: "HIGH",
-    firstChapter: 6,
-    relationships: [
-      { characterId: "finwe", type: "child" },
-      { characterId: "feanor", type: "sibling" },
-      { characterId: "finarfin", type: "sibling" }
-    ],
-    locations: ["valinor", "beleriand"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "finarfin",
-    name: "Finarfin",
-    aliases: ["Tercero de los Noldor"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Rey de los Noldor",
-    description: "Hijo de Finwë. Más sabio y reflexivo. Regresa a Valinor cuando reconoce el error de la rebelión.",
-    importance: "MEDIUM",
-    firstChapter: 6,
-    relationships: [
-      { characterId: "finwe", type: "child" },
-      { characterId: "feanor", type: "sibling" },
-      { characterId: "fingolfin", type: "sibling" }
-    ],
-    locations: ["valinor", "beleriand"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "thingol",
-    name: "Thingol",
-    aliases: ["Elwë Singollo", "Rey de Doriath"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Rey del Bosque de Doriath",
-    description: "Líder de los Teleri que se perdió en los bosques y encontró amor con Melian. Funda el reino de Doriath.",
-    importance: "HIGH",
-    firstChapter: 5,
-    relationships: [
-      { characterId: "melian", type: "spouse" }
-    ],
-    locations: ["doriath"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "melian",
-    name: "Melian",
-    aliases: ["Reina de Doriath"],
-    race: "Maia",
-    alignment: "good",
-    role: "Reina de Doriath",
-    description: "Una Maia que amó a Thingol. Reina de Doriath. Posee gran poder y sabiduría.",
-    importance: "HIGH",
-    firstChapter: 5,
-    relationships: [
-      { characterId: "thingol", type: "spouse" }
-    ],
-    locations: ["doriath"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "luthien",
-    name: "Lúthien",
-    aliases: ["La Más Bella de los Elfos", "Lúthien Tinúviel"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Heroína de Mayor Belleza",
-    description: "Hija de Thingol y Melian. Se enamora de Beren y desafía a los poderes del mal.",
-    importance: "CRITICAL",
-    firstChapter: 12,
-    relationships: [
-      { characterId: "thingol", type: "child" },
-      { characterId: "melian", type: "child" },
-      { characterId: "beren", type: "spouse" }
-    ],
-    locations: ["doriath", "beleriand"],
-    events: [],
-    greatTales: ["beren-luthien"]
-  },
-  {
-    id: "beren",
-    name: "Beren",
-    aliases: ["Camarog", "Beren el Valiente"],
-    race: "Hombre",
-    alignment: "good",
-    role: "Guerrero y Héroe",
-    description: "Un Hombre que se enamora de la Elfa Lúthien. Realiza hazañas imposibles movido por su amor.",
-    importance: "CRITICAL",
-    firstChapter: 12,
-    relationships: [
-      { characterId: "luthien", type: "spouse" }
-    ],
-    locations: ["beleriand"],
-    events: [],
-    greatTales: ["beren-luthien"]
-  },
-  {
-    id: "turin",
-    name: "Túrin",
-    aliases: ["Mormegil", "Gorthol", "Turambar", "El Hombre Salvaje"],
-    race: "Hombre",
-    alignment: "good",
-    role: "Guerrero Maldecido",
-    description: "Hijo de Húrin. Bajo una maldición de Morgoth que lo persigue toda su vida. Su historia es la más trágica.",
-    importance: "CRITICAL",
-    firstChapter: 12,
-    relationships: [
-      { characterId: "hurin", type: "child" }
-    ],
-    locations: ["beleriand"],
-    events: [],
-    greatTales: ["turin"]
-  },
-  {
-    id: "hurin",
-    name: "Húrin",
-    aliases: ["Thalion", "El Fuerte"],
-    race: "Hombre",
-    alignment: "good",
-    role: "Señor de Dor-lómin",
-    description: "Guerrero valiente. Padre de Túrin. Capturado por Morgoth pero permanece desafiante.",
-    importance: "HIGH",
-    firstChapter: 12,
-    relationships: [
-      { characterId: "turin", type: "child" }
-    ],
-    locations: ["beleriand"],
-    events: [],
-    greatTales: ["turin"]
-  },
-  {
-    id: "galadriel",
-    name: "Galadriel",
-    aliases: ["La Sabia", "Reina de Lothlórien"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Sabia Elfa",
-    description: "Hija de Finarfin. Sabia y poderosa. Sobrevive la Primera Edad y continúa en la Segunda y Tercera.",
-    importance: "HIGH",
-    firstChapter: 6,
-    relationships: [
-      { characterId: "finarfin", type: "child" }
-    ],
-    locations: ["valinor", "beleriand"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "finrod",
-    name: "Finrod Felagund",
-    aliases: ["Rey de Nargothrond"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Rey de Nargothrond",
-    description: "Hijo de Finarfin. Funda el reino de Nargothrond. Ayuda a Beren en su misión.",
-    importance: "HIGH",
-    firstChapter: 10,
-    relationships: [
-      { characterId: "finarfin", type: "child" }
-    ],
-    locations: ["nargothrond"],
-    events: [],
-    greatTales: ["beren-luthien"]
-  },
-  {
-    id: "earendil",
-    name: "Eärendil",
-    aliases: ["El Marinero", "Gil-Eärendil", "La Estrella Matutina"],
-    race: "Hombre/Elfo",
-    alignment: "good",
-    role: "Portador de Luz",
-    description: "Hijo de Tuor. Último gran héroe de la Primera Edad. Navega a Valinor cargando un Silmaril en su frente.",
-    importance: "CRITICAL",
-    firstChapter: 24,
-    relationships: [
-      { characterId: "tuor", type: "child" }
-    ],
-    locations: ["gondolin", "valinor"],
-    events: [],
-    greatTales: ["earendil"]
-  },
-  {
-    id: "tuor",
-    name: "Tuor",
-    aliases: ["El Valiente", "Padre de Eärendil"],
-    race: "Hombre",
-    alignment: "good",
-    role: "Héroe de Gondolin",
-    description: "Guerrero valiente que llega a Gondolin. Padre de Eärendil.",
-    importance: "HIGH",
-    firstChapter: 23,
-    relationships: [
-      { characterId: "earendil", type: "child" }
-    ],
-    locations: ["gondolin"],
-    events: [],
-    greatTales: []
-  },
-  {
-    id: "turgon",
-    name: "Turgon",
-    aliases: ["El Sabio", "Rey de Gondolin"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Rey de Gondolin",
-    description: "Hijo de Fingolfin. Funda la ciudad escondida de Gondolin. Sabio pero orgulloso.",
-    importance: "HIGH",
-    firstChapter: 10,
-    relationships: [
-      { characterId: "fingolfin", type: "child" }
-    ],
-    locations: ["gondolin"],
-    events: [],
-    greatTales: ["fall-gondolin"]
-  },
-  {
-    id: "idril",
-    name: "Idril",
-    aliases: ["Celebrindal", "Pies de Plata"],
-    race: "Elfo",
-    alignment: "good",
-    role: "Princesa de Gondolin",
-    description: "Hija de Turgon. Se enamora de Tuor. Madre de Eärendil.",
-    importance: "MEDIUM",
-    firstChapter: 23,
-    relationships: [
-      { characterId: "turgon", type: "child" },
-      { characterId: "tuor", type: "spouse" },
-      { characterId: "earendil", type: "child" }
-    ],
-    locations: ["gondolin"],
-    events: [],
-    greatTales: []
-  }
+  { id: "iluvatar", name: "Eru Ilúvatar", aliases: ["El Único", "Manwë en Arda", "El Creador"], race: "Eru", alignment: "good", role: "El Único, fuente de todo ser", description: "El Ser Supremo que creó a los Ainur de su pensamiento infinito y propuso los Grandes Temas de la Música que dieron forma a Arda.", details: "Ilúvatar es el Único, el Ser que existe por sí mismo, fuente de toda existencia. Creó a los Ainur en acto de su voluntad, dotándoles de potencia para crear. Levantó tres temas contra la discordancia de Melkor, incorporando incluso la maldad al propósito supremo. Mostró la Visión de Arda a los Ainur, revelando todo cuanto sucedería. Al pronunciar 'Eä', convirtió la Música en realidad. Su soberanía es absoluta: incluso el sufrimiento y el conflicto sirven a Sus propósitos eternos.", titles: [{chapter: 0, text: "El Único"}, {chapter: 0, text: "El Creador"}, {chapter: 0, text: "Fuente de Todo Ser"}], notableDeeds: [{chapter: 0, text: "Creación de los Ainur"}, {chapter: 0, text: "Proposición de los tres Temas de la Música"}, {chapter: 0, text: "Incorporación de la discordancia al propósito"}, {chapter: 0, text: "Pronunciación de 'Eä'"}], importance: "CRITICAL", firstChapter: 0, relationships: [], locations: ["Vacío Intemporal", "Aman"], events: ["Creación de los Ainur", "La Gran Música de los Ainur", "La Visión de Arda", "Pronunciación de Eä"], greatTales: ["creation-music", "eternal-struggle"] },
+  { id: "manwe", name: "Manwë", aliases: ["Manwë Sulimo", "Rey de los Valar", "Señor de los Vientos"], race: "Vala", alignment: "good", role: "Rey de Arda, Señor de los Vientos", description: "El más querido por Ilúvatar, comprende mejor que nadie Sus propósitos. Llevó adelante los temas de la Música contra Melkor.", details: "Manwë es el Rey de los Valar y el Señor del Aire y los Vientos. Durante la Gran Música, fue elegido por Ilúvatar para contraponer sus temas a la discordancia de Melkor. Es el instrumento principal de la voluntad divina en Arda. Su autoridad sobre los Ainur es reconocida universalmente, y su lealtad a Ilúvatar es inquebrantable.", titles: [{chapter: 0, text: "Rey de los Valar"}, {chapter: 1, text: "Señor del Aire"}, {chapter: 0, text: "Instrumento de Ilúvatar"}], notableDeeds: [{chapter: 0, text: "Levantó los temas de la Música contra Melkor"}, {chapter: 0, text: "Descendió a Arda para darle forma"}], importance: "CRITICAL", firstChapter: 0, relationships: [{characterId: "varda", type: "spouse"}, {characterId: "iluvatar", type: "father"}], locations: ["Valinor", "Taniquetil", "Aman"], events: ["Creación de los Ainur", "La Gran Música de los Ainur", "Descenso a Arda"], greatTales: ["creation-music", "eternal-struggle"] },
+  { id: "melkor", name: "Melkor / Morgoth", aliases: ["Melkor", "Morgoth", "El Enemigo", "El Señor Oscuro", "El Contramaestro"], race: "Vala corrompido", alignment: "evil", role: "El Señor Oscuro, mayor de los Ainur en poder pero corrompido", description: "El que se alzó en orgullo, deseando crear cosas propias como Ilúvatar, y trajo el mal al mundo. Introdujo tres veces disonancia en la Gran Música, pero incluso su maldad fue incorporada al propósito divino.", details: "Melkor fue uno de los grandes Ainur, dotado de poder casi igual al de los Valar. En el acto de creación, fue presa de la envidia y el orgullo: deseaba poseer la Llama Imperecedera y crear según su propia voluntad. Introdujo discordancia en la Música de los Ainur en tres ocasiones, buscando destruir los temas de Manwë. A pesar de sus intentos, Ilúvatar incorporó incluso su maldad al propósito supremo. Tras la caída de Valinor, se convirtió en Morgoth, el Señor Oscuro, y desde Angband atormentó a Elfos y Hombres durante las Primeras Edades.", titles: [{chapter: 0, text: "Vala"}, {chapter: 0, text: "Mayor de los Ainur en Poder"}, {chapter: 9, text: "Señor Oscuro"}, {chapter: 9, text: "El Enemigo"}], notableDeeds: [{chapter: 0, text: "Introdujo discordancia en la Música (tres intentos)"}, {chapter: 0, text: "Buscó poseer la Llama Imperecedera"}, {chapter: 2, text: "Destruyó las Lámparas de los Valar"}, {chapter: 9, text: "Robó los Silmarils"}, {chapter: 14, text: "Encadenó a Maedhros"}, {chapter: 22, text: "Maldijo a la casa de Húrin"}], importance: "CRITICAL", firstChapter: 0, relationships: [{characterId: "manwe", type: "enemy"}, {characterId: "iluvatar", type: "father"}], locations: ["Utumno", "Angband", "Vacío Intemporal"], events: ["Creación de los Ainur", "La Gran Música de los Ainur", "La Discordancia de Melkor", "Destrucción de las Lámparas", "Robo de los Silmarils"], greatTales: ["creation-music", "eternal-struggle", "beren-luthien", "turin", "fall-gondolin"] },
+  { id: "varda", name: "Varda", aliases: ["Elbereth", "Reina de las Estrellas"], race: "Vala", alignment: "good", role: "Reina de los Valar, Señora de las Estrellas", description: "La más poderosa entre los Valar y la más reverenciada por los Elfos. Confidente de Manwë en la dirección del mundo.", importance: "CRITICAL", firstChapter: 0, relationships: [{characterId: "manwe", type: "spouse"}, {characterId: "iluvatar", type: "father"}], locations: ["Valinor", "Taniquetil", "Aman"], events: ["Creación de los Ainur", "La Gran Música de los Ainur", "Creación de las estrellas"], greatTales: ["creation-music", "eternal-struggle"] },
+  { id: "aule", name: "Aulë", aliases: ["El Maestro Forjador", "Aulë el Supremo"], race: "Vala", alignment: "good", role: "El Maestro Forjador, modelador de la tierra", description: "Señor de las sustancias de las que está hecha la tierra. Ama el trabajo en sí mismo, no el poder ni la posesión. Durante la Música, participó en el canto con destreza.", importance: "HIGH", firstChapter: 0, relationships: [{characterId: "yavanna", type: "spouse"}, {characterId: "iluvatar", type: "father"}], locations: ["Valinor", "Aman"], events: ["Creación de los Ainur", "La Gran Música de los Ainur", "Descenso a Arda"], greatTales: ["creation-music"] },
+  { id: "yavanna", name: "Yavanna", aliases: ["Dadora de Frutos", "Yavanna Palantíri"], race: "Vala", alignment: "good", role: "Dadora de Frutos, Señora de la Vida Vegetal", description: "Amante de todas las cosas que crecen en la tierra. Durante la Música, cantó con poder sobre el crecimiento y la renovación. Es confidente de los propósitos de Ilúvatar.", importance: "HIGH", firstChapter: 0, relationships: [{characterId: "aule", type: "spouse"}, {characterId: "iluvatar", type: "father"}], locations: ["Valinor", "Aman"], events: ["Creación de los Ainur", "La Gran Música de los Ainur", "Creación de los Dos Árboles", "Descenso a Arda"], greatTales: ["creation-music"] },
+  { id: "ulmo", name: "Ulmo", aliases: ["Señor de las Aguas", "Ulmo de las Aguas Profundas"], race: "Vala", alignment: "good", role: "Señor de las Aguas y los Ríos", description: "Vive en el Océano Exterior y ama a los Elfos y los Hombres, guiándolos en secreto. Durante la Música, cantó con profundidad y poder. Es único entre los Valar: nunca abandonará Arda.", importance: "HIGH", firstChapter: 0, relationships: [{characterId: "iluvatar", type: "father"}, {characterId: "manwe", type: "ally"}], locations: ["Ekkaia", "Océano Exterior", "Aman"], events: ["Creación de los Ainur", "La Gran Música de los Ainur", "Descenso a Arda", "Guía a Turgon", "Guía a Tuor"], greatTales: ["creation-music", "fall-gondolin", "earendil"] },
+  { id: "finwe", name: "Finwë", race: "Elfo Noldor", alignment: "good", role: "Primer Rey de los Noldor", description: "Lideró a su pueblo a Valinor, su asesinato precipitó la rebelión de los Noldor.", importance: "HIGH", firstChapter: 4, relationships: [{characterId: "feanor", type: "child"}, {characterId: "fingolfin", type: "child"}, {characterId: "finarfin", type: "child"}], locations: ["Valinor", "Tirion"], events: ["Llegada a Valinor", "Asesinato en Formenos"], greatTales: [] },
+  { id: "thingol", name: "Elwë / Thingol", aliases: ["Elwë", "Thingol", "Singollo"], race: "Elfo Sindar", alignment: "good", role: "Rey de Doriath", description: "Vio la Luz de los Árboles pero se quedó en la Tierra Media por amor.", details: "Elwë era uno de los líderes de los Teleri, pero se perdió en los bosques de la Tierra Media y encontró a la Maia Melian. Su amor fue tan profundo que optó por quedarse con ella en lugar de viajar a Aman. Así fundó el reino de Doriath en los bosques centrales de Beleriand. Con la ayuda de la magia de Melian, Doriath se convirtió en un refugio de paz y sabiduría, pero también cayó bajo la maldición de los Silmarils.", titles: [{chapter: 5, text: "Rey de Doriath"}, {chapter: 5, text: "Señor de los Sindar"}, {chapter: 5, text: "El Gris"}], notableDeeds: [{chapter: 5, text: "Encontró a Melian y fundó Doriath"}, {chapter: 15, text: "Protegió Beleriand con la Cintura de Melian"}, {chapter: 20, text: "Exigió un Silmaril como dote de Lúthien"}, {chapter: 23, text: "Rechazó a los Hijos de Fëanor"}], importance: "CRITICAL", firstChapter: 5, lastChapter: 23, deathInfo: { chapter: 23, description: "Asesinado por los Enanos que deseaban el collar Nauglamír y el Silmaril que poseía." }, relationships: [{characterId: "melian", type: "spouse"}, {characterId: "luthien", type: "child"}], locations: ["Doriath", "Menegroth"], events: ["Encuentro con Melian", "Demanda del Silmaril"], greatTales: ["beren-luthien"] },
+  { id: "melian", name: "Melian", race: "Maia", alignment: "good", role: "Reina de Doriath", description: "Espíritu de gran poder que protegió su reino con una cintura de encantamiento.", importance: "HIGH", firstChapter: 5, relationships: [{characterId: "thingol", type: "spouse"}, {characterId: "luthien", type: "child"}], locations: ["Doriath"], events: ["La Cintura de Melian"], greatTales: ["beren-luthien"] },
+  { id: "luthien", name: "Lúthien Tinúviel", aliases: ["Lúthien", "Tinúviel", "Nightingale"], race: "Elfo/Maia", alignment: "good", role: "Hija de Thingol y Melian", description: "La más hermosa de todos los Hijos de Ilúvatar.", details: "Lúthien fue la más hermosa de todas las criaturas vivientes. Hija de Thingol, Rey de Doriath, y Melian, una Maia, combinó lo mejor de ambos mundos. Se enamoró de Beren, un mortal proscrito, y desafió a su padre para casarse con él. Juntos lograron arrebatar un Silmaril de la corona de Morgoth, una hazaña que nadie creía posible. En el acto final de su amor, Lúthien eligió volverse mortal para compartir el breve destino de Beren.", titles: [{chapter: 5, text: "Princesa de Doriath"}, {chapter: 5, text: "La Más Hermosa"}, {chapter: 5, text: "Bailadora de los Bosques"}], notableDeeds: [{chapter: 20, text: "Se enamoró de Beren el mortal"}, {chapter: 20, text: "Hizo dormir a Morgoth con su magia"}, {chapter: 20, text: "Logró arrebatar un Silmaril"}, {chapter: 20, text: "Renunció a la inmortalidad por amor"}], importance: "CRITICAL", firstChapter: 5, relationships: [{characterId: "beren", type: "spouse"}, {characterId: "thingol", type: "father"}, {characterId: "melian", type: "mother"}], locations: ["Doriath", "Tol Galen"], events: ["Robo del Silmaril", "Renuncia a la inmortalidad"], greatTales: ["beren-luthien"] },
+  { id: "feanor", name: "Fëanor", aliases: ["Fëanor", "Phëanor"], race: "Elfo Noldor", alignment: "neutral", role: "Creador de los Silmarils", description: "Su ardiente espíritu consumió su vida. Hacedor de grandes obras y de grandes males.", details: "Fëanor fue el más dotado de los Noldor en arte e ingenio. Creó las tres Silmarils, joyas que capturaban la luz pura de los Dos Árboles de Valinor. Su obsesión con estas gemas lo llevó a hacer un terrible juramento: recuperarlas cueste lo que cueste. Aunque su rebelión contra los Valar fue condenada, su legado fue la fuerza que sostuvo la resistencia élfica en la Tierra Media.", titles: [{chapter: 7, text: "El Gran Forjador"}, {chapter: 8, text: "Creador de los Silmarils"}, {chapter: 9, text: "Rey de los Noldor"}], notableDeeds: [{chapter: 7, text: "Inventó los Tengwar (letras élficas)"}, {chapter: 8, text: "Forjó los tres Silmarils"}, {chapter: 9, text: "Pronunció el Juramento de Fëanor"}, {chapter: 9, text: "Lideró la rebelión de los Noldor"}], importance: "CRITICAL", firstChapter: 7, deathInfo: { chapter: 10, description: "Murió a causa de heridas de batalla poco después de llegar a Beleriand, consumido por su fervor obsesivo." }, relationships: [{characterId: "finwe", type: "father"}], locations: ["Valinor", "Formenos", "Losgar"], events: ["Creación de los Silmarils", "Juramento de Fëanor", "Muerte en la Dagor-nuin-Giliath"], greatTales: ["beren-luthien", "turin", "fall-gondolin"] },
+  { id: "fingolfin", name: "Fingolfin", aliases: ["Fingolfin", "Aran Gwarth"], race: "Elfo Noldor", alignment: "good", role: "Rey Supremo de los Noldor en el exilio", description: "Valeroso rey que cruzó el hielo y desafió a Morgoth a duelo singular.", details: "Fingolfin fue el medio hermano de Fëanor y rey de los Noldor después de la muerte de su padre Finwë. Aunque no fue el principal instigador de la rebelión, cruzó el peligroso Helcaraxë con su pueblo para entrar en la Tierra Media. Durante el Sitio de Angband, fue el único que se atrevió a retar a Morgoth a combate singular. En ese duelo épico, hirió al Señor Oscuro siete veces antes de caer, una hazaña nunca olvidada.", titles: [{chapter: 10, text: "Señor de los Noldor"}, {chapter: 14, text: "Rey de Hithlum"}, {chapter: 19, text: "El Valeroso"}], notableDeeds: [{chapter: 10, text: "Cruzó el Helcaraxë con su pueblo"}, {chapter: 14, text: "Estableció los reinos de Beleriand"}, {chapter: 19, text: "Retó a Morgoth en duelo singular"}, {chapter: 19, text: "Hirió siete veces al Señor Oscuro"}], importance: "CRITICAL", firstChapter: 7, lastChapter: 19, deathInfo: { chapter: 19, description: "Murió en duelo singular contra Morgoth. Hirió al Señor Oscuro siete veces, pero fue abatido.", killer: "melkor" }, relationships: [{characterId: "finwe", type: "father"}], locations: ["Hithlum"], events: ["El cruce del Helcaraxë", "Duelo con Morgoth"], greatTales: [] },
+  { id: "finarfin", name: "Finarfin", race: "Elfo Noldor", alignment: "good", role: "Rey de los Noldor en Aman", description: "El único de los hijos de Finwë que regresó al arrepentirse de la rebelión.", importance: "MEDIUM", firstChapter: 7, relationships: [{characterId: "finwe", type: "father"}, {characterId: "galadriel", type: "child"}], locations: ["Tirion"], events: ["Arrepentimiento de Finarfin"], greatTales: [] },
+  { id: "galadriel", name: "Galadriel", aliases: ["Galadriel", "Alatáriel"], race: "Elfo Noldor", alignment: "good", role: "Una de los líderes de la rebelión", description: "Deseaba ver la Tierra Media y gobernar un reino allí.", importance: "HIGH", firstChapter: 7, relationships: [{characterId: "finarfin", type: "father"}], locations: ["Doriath", "Nargothrond"], events: ["El cruce del Helcaraxë"], greatTales: [] },
+  { id: "beren", name: "Beren Erchamion", aliases: ["Beren", "Erchamion"], race: "Hombre", alignment: "good", role: "El único mortal amado por un Elfo en la Primera Edad", description: "Proscrito valeroso que logró lo imposible por amor.", details: "Beren fue el hijo de Barahir, un mortal que luchó contra Morgoth. Proscrito y perseguido por el Señor Oscuro, fue el primer hombre que llegó a Doriath en los Años del Sol. Allí conoció a Lúthien, la hija del Rey Thingol, y se enamoraron profundamente. Cuando Thingol exigió un Silmaril como prueba de su amor, Beren aceptó esta misión imposible. Con la ayuda de Lúthien, logró lo que nadie creía posible: arrebatar un Silmaril de la mismísima corona de Morgoth.", titles: [{chapter: 20, text: "El Proscrito"}, {chapter: 20, text: "Portador del Silmaril"}, {chapter: 20, text: "El Valiente"}], notableDeeds: [{chapter: 20, text: "Ganó el amor de una Princesa Elfa"}, {chapter: 20, text: "Se enfrentó a Glaurung el dragón"}, {chapter: 20, text: "Logró arrebatar un Silmaril de Morgoth"}, {chapter: 24, text: "Su hijo fue Eärendil el Marinero"}], importance: "CRITICAL", firstChapter: 20, relationships: [{characterId: "luthien", type: "spouse"}], locations: ["Dorthonion", "Doriath", "Angband"], events: ["Búsqueda del Silmaril"], greatTales: ["beren-luthien"] },
+  { id: "turin", name: "Túrin Turambar", aliases: ["Túrin", "Turambar", "Mormegil"], race: "Hombre", alignment: "neutral", role: "Portador de la maldición de Morgoth", description: "Trágico héroe humano. Matador de Glaurung.", details: "Túrin fue el hijo de Húrin, maldecido por Morgoth. Aunque fue un guerrero valiente y dotado, todo lo que tocaba se convertía en tragedia. Fue capturado en la Nirnaeth Arnoediad pero escapó. Luego llegó a Nargothrond, donde su orgullo causó la caída del reino. Su mayor logro fue matar a Glaurung, el padre de los dragones, pero el dragón vengador lo maldijo con un hechizo que lo llevó a casarse con su propia hermana sin saberlo. Cuando descubrió la verdad, su desesperación lo llevó al suicidio.", titles: [{chapter: 22, text: "Portador de la Maldición"}, {chapter: 22, text: "El Guerrero Negro"}, {chapter: 22, text: "Matador de Glaurung"}], notableDeeds: [{chapter: 22, text: "Fue el guerrero más temido de su tiempo"}, {chapter: 22, text: "Su espada era legendaria"}, {chapter: 22, text: "Defendió Nargothrond"}, {chapter: 22, text: "Mató a Glaurung el dragón"}], importance: "CRITICAL", firstChapter: 22, deathInfo: { chapter: 22, description: "Se suicidó con su propia espada al descubrir que se había casado con su hermana bajo el hechizo de Glaurung." }, relationships: [], locations: ["Doriath", "Nargothrond", "Brethil"], events: ["Caída de Nargothrond", "Muerte de Glaurung"], greatTales: ["turin"] },
+  { id: "earendil", name: "Eärendil", aliases: ["Eärendil", "El Marinero Estrella"], race: "Medio-elfo", alignment: "good", role: "El marinero estrella", description: "Navegó a Valinor para pedir ayuda a los Valar por las Dos Razas.", details: "Eärendil fue el hijo de Tuor y la princesa elfa Idril, nacido en Gondolin. Cuando la ciudad cayó ante Morgoth, escapó con sus padres y el Silmaril recuperado de Beren y Lúthien. Intentó viajar a Valinor en un barco mágico para implorar a los Valar que fueran en ayuda de Elfos y Hombres. Los Valar le concedieron esta misión, colocando el Silmaril en su frente como una estrella brillante. Se convirtió en Gil-Eärendil, la Estrella de la Mañana, visible en el cielo nocturno de Arda para siempre, símbolo de esperanza.", titles: [{chapter: 24, text: "El Marinero Estrella"}, {chapter: 24, text: "Portador del Silmaril"}, {chapter: 24, text: "Mensajero de los Valar"}], notableDeeds: [{chapter: 24, text: "Escapó de la caída de Gondolin"}, {chapter: 24, text: "Viajó a Valinor contra toda probabilidad"}, {chapter: 24, text: "Dio inicio a la Guerra de la Cólera"}, {chapter: 24, text: "Se convirtió en una estrella eternal"}], importance: "CRITICAL", firstChapter: 24, relationships: [], locations: ["Gondolin", "Puertos del Sirion"], events: ["Navegación a Aman", "Guerra de la Cólera"], greatTales: ["fall-gondolin", "earendil"] },
+  { id: "mandos", name: "Mandos / Námo", aliases: ["Námo", "Guardián de las Casas de los Muertos", "Juez de los Valar"], race: "Vala", alignment: "good", role: "Guardián de los espíritus de los muertos", description: "El mayor de los Fëanturi. No olvida nada; conoce todas las cosas que serán, excepto las que dependen de la libertad de Ilúvatar. Condena solo por orden de Manwë.", importance: "HIGH", firstChapter: 1, relationships: [{characterId: "nienna", type: "sibling"}, {characterId: "irmo", type: "sibling"}, {characterId: "vaire", type: "spouse"}], locations: ["Valinor", "Mandos"], events: ["Hado de Mandos"], greatTales: [] },
+  { id: "irmo", name: "Lórien / Irmo", aliases: ["Irmo", "Patrono de visiones y sueños", "El Menor de los Fëanturi"], race: "Vala", alignment: "good", role: "Señor de los sueños y las visiones", description: "El menor de los Fëanturi. Sus jardines en Lórien son el lugar más hermoso del mundo. Los mismos Valar acuden allí para encontrar reposo.", importance: "MEDIUM", firstChapter: 1, relationships: [{characterId: "mandos", type: "sibling"}, {characterId: "nienna", type: "sibling"}, {characterId: "este", type: "spouse"}], locations: ["Valinor", "Lórien"], events: ["Creación de Lórien"], greatTales: [] },
+  { id: "nienna", name: "Nienna", aliases: ["Hermana de los Fëanturi"], race: "Vala", alignment: "good", role: "Señora del duelo y la compasión", description: "Más poderosa que Estë. Vive sola. Llora todas las heridas de Arda. No llora por sí misma. Quienes la escuchan aprenden piedad y firmeza en la esperanza. Convierte el dolor en sabiduría.", details: "Rara vez viene a Valimar. Visita los palacios de Mandos. Sus ventanas miran hacia afuera desde los muros del mundo.", importance: "HIGH", firstChapter: 1, relationships: [{characterId: "mandos", type: "sibling"}, {characterId: "irmo", type: "sibling"}], locations: ["Valinor", "Mandos", "Límites del Mundo"], events: [], greatTales: [] },
+  { id: "vaire", name: "Vairë", aliases: ["La Tejedora"], race: "Vala", alignment: "good", role: "Tejedora de la Historia", description: "Teje todas las cosas que han sido en el Tiempo en tramas de historias. Las estancias de Mandos se adornan con sus obras.", importance: "LOW", firstChapter: 1, relationships: [{characterId: "mandos", type: "spouse"}], locations: ["Valinor", "Mandos"], events: [], greatTales: [] },
+  { id: "este", name: "Estë", aliases: ["La Gentil", "La Curadora"], race: "Vala", alignment: "good", role: "Curadora de heridas y fatigas", description: "Viste de gris, reposo es su don. No camina durante el día. Duerme en una isla en el lago de Lórellin, sombreado de árboles.", importance: "LOW", firstChapter: 1, relationships: [{characterId: "irmo", type: "spouse"}], locations: ["Valinor", "Lórien"], events: [], greatTales: [] },
+  { id: "tulkas", name: "Tulkas Astaldo", aliases: ["Astaldo", "El Valiente", "El más fuerte"], race: "Vala", alignment: "good", role: "El más fuerte en proezas físicas", description: "Último en llegar a Arda. Corre más rápido que toda criatura, no conoce la fatiga. Pelo y barba dorados, piel rojiza. Sus armas son las manos. Ríe siempre, incluso en guerra.", details: "No es buen consejero pero sí amigo intrépido. Poco caso hace del pasado o del futuro.", importance: "MEDIUM", firstChapter: 1, relationships: [{characterId: "nessa", type: "spouse"}], locations: ["Valinor"], events: [], greatTales: [] },
+  { id: "orome", name: "Oromë", aliases: ["Aldaron", "Tauron", "Señor de los Bosques"], race: "Vala", alignment: "good", role: "Cazador, Señor de los Bosques", description: "Más terrible en cólera que Tulkas. Amaba la Tierra Media y la dejó de mala gana. Cazador de monstruos y bestias feroces. Ama caballos, perros y árboles.", details: "Su caballo Nahar es blanco al sol, plata por la noche. Su cuerno Valaróma suena como el ascenso del sol envuelto en luz escarlata.", importance: "HIGH", firstChapter: 1, relationships: [{characterId: "vana", type: "spouse"}, {characterId: "nessa", type: "sibling"}], locations: ["Valinor", "Tierra Media"], events: ["Descubrimiento de los Elfos"], greatTales: [] },
+  { id: "vana", name: "Vána", aliases: ["La Siempre Joven"], race: "Vala", alignment: "good", role: "Señora de la juventud y las flores", description: "Hermana menor de Yavanna. Las flores brotan cuando ella pasa, se abren cuando ella las mira, y todos los pájaros cantan cuando ella se acerca.", importance: "LOW", firstChapter: 1, relationships: [{characterId: "orome", type: "spouse"}, {characterId: "yavanna", type: "sibling"}], locations: ["Valinor"], events: [], greatTales: [] },
+  { id: "nessa", name: "Nessa", aliases: ["La Ágil"], race: "Vala", alignment: "good", role: "Señora de la danza y la carrera", description: "Hermana de Oromë. Ágil y ligera de pies. Ama a los ciervos y los vence en la carrera. Danza en los prados siempre verdes de Valinor.", importance: "LOW", firstChapter: 1, relationships: [{characterId: "tulkas", type: "spouse"}, {characterId: "orome", type: "sibling"}], locations: ["Valinor"], events: [], greatTales: [] },
+  { id: "eonwe", name: "Eönwë", race: "Maia", alignment: "good", role: "Heraldo y portador del estandarte de Manwë", description: "Poder en el manejo de las armas que nadie sobrepasa en Arda. Sirve directamente a Manwë y es su voz entre los pueblos de Arda.", importance: "MEDIUM", firstChapter: 1, relationships: [{characterId: "manwe", type: "ally"}], locations: ["Valinor"], events: [], greatTales: [] },
+  { id: "ilmare", name: "Ilmarë", race: "Maia", alignment: "good", role: "Doncella de Varda", description: "Sirve a Varda. La única Maia que habita comúnmente en Valinor con los Valar.", importance: "LOW", firstChapter: 1, relationships: [{characterId: "varda", type: "ally"}], locations: ["Valinor", "Taniquetil"], events: [], greatTales: [] },
+  { id: "osse", name: "Ossë", race: "Maia", alignment: "neutral", role: "Amo de los mares costeros", description: "Vasallo de Ulmo. Ama las costas e islas. Se deleita en las tormentas y ríe en medio del rugir de las olas. Nunca perdió del todo el gusto por la violencia.", importance: "MEDIUM", firstChapter: 1, relationships: [{characterId: "ulmo", type: "ally"}, {characterId: "uinen", type: "spouse"}], locations: ["Mares costeros", "Océano"], events: [], greatTales: [] },
+  { id: "uinen", name: "Uinen", race: "Maia", alignment: "good", role: "Señora de los Mares", description: "Vasalla de Ulmo. Sus cabellos se esparcen por todas las aguas bajo el cielo. Los marineros claman por ella para calmar las olas. Los Númenóreanos la veneraban como a los Valar.", importance: "MEDIUM", firstChapter: 1, relationships: [{characterId: "ulmo", type: "ally"}, {characterId: "osse", type: "spouse"}], locations: ["Océano", "Aguas del Mundo"], events: [], greatTales: [] },
+  { id: "olorin", name: "Olórin", race: "Maia", alignment: "good", role: "El más sabio de los Maiar", description: "Vivía en Lórien. Sus caminos lo llevaban a menudo a casa de Nienna, de quien aprendió piedad y paciencia. Andaba entre los Elfos invisible o con forma élfica. Quienes lo escuchaban despertaban de la desesperación.", details: "Más tarde será amigo de todos los Hijos de Ilúvatar. Conocido en la Tierra Media como Gandalf.", importance: "HIGH", firstChapter: 1, relationships: [{characterId: "manwe", type: "ally"}, {characterId: "nienna", type: "ally"}], locations: ["Valinor", "Lórien", "Tierra Media"], events: [], greatTales: ["fall-gondolin", "earendil"] }
 ];
 
-// ==================== LOCATIONS ====================
 export const locationsData: Location[] = [
-  {
-    id: "valinor",
-    name: "Valinor",
-    aliases: ["Reino de los Valar", "Reino Bendecido"],
-    description: "Ciudad de los Valar. Ubicada en Aman, al occidente del Gran Mar.",
-    importance: "CRITICAL",
-    type: "Kingdom",
-    region: "Aman",
-    status: "Active",
-    firstChapter: 2,
-    ruler: { characterId: "manwe" },
-    lat: 0,
-    lng: 0,
-    greatTales: []
-  },
-  {
-    id: "aman",
-    name: "Aman",
-    aliases: ["Tierra Bendecida", "El Occidente"],
-    description: "La tierra sagrada más allá del Gran Mar donde los Valar moran.",
-    importance: "CRITICAL",
-    type: "Realm",
-    region: "Aman",
-    status: "Active",
-    firstChapter: 2,
-    lat: 0,
-    lng: 0,
-    greatTales: []
-  },
-  {
-    id: "beleriand",
-    name: "Beleriand",
-    aliases: ["La Tierra de los Elfos"],
-    description: "Gran región en el norte de la Tierra Media. Contiene los principales reinos elfos.",
-    importance: "CRITICAL",
-    type: "Region",
-    region: "Beleriand",
-    status: "Destroyed",
-    firstChapter: 10,
-    lat: 0,
-    lng: 0,
-    greatTales: []
-  },
-  {
-    id: "doriath",
-    name: "Doriath",
-    aliases: ["Bosque Escondido", "Tierra de Thingol"],
-    description: "Reino de Thingol protegido por la magia de Melian.",
-    importance: "HIGH",
-    type: "Kingdom",
-    region: "Beleriand",
-    status: "Destroyed",
-    firstChapter: 5,
-    ruler: { characterId: "thingol" },
-    lat: 0,
-    lng: 0,
-    greatTales: []
-  },
-  {
-    id: "nargothrond",
-    name: "Nargothrond",
-    aliases: ["Fortaleza Subterránea"],
-    description: "Gran fortaleza subterránea de los Elfos fundada por Finrod Felagund.",
-    importance: "HIGH",
-    type: "Fortress",
-    region: "Beleriand",
-    status: "Destroyed",
-    firstChapter: 12,
-    ruler: { characterId: "finrod" },
-    lat: 0,
-    lng: 0,
-    greatTales: []
-  },
-  {
-    id: "gondolin",
-    name: "Gondolin",
-    aliases: ["Ciudad Escondida", "La Gran Fortaleza"],
-    description: "Ciudad escondida de los Elfos fundada por Turgon en las montañas.",
-    importance: "HIGH",
-    type: "City",
-    region: "Beleriand",
-    status: "Destroyed",
-    firstChapter: 10,
-    ruler: { characterId: "turgon" },
-    lat: 0,
-    lng: 0,
-    greatTales: ["fall-gondolin"]
-  },
-  {
-    id: "angband",
-    name: "Angband",
-    aliases: ["Fortaleza de Morgoth"],
-    description: "Fortaleza de Morgoth en el norte de la Tierra Media. Su principal bastión.",
-    importance: "CRITICAL",
-    type: "Fortress",
-    region: "Beleriand",
-    status: "Destroyed",
-    firstChapter: 10,
-    lat: 0,
-    lng: 0,
-    greatTales: []
-  }
+  { id: "void-timeless", name: "El Vacío Intemporal", aliases: ["Los Palacios Intemporales", "El Trono de Ilúvatar"], description: "El lugar sin tiempo donde Ilúvatar existe y crea. Aquí fueron cantados los Ainur y donde Ilúvatar pronunció 'Eä'. Es el origen de toda existencia.", importance: "CRITICAL", type: "Realm", region: "Legendario", status: "Legendary", firstChapter: 0, lat: 0, lng: 0, relatedCharacters: ["iluvatar", "manwe", "melkor", "varda"], relatedEvents: ["creation-ainur", "great-music", "eä"], greatTales: ["creation-music"] },
+  { id: "valinor", name: "Valinor", description: "El Reino Bendecido en el continente de Aman, hogar de los Valar y los Elfos de la Luz. Aquí fue la Música cantada, los Árboles crecieron, y los Valar dirigieron el destino de Arda.", importance: "CRITICAL", type: "Realm", region: "Aman", status: "Active", firstChapter: 0, lat: 20, lng: -60, relatedCharacters: ["manwe", "varda", "aule", "yavanna", "ulmo", "iluvatar"], relatedEvents: ["great-music", "vision-arda"], greatTales: ["creation-music"] },
+  { id: "angband", name: "Angband", description: "La fortaleza secundaria y luego principal de Morgoth en el norte de Beleriand.", importance: "CRITICAL", type: "Fortress", region: "Beleriand", status: "Active", firstChapter: 3, lat: 75, lng: -20, ruler: { characterId: "melkor", period: "Capítulos 3-24" }, relatedCharacters: ["melkor", "beren", "luthien", "turin"], relatedEvents: ["t12", "t13"], greatTales: ["beren-luthien", "turin", "fall-gondolin"] },
+  { id: "doriath", name: "Doriath", aliases: ["El Reino Escondido", "Menegroth"], description: "El Reino Escondido de Thingol y Melian en los bosques centrales de Beleriand.", importance: "CRITICAL", type: "Kingdom", region: "Beleriand", status: "Destroyed", lastChapter: 23, firstChapter: 5, ruler: { characterId: "thingol", period: "Capítulos 5-23" }, relatedCharacters: ["thingol", "melian", "luthien", "beren"], relatedEvents: ["t4", "t16"], lat: 50, lng: 20, greatTales: ["beren-luthien"] },
+  { id: "tirion", name: "Tirion", description: "La gran ciudad de los Elfos Noldor y Vanyar sobre la colina de Túna en Aman.", importance: "HIGH", type: "City", region: "Aman", status: "Active", firstChapter: 6, lat: 15, lng: -55, relatedCharacters: ["feanor", "fingolfin", "finarfin"], relatedEvents: ["t6", "t8"], greatTales: [] },
+  { id: "formenos", name: "Formenos", description: "Fortaleza de Fëanor en el norte de Valinor.", importance: "MEDIUM", type: "Fortress", region: "Aman", status: "Destroyed", firstChapter: 8, lat: 25, lng: -58, relatedCharacters: ["feanor", "finwe"], relatedEvents: ["t7"], greatTales: [] },
+  { id: "helcaraxe", name: "Helcaraxë", description: "El Hielo Crujiente, el estrecho estrecho en el extremo norte que conectaba Aman y la Tierra Media.", importance: "HIGH", type: "Other", region: "Mar", status: "Legendary", firstChapter: 14, lat: 90, lng: -60, relatedCharacters: ["fingolfin", "finarfin", "galadriel"], relatedEvents: ["t8"], greatTales: [] },
+  { id: "hithlum", name: "Hithlum", description: "Región del norte de Beleriand, feudo principal de Fingolfin y los Altos Reyes.", importance: "HIGH", type: "Region", region: "Beleriand", status: "Destroyed", firstChapter: 15, lat: 70, lng: -40, ruler: { characterId: "fingolfin", period: "Capítulos 15-19" }, relatedCharacters: ["fingolfin"], relatedEvents: ["t12"], greatTales: [] },
+  { id: "nargothrond", name: "Nargothrond", aliases: ["Fortaleza de Narog", "Castillo Subterráneo"], description: "Reino subterráneo fundado por Finrod Felagund cerca del río Narog.", importance: "HIGH", type: "Fortress", region: "Beleriand", status: "Destroyed", lastChapter: 22, firstChapter: 15, relatedCharacters: ["turin"], relatedEvents: ["t15"], lat: 35, lng: -50, greatTales: ["turin"] },
+  { id: "gondolin", name: "Gondolin", aliases: ["La Ciudad Oculta", "Roca Oculta", "Ciudad de Turgon"], description: "La Ciudad Oculta de Turgon, rodeada por las Montañas Circundantes.", importance: "CRITICAL", type: "City", region: "Beleriand", status: "Destroyed", lastChapter: 24, firstChapter: 16, relatedCharacters: ["earendil", "tuor", "idril"], relatedEvents: ["t11", "t17"], lat: 55, lng: -15, greatTales: ["fall-gondolin"] },
+  { id: "tolgalen", name: "Tol Galen", description: "La Isla Verde en Adurant, donde vivieron Beren y Lúthien.", importance: "MEDIUM", type: "Other", region: "Beleriand", status: "Legendary", firstChapter: 20, lat: 30, lng: 10, relatedCharacters: ["beren", "luthien"], relatedEvents: ["t13"], greatTales: ["beren-luthien"] },
+  { id: "brethil", name: "Brethil", description: "El bosque de los Hombres de Haleth, escenario del fin trágico de Túrin.", importance: "MEDIUM", type: "Forest", region: "Beleriand", status: "Active", firstChapter: 18, lat: 40, lng: -10, relatedCharacters: ["turin"], relatedEvents: ["t15"], greatTales: ["turin"] },
+  { id: "aman", name: "Aman", aliases: ["Tierra Bendecida", "Tierra Inmortal", "Las Tierras Imperecederas"], description: "El continente sagrado en el lejano Oeste donde habitan los Valar y los Elfos elegidos. Protegido de las perecederas del mundo material. Es el destino final de los justos.", importance: "CRITICAL", type: "Realm", region: "Aman", status: "Active", firstChapter: 0, lat: 25, lng: -70, relatedCharacters: ["manwe", "varda", "aule", "yavanna", "ulmo", "iluvatar"], relatedEvents: ["vision-arda", "descent-valar"], greatTales: ["creation-music"] },
+  { id: "ocean", name: "El Océano Exterior", aliases: ["Ekkaia", "El Mar Externo", "Las Aguas Circundantes"], description: "La vastedad de agua que rodea a Arda. Ulmo mora en sus profundidades. Más allá de él se encuentran los Puertos de Aman, inaccesibles a los mortales sin don especial.", importance: "HIGH", type: "Other", region: "Mar", status: "Active", firstChapter: 0, lat: 50, lng: -100, relatedCharacters: ["ulmo"], relatedEvents: ["vision-arda"], greatTales: ["creation-music"] },
+  { id: "taniquetil", name: "Taniquetil / Oiolossë", aliases: ["Taniquetil", "Oiolossë", "La Montaña Santa"], description: "La montaña más elevada de la Tierra. Morada de Manwë y Varda. Palacios sobre nieves eternas. Desde aquí se puede ver todo Arda.", importance: "HIGH", type: "Mountain", region: "Aman", status: "Active", firstChapter: 1, lat: 22, lng: -65, relatedCharacters: ["manwe", "varda"], relatedEvents: [], greatTales: [] },
+  { id: "mandos-hall", name: "Mandos (Las Casas de los Muertos)", aliases: ["Casas de Mandos", "Fosa del Ahora"], description: "En el oeste de Valinor. Guardado por Námo. Las estancias se amplían con las edades y se adornan con los tapices de Vairë que registran toda la historia.", importance: "HIGH", type: "Fortress", region: "Aman", status: "Active", firstChapter: 1, lat: 18, lng: -62, ruler: {characterId: "mandos", period: "Desde la creación"}, relatedCharacters: ["mandos", "vaire", "nienna"], relatedEvents: [], greatTales: [] },
+  { id: "lorien", name: "Lórien (Jardines de Irmo)", aliases: ["Jardines de Irmo", "Los Prados Dorados"], description: "El más hermoso de todos los lugares del mundo. Habitado por muchos espíritus. Contiene el lago de Lórellin. Incluso los Valar acuden allí por reposo. Olórin vivía en estos jardines.", importance: "MEDIUM", type: "Other", region: "Aman", status: "Active", firstChapter: 1, lat: 20, lng: -58, relatedCharacters: ["irmo", "este", "olorin"], relatedEvents: [], greatTales: [] },
+  { id: "valimar", name: "Valimar (Ciudad de los Valar)", aliases: ["Ciudad de los Valar", "Ciudad del Regocijo"], description: "Ciudad donde todo es regocijo. Centro de la vida de los Valar en Aman. Aquí residen los Valar cuando no están en sus dominios particulares.", importance: "HIGH", type: "City", region: "Aman", status: "Active", firstChapter: 1, lat: 20, lng: -62, relatedCharacters: ["manwe", "varda", "aule", "yavanna"], relatedEvents: [], greatTales: [] }
 ];
 
-// ==================== TIMELINE EVENTS ====================
 export const timelineData: TimelineEvent[] = [
-  {
-    id: "silmarils_forjados",
-    year: "FA 1500 (aprox)",
-    title: "Los Silmarils son forjados",
-    description: "Fëanor crea las tres gemas que encierran la luz de los Árboles.",
-    importance: "CRITICAL",
-    category: "Creation",
-    firstChapter: 8,
-    relatedCharacters: ["feanor"]
-  },
-  {
-    id: "arboles_destruidos",
-    year: "FA 1502",
-    title: "Los Dos Árboles son destruidos",
-    description: "Melkor y Ungoliant destruyen los Dos Árboles de Valinor. Melkor roba los Silmarils.",
-    importance: "CRITICAL",
-    category: "Destruction",
-    firstChapter: 9,
-    relatedCharacters: ["melkor", "feanor"]
-  },
-  {
-    id: "noldor_rebelion",
-    year: "FA 1502",
-    title: "Rebelión de los Noldor",
-    description: "Fëanor encabeza a los Noldor en rebelión contra los Valar para recuperar los Silmarils.",
-    importance: "CRITICAL",
-    category: "Oath",
-    firstChapter: 10,
-    relatedCharacters: ["feanor", "fingolfin"]
-  },
-  {
-    id: "beren_luthien_encuentro",
-    year: "FA 465",
-    title: "Encuentro de Beren y Lúthien",
-    description: "Beren llega a Doriath y ve a Lúthien, iniciando la historia de mayor belleza.",
-    importance: "CRITICAL",
-    category: "Journey",
-    firstChapter: 12,
-    relatedCharacters: ["beren", "luthien"]
-  },
-  {
-    id: "silmaril_recuperado",
-    year: "FA 466",
-    title: "Un Silmaril es recuperado",
-    description: "Beren logra obtener un Silmaril de la corona de Morgoth con ayuda de Lúthien.",
-    importance: "CRITICAL",
-    category: "Battle",
-    firstChapter: 12,
-    relatedCharacters: ["beren", "luthien", "melkor"]
-  },
-  {
-    id: "caida_nargothrond",
-    year: "FA 495",
-    title: "Caída de Nargothrond",
-    description: "El dragón Glaurung destruye el reino de Nargothrond causando su ruina.",
-    importance: "HIGH",
-    category: "Destruction",
-    firstChapter: 14,
-    relatedCharacters: ["finrod"]
-  },
-  {
-    id: "caida_gondolin",
-    year: "FA 510",
-    title: "Caída de Gondolin",
-    description: "Morgoth destruye la ciudad escondida de Gondolin en un ataque sorpresa.",
-    importance: "CRITICAL",
-    category: "Destruction",
-    firstChapter: 23,
-    relatedCharacters: ["turgon", "tuor", "idril"],
-    relatedLocations: ["gondolin"]
-  },
-  {
-    id: "guerra_colera",
-    year: "FA 545",
-    title: "La Guerra de la Cólera",
-    description: "Los Valar intervienen directamente. Morgoth es derrotado. Fin de la Primera Edad.",
-    importance: "CRITICAL",
-    category: "Battle",
-    firstChapter: 24,
-    relatedCharacters: ["melkor", "earendil", "manwe"]
-  }
+  { id: "creation-ainur", year: "Antes de los Días", title: "Creación de los Ainur", description: "Ilúvatar crea a los Ainur de su pensamiento, dotándoles de potencia para participar en la creación.", importance: "CRITICAL", category: "Creation", firstChapter: 0, relatedCharacters: ["iluvatar", "manwe", "varda", "melkor"], relatedLocations: ["void-timeless"], greatTaleId: "creation-music" },
+  { id: "great-music", year: "Antes de los Días", title: "La Gran Música de los Ainur", description: "Ilúvatar levanta tres temas contra la discordancia de Melkor. Los Ainur cantan la Música que contiene toda la historia de Arda. Tres veces introduce Melkor disonancia; tres veces es contrapuesta.", importance: "CRITICAL", category: "Creation", firstChapter: 0, relatedCharacters: ["iluvatar", "manwe", "melkor", "varda"], relatedLocations: ["void-timeless"], greatTaleId: "creation-music" },
+  { id: "discord-melkor", year: "Antes de los Días", title: "La Discordancia de Melkor", description: "Melkor introduce discordia en la Música tres veces, buscando destruir los temas de Ilúvatar. Ilúvatar incorpora incluso su maldad al propósito supremo.", importance: "CRITICAL", category: "Other", firstChapter: 0, relatedCharacters: ["melkor", "manwe", "iluvatar"], relatedLocations: ["void-timeless"], greatTaleId: "eternal-struggle" },
+  { id: "vision-arda", year: "Antes de los Días", title: "La Visión de Arda", description: "Ilúvatar muestra a los Ainur la visión de todo cuanto sucedería: la historia de Arda desplegada antes que existiera. Los Ainur ven sus propias acciones y las de los Hijos de Ilúvatar.", importance: "CRITICAL", category: "Creation", firstChapter: 0, relatedCharacters: ["iluvatar", "manwe", "melkor"], relatedLocations: ["void-timeless", "valinor"], greatTaleId: "creation-music" },
+  { id: "eä", year: "Año 1", title: "Pronunciación de 'Eä'", description: "Ilúvatar pronuncia 'Eä', convirtiendo la Música en realidad. Arda cobra existencia como mundo material. La Música se encarna en los Árboles, los Elementos, y la Tierra.", importance: "CRITICAL", category: "Creation", firstChapter: 0, relatedCharacters: ["iluvatar", "manwe"], relatedLocations: ["void-timeless", "valinor", "aman"], greatTaleId: "creation-music" },
+  { id: "descent-valar", year: "Año 1", title: "Descenso de los Valar a Arda", description: "Los Valar descienden a Arda para completar su formación según la Visión. Escogen someterse a las limitaciones del mundo creado para cumplir los propósitos de Ilúvatar.", importance: "CRITICAL", category: "Other", firstChapter: 0, relatedCharacters: ["manwe", "varda", "aule", "yavanna", "ulmo"], relatedLocations: ["aman", "valinor"], greatTaleId: "creation-music" },
+  { id: "t1", year: "Años de las Lámparas", title: "Modelado de Arda", description: "Los Valar dan forma a Arda, creando montañas, valles, aguas y luz. La Música se manifiesta gradualmente en la creación material.", importance: "HIGH", category: "Creation", firstChapter: 0, relatedCharacters: ["manwe", "aule", "yavanna", "ulmo"], relatedLocations: ["aman", "ocean"], greatTaleId: "creation-music" },
+  { id: "t2", year: "Años de las Lámparas", title: "Entrada de los Valar", description: "Los Valar descienden a Arda para darle forma.", importance: "CRITICAL", category: "Creation", firstChapter: 1, relatedCharacters: ["manwe", "varda", "aule", "yavanna"] },
+  { id: "valar-take-form", year: "Años de las Lámparas", title: "Los Valar toman forma visible", description: "Los Valar se visten con galas del Mundo, tomando formas que se asemejan a los Hijos de Ilúvatar. Sus formas visibles son como vestiduras, no su verdadera naturaleza.", importance: "HIGH", category: "Other", firstChapter: 1, relatedCharacters: ["manwe", "varda", "aule", "yavanna", "ulmo"], relatedLocations: ["valinor"], greatTaleId: "" },
+  { id: "aratar-recognized", year: "Años de las Lámparas", title: "Los Aratar son reconocidos", description: "Se reconocen ocho como los principales de Arda: Manwë, Varda, Ulmo, Yavanna, Aulë, Mandos, Nienna, Oromë. Son los más poderosos y sus dominios gobiernan la mayor parte de Arda.", importance: "HIGH", category: "Other", firstChapter: 1, relatedCharacters: ["manwe", "varda", "ulmo", "yavanna", "aule", "mandos", "nienna", "orome"], relatedLocations: ["valinor"], greatTaleId: "" },
+  { id: "t3", year: "Años de las Lámparas", title: "Destrucción de las Lámparas", description: "Melkor destruye Illuin y Ormal. Los Valar se mudan a Aman.", importance: "CRITICAL", category: "Destruction", firstChapter: 2, relatedCharacters: ["melkor"], relatedLocations: ["valinor"] },
+  { id: "t4", year: "Años de los Árboles", title: "Despertar de los Elfos", description: "Los Primeros Nacidos despiertan junto a Cuiviénen.", importance: "CRITICAL", category: "Birth", firstChapter: 4 },
+  { id: "t5", year: "Años de los Árboles", title: "Nacimiento de Fëanor", description: "Nace el más dotado de los Noldor; muerte de Míriel.", importance: "HIGH", category: "Birth", firstChapter: 7, relatedCharacters: ["feanor", "finwe"] },
+  { id: "t6", year: "Años de los Árboles", title: "Forja de los Silmarils", description: "Fëanor captura la luz de los Dos Árboles en tres grandes joyas.", importance: "CRITICAL", category: "Creation", firstChapter: 8, relatedCharacters: ["feanor"] },
+  { id: "t7", year: "Años de los Árboles", title: "Oscurecimiento de Valinor", description: "Melkor y Ungoliant destruyen los Árboles y roban los Silmarils.", importance: "CRITICAL", category: "Destruction", firstChapter: 9, relatedCharacters: ["melkor"], relatedLocations: ["valinor"] },
+  { id: "t8", year: "Años de los Árboles", title: "Vuelo de los Noldor", description: "Rebelión de Fëanor y matanza de Alqualondë.", importance: "HIGH", category: "Oath", firstChapter: 10, relatedCharacters: ["feanor", "fingolfin", "finarfin"] },
+  { id: "t9", year: "Años del Sol, 1", title: "Primera salida del Sol", description: "Despertar de los Hombres en el este.", importance: "HIGH", category: "Birth", firstChapter: 12 },
+  { id: "t10", year: "Años del Sol, 60", title: "Batalla Gloriosa", description: "Victoria élfica y comienzo del Sitio de Angband.", importance: "HIGH", category: "Battle", firstChapter: 15, relatedLocations: ["angband"] },
+  { id: "t11", year: "Años del Sol, 116", title: "Terminación de Gondolin", description: "Turgon completa la ciudad oculta.", importance: "HIGH", category: "Creation", firstChapter: 16, relatedLocations: ["gondolin"] },
+  { id: "t12", year: "Años del Sol, 455", title: "Dagor Bragollach", description: "Ruina del sitio de Angband y muerte de Fingolfin.", importance: "CRITICAL", category: "Battle", firstChapter: 19, relatedCharacters: ["fingolfin", "melkor"], relatedLocations: ["angband"], greatTaleId: "" },
+  { id: "t13", year: "Años del Sol, 466", title: "La Búsqueda del Silmaril", description: "Beren y Lúthien recuperan un Silmaril; muerte de Finrod.", importance: "CRITICAL", category: "Journey", firstChapter: 20, relatedCharacters: ["beren", "luthien"], greatTaleId: "beren-luthien" },
+  { id: "t14", year: "Años del Sol, 472", title: "Nirnaeth Arnoediad", description: "Desastrosa derrota de la alianza de elfos y hombres.", importance: "CRITICAL", category: "Battle", firstChapter: 21, relatedLocations: ["beleriand"] },
+  { id: "t15", year: "Años del Sol, 495", title: "Caída de Nargothrond", description: "Glaurung destruye el reino subterráneo debido al orgullo de Túrin.", importance: "HIGH", category: "Destruction", firstChapter: 22, relatedCharacters: ["turin"], relatedLocations: ["nargothrond"], greatTaleId: "turin" },
+  { id: "t16", year: "Años del Sol, 503", title: "Muerte de Thingol", description: "Ruina de Doriath a manos de los Enanos.", importance: "HIGH", category: "Death", firstChapter: 23, relatedCharacters: ["thingol"], relatedLocations: ["doriath"] },
+  { id: "t17", year: "Años del Sol, 510", title: "Caída de Gondolin", description: "Morgoth destruye el último gran reino noldorin.", importance: "CRITICAL", category: "Destruction", firstChapter: 24, relatedCharacters: ["melkor", "earendil"], relatedLocations: ["gondolin"], greatTaleId: "fall-gondolin" }
 ];
 
-// ==================== GREAT TALES ====================
 export const greatTalesData: GreatTale[] = [
+  {
+    id: "creation-music",
+    title: "La Creación del Mundo en la Música",
+    description: "El acto supremo de creación: Ilúvatar levanta la Gran Música en la que los Ainur participan, tejiendo toda la historia de Arda. Tres veces Melkor intenta romper la armonía; tres veces es incorporado al propósito divino. La Música se vuelve real cuando Ilúvatar pronuncia 'Eä'.",
+    details: "En el principio, antes del tiempo, Ilúvatar creó a los Ainur de su pensamiento. Les mostró tres temas y los invitó a cantar la Música de la creación. Juntos levantaron sus voces en un canto que contenía toda la historia de Arda desde su origen hasta su fin. Pero Melkor, presa de envidia, introdujo discordancia en tres ocasiones, buscando imponer su propia voluntad sobre la Música. Cada vez, Ilúvatar incorporó incluso la maldad al propósito supremo, transformando la discordancia en una parte mayor del plan. Luego Ilúvatar mostró a los Ainur la Visión de Arda: pudieron ver cómo la Música se manifestaría en realidad. Cuando Ilúvatar pronunció la palabra 'Eä', la Música cobró existencia. Los Valar descendieron entonces a Arda para completar lo que la Música había iniciado.",
+    protagonists: ["iluvatar", "manwe", "varda", "aule", "yavanna", "ulmo"],
+    antagonists: ["melkor"],
+    keyCharacters: [],
+    relatedLocations: ["void-timeless", "valinor", "aman", "ocean"],
+    relatedEvents: ["creation-ainur", "great-music", "discord-melkor", "vision-arda", "eä", "descent-valar"],
+    themes: ["Creación divina", "Orden vs Caos", "Soberanía absoluta", "Libertad responsable", "Incorporación del mal"],
+    needToKnow: [
+      "Ilúvatar crea a los Ainur como participantes en la creación",
+      "La Gran Música contiene toda la historia de Arda antes de que exista",
+      "Melkor introduce tres veces discordancia; Ilúvatar la incorpora al propósito",
+      "La Visión muestra a los Ainur lo que sucederá en Arda",
+      "Cuando Ilúvatar pronuncia 'Eä', la Música se vuelve realidad"
+    ],
+    afterReadingShouldKnow: [
+      "La soberanía de Ilúvatar implica que incluso el mal sirve a Sus propósitos supremos",
+      "La historia de Arda es el cumplimiento gradual de la Música ya tejida en la eternidad",
+      "El sufrimiento y el conflicto son parte del plan divino, no accidentes",
+      "Los Valar aceptan limitaciones voluntarias al descender a Arda",
+      "El mundo es 'precantado': su historia existe en la Música antes de suceder"
+    ],
+    startChapter: 0,
+    endChapter: 0
+  },
+  {
+    id: "eternal-struggle",
+    title: "La Eterna Lucha entre el Bien y el Mal",
+    description: "Desde el momento de la Música, Melkor busca imponer su voluntad contra los propósitos de Ilúvatar. Su envidia y orgullo lo llevan a introducir discordancia, iniciando un conflicto que durará hasta la consumación de los tiempos.",
+    details: "Desde que fue creado, Melkor fue el mayor de los Ainur en poder. Pero su corazón fue presa de la envidia: deseaba ser como Ilúvatar, capaz de crear según su propia voluntad. Buscó la Llama Imperecedera, el poder generador supremo. Cuando en la Música intentó imponer su discordancia, Ilúvatar la transformó cada vez. Pero Melkor no se arrepintió; su malicia se profundizó. Esta lucha entre la armonía que Ilúvatar propone y la discordancia que Melkor genera es la historia de Arda misma. Los Hijos de Ilúvatar—Elfos y Hombres—estarán en el centro de este conflicto. Incluso en su derrota final, Melkor habrá dejado huella en el mundo, pues Ilúvatar permitió que la libertad de sus criaturas significara la libertad incluso de rechazarlo.",
+    protagonists: ["iluvatar", "manwe", "varda"],
+    antagonists: ["melkor"],
+    keyCharacters: [],
+    relatedLocations: ["void-timeless", "valinor"],
+    relatedEvents: ["great-music", "discord-melkor"],
+    themes: ["Bien vs Mal", "Orden vs Caos", "Libre albedrío", "Envidia y soberbia", "Perseverancia en la luz"],
+    needToKnow: [
+      "Melkor es el mayor de los Ainur en poder pero está corrupto",
+      "Busca la Llama Imperecedera y el poder de crear",
+      "Introduce discordancia tres veces en la Música",
+      "Ilúvatar transforma incluso su malicia en parte del propósito supremo",
+      "La lucha entre el bien y el mal es fundamental a la existencia de Arda"
+    ],
+    afterReadingShouldKnow: [
+      "El bien no triunfa automáticamente; requiere la perseverancia de los que aman la luz",
+      "Incluso el poder casi divino puede ser corrompido por la envidia y el orgullo",
+      "La libertad verdadera implica la posibilidad real de rechazar el bien",
+      "La derrota de Melkor será victoria, pero su influencia permanecerá en Arda",
+      "El Silmarillion es la historia del esfuerzo infinito de contrarrestar la discordancia"
+    ],
+    startChapter: 0,
+    endChapter: 0
+  },
   {
     id: "beren-luthien",
     title: "Beren y Lúthien",
-    description: "Historia de amor entre un Hombre y una Elfa. Amor que desafía la muerte y el mal mismo.",
-    details: "Beren es un Hombre que llega a Doriath huyendo de la persecución de Morgoth. Allí ve a Lúthien, la hija del Rey Thingol, y se enamora de ella. Thingol, ofendido por que un Hombre ose amar a su hija, impone una prueba imposible: traer un Silmaril de la corona de Morgoth. Con la ayuda de Lúthien y su poder de hechicera, Beren logra infiltrarse en Angband. Lúthien pone a dormir a Morgoth con su canción. Beren corta un Silmaril de su corona. Pero escapan de Angband y son perseguidos. En el camino, la bestia Carcharoth los atrapa y muere al tragar el Silmaril. Beren es mortalmente herido. Lúthien lo ama tan profundamente que obtiene el poder de volver de la muerte. Ambos son restituidos a la vida como semi-mortales. Esta es la historia de mayor belleza en el Silmarillion: un amor que trasciende la muerte y el tiempo.",
+    description: "La historia más grande de la Primera Edad: un mortal proscrito y una princesa elfa desafían a Morgoth mismo. Su amor es tan poderoso que trasciende la frontera entre razas, y juntos logran arrebatar un Silmaril de la corona del Señor Oscuro.",
+    details: "Beren, perseguido y maldito, llegó a Doriath donde conoció a Lúthien, la princesa más hermosa del mundo. Su amor fue instantáneo pero imposible: Thingol exigió un Silmaril como prueba. Con ayuda de Finrod, Beren fue capturado por Morgoth, pero Lúthien lo rescató con su magia. Juntos lograron lo que nadie creía posible: arrebatar un Silmaril de la corona del Señor Oscuro. La maldición persiguió su amor, pero su legado fue inmortal. Lúthien eligió la mortalidad, y de su unión nació Eärendil, quien se convertiría en la Estrella de la Mañana.",
     protagonists: ["beren", "luthien"],
-    antagonists: ["melkor", "carcharoth"],
-    keyCharacters: ["thingol", "melian", "orome"],
-    relatedLocations: ["angband", "doriath"],
-    relatedEvents: ["beren_luthien_encuentro", "silmaril_recuperado"],
-    themes: ["amor que trasciende", "belleza en la tragedia", "poder del sacrificio", "redencion"],
+    antagonists: ["melkor"],
+    keyCharacters: ["thingol", "melian", "finrod"],
+    relatedLocations: ["doriath", "angband", "tolgalen"],
+    relatedEvents: ["t13"],
+    themes: ["love conquers all", "sacrifice", "impossible quests", "mortality vs immortality"],
     needToKnow: [
-      "Un Hombre (Beren) se enamora de una Elfa (Lúthien).",
-      "El Rey Thingol impone una prueba imposible: obtener un Silmaril.",
-      "Con magia y amor, logran lo imposible.",
-      "Es la historia de mayor belleza del Silmarillion."
+      "Thingol exige un Silmaril como dote de Lúthien",
+      "Beren y Finrod son capturados pero Lúthien los rescata",
+      "Logran arrebatar un Silmaril de la corona de Morgoth",
+      "Lúthien elige la mortalidad para estar con Beren",
+      "Su hijo Eärendil es el marinero estrella"
     ],
     afterReadingShouldKnow: [
-      "El amor puede cambiar el destino incluso en un mundo maldecido.",
-      "Los Hijos de Ilúvatar (Hombres y Elfos) pueden lograr grandes cosas juntos.",
-      "La belleza verdadera surge del sufrimiento y el sacrificio.",
-      "Este acto salva un Silmaril del servicio al mal."
+      "El amor puede desafiar el destino, pero no lo anula completamente",
+      "La maldición de Morgoth persigue incluso los actos más gloriosos",
+      "La mortalidad no es debilidad: es libertad y dignidad",
+      "Un Silmaril fue recuperado, pero dos permanecen perdidos en las tinieblas",
+      "De esta unión nació la esperanza del mundo: Eärendil"
     ],
-    startChapter: 12,
-    endChapter: 12
+    startChapter: 20,
+    endChapter: 20
   },
   {
     id: "turin",
     title: "Túrin Turambar",
-    description: "La mayor tragedia del Silmarillion. Un guerrero bajo maldición.",
-    details: "Túrin es hijo de Húrin, el guerrero. Está bajo una terrible maldición de Morgoth: todo lo que haga llevará a la ruina. Es valiente y noble, pero incapaz de escapar a su maldición. Va de un lugar a otro, y cada reino en el que llega es destruido. Ama a Finduilas pero ella es capturada. Entra en Nargothrond y causa división entre sus líderes. El reino es destruido poco después. Va a Brethil donde se enamora nuevamente, pero sin saber que es su hermana. Cuando se da cuenta, destruido por la vergüenza, se mata. Su historia es el mayor ejemplo de tragedia: un hombre noble pero maldecido, que causa ruina a todo lo que toca simplemente con su presencia.",
+    description: "La maldición de Morgoth sobre Húrin se cierne como una sombra sobre su hijo Túrin. A través de traiciones, batallas perdidas y amores destruidos, Túrin busca redención, solo para encontrar tragedia en su victoria final.",
+    details: "Túrin fue marcado desde el nacimiento por la maldición de Morgoth sobre su padre Húrin. El Señor Oscuro juró que la familia sufriría dolor infinito. A pesar de ser un guerrero sin igual, Túrin traía consigo la maldición. En Nargothrond, su orgullo causó la caída del reino. Perseguido por Glaurung, el padre de los dragones, Túrin logró matarlo en un acto de heroísmo extremo. Pero el dragón vengador lo hechizó, causando que se casara con su propia hermana sin saberlo. Al descubrir la verdad, incapaz de soportar el horror, Túrin se suicidó. Su historia es la más trágica del Silmarillion: ni siquiera la victoria puede redimir una vida marcada por la maldición.",
     protagonists: ["turin"],
-    antagonists: ["melkor", "glaurung"],
-    keyCharacters: ["hurin", "morwen", "nienor", "finduilas"],
-    relatedLocations: ["nargothrond", "brethil"],
-    relatedEvents: ["caida_nargothrond"],
-    themes: ["destino maldito", "tragedia noble", "el costo de la valentía", "impotencia ante el mal"],
+    antagonists: ["melkor"],
+    keyCharacters: ["glaurung"],
+    relatedLocations: ["nargothrond", "brethil", "doriath"],
+    relatedEvents: ["t15"],
+    themes: ["curse and fate", "warrior's honor", "internal struggle", "tragic hero"],
     needToKnow: [
-      "Túrin es un guerrero noble bajo una maldición.",
-      "Todo lo que intenta llevar a la ruina.",
-      "Ama dos veces pero pierde a ambas.",
-      "Es la tragedia más profunda de la Primera Edad."
+      "Morgoth maldice a Húrin y su familia",
+      "Túrin es un gran guerrero pero la tragedia lo persigue",
+      "Causa la caída de Nargothrond con su orgullo",
+      "Mata a Glaurung, el padre de los dragones",
+      "Se suicida al descubrir que se casó con su hermana bajo hechizo"
     ],
     afterReadingShouldKnow: [
-      "Incluso la nobleza y valentía no pueden vencer a una maldición de Morgoth.",
-      "La libertad y el destino están en tensión constante.",
-      "El sufrimiento de Túrin fuerza a Morgoth a mostrar su verdadera naturaleza.",
-      "Su muerte no es derrota sino liberación de la maldición."
+      "La maldición de Morgoth es más poderosa que el heroísmo individual",
+      "La victoria puede venir acompañada de traición y horror",
+      "Incluso los más valientes pueden ser vencidos por el destino",
+      "El libre albedrío existe, pero hay fuerzas que condenan nuestras elecciones",
+      "La tragedia personal de Túrin es el corazón oscuro del Silmarillion"
     ],
-    startChapter: 12,
-    endChapter: 21
+    startChapter: 22,
+    endChapter: 22
   },
   {
     id: "fall-gondolin",
     title: "La Caída de Gondolin",
-    description: "La ciudad escondida cae. La última esperanza se va.",
-    details: "Gondolin es la ciudad más grande y hermosa de los Elfos, escondida en las montañas. Su rey Turgon la gobierna con sabiduría. Pero Morgoth, con paciencia, descubre su ubicación. Envía un ejército masivo de orcos y demonios. La ciudad es sitiada y quemada. La mayoría de sus habitantes mueren. Los pocos sobrevivientes huyen. Entre ellos está Tuor, su esposa Idril (hija de Turgon), y su hijo Eärendil. Esta caída marca el fin de la resistencia organizada de los Elfos. Después de esto, solo quedan pequeños grupos dispersos.",
-    protagonists: ["turgon", "tuor", "idril"],
-    antagonists: ["melkor", "sauron"],
-    keyCharacters: ["earendil", "maeglin"],
-    relatedLocations: ["gondolin"],
-    relatedEvents: ["caida_gondolin"],
-    themes: ["caída de la civilización", "fin de la esperanza", "el poder del mal", "supervivencia"],
+    description: "La última y más gloriosa de las ciudades elfas es traicionada desde dentro. En una batalla épica con dragones y Balrogs, Gondolin cae, pero de sus cenizas emerge una nueva esperanza en el marinero Eärendil.",
+    details: "Gondolin fue construida en secreto por Turgon en un valle escondido, protegida por montañas impenetrables. Durante siglos fue un faro de belleza y poder, inexpugnable frente a los ataques de Morgoth. Pero la traición llegó desde dentro: Maeglin, ambicioso hijo de Eöl, reveló la ubicación de la ciudad al Señor Oscuro. Morgoth envió su ejército final: dragones, Balrogs, y hordas de Orcos. En la batalla resultante, la Ciudad Oculta fue destruida. Sin embargo, Tuor y su familia escaparon, llevando el Silmaril de Beren y Lúthien. Su hijo Eärendil llevaría este tesoro a Valinor como imploración final. De la ruina de Gondolin nació la guerra que finalmente derrotaría a Morgoth.",
+    protagonists: ["earendil", "tuor"],
+    antagonists: ["melkor", "maeglin"],
+    keyCharacters: ["turgon", "idril", "ulmo"],
+    relatedLocations: ["gondolin", "angband"],
+    relatedEvents: ["t17"],
+    themes: ["betrayal", "last stand", "redemption from ashes", "sacrifice for future"],
     needToKnow: [
-      "Gondolin es la ciudad más bella de los Elfos.",
-      "Morgoth descubre su ubicación y la ataca.",
-      "La ciudad cae. Pocos sobreviven.",
-      "Marca el fin de la Primera Edad."
+      "Gondolin fue construida en secreto por Turgon",
+      "Maeglin traiciona su ubicación a Morgoth",
+      "Cae en un asalto con fuego y dragones",
+      "Tuor y su familia escapan, llevando el Silmaril recuperado de Beren",
+      "Eärendil, su hijo, navegará a Valinor para buscar ayuda"
     ],
     afterReadingShouldKnow: [
-      "Incluso la belleza escondida puede ser encontrada y destruida.",
-      "Tuor y Idril escapan llevando esperanza al futuro.",
-      "Su hijo Eärendil será crucial en la derrota final de Morgoth.",
-      "De la ruina viene la redención en la edad siguiente."
+      "Incluso la ciudad más bella y protegida puede caer por traición interior",
+      "La lealtad de unos (Tuor, Idril) contrarresta la traición de otros (Maeglin)",
+      "De la derrota nace la esperanza: Eärendil es el resultado",
+      "Morgoth logra destruir los reinos élficos, pero no puede destruir el futuro",
+      "Esta es la última batalla de la Primera Edad; lo que sigue es la venganza de los Valar"
     ],
-    startChapter: 23,
+    startChapter: 24,
     endChapter: 24
   },
   {
     id: "earendil",
     title: "Eärendil el Marinero",
-    description: "El último acto de la Primera Edad. Esperanza hecha estrella.",
-    details: "Eärendil nace en Gondolin de Tuor e Idril. Crece en los Puertos del Sirion oyendo historias de la lucha contra Morgoth. Viendo que todo se pierde, decide hacer lo imposible: navegar a Valinor para implorar a los Valar que intervengan. Es un acto de fe en tiempos de desesperación. Contra toda probabilidad, logra llegar. Los Valar, movidos por su fe, le conceden una tarea sin precedentes: portar el Silmaril en su frente como una estrella eternamente brillante en el cielo. Se convierte en Gil-Eärendil. Su viaje marca el fin de la Primera Edad y el comienzo de la Guerra de la Cólera que derrota a Morgoth. La Estrella de la Mañana es símbolo eterno de esperanza.",
+    description: "El último acto de la Primera Edad. Eärendil, portador de un Silmaril en su frente, navega a Valinor para implorar a los Valar. Su viaje es el preludio a la Guerra de la Cólera que finalmente derrota a Morgoth.",
+    details: "Eärendil nació en Gondolin, hijo de Tuor y la princesa Idril. Cuando la ciudad cayó, escapó con sus padres llevando el Silmaril de Beren y Lúthien. Creció en los Puertos del Sirion, oyendo historias de la lucha interminable contra Morgoth. Los Años del Sol avanzaban, y la esperanza menguaba. Eärendil decidió hacer lo imposible: navegar a Valinor y implorar a los Valar que intervinieron. Contra toda probabilidad, logró llegar. Los Valar le concedieron una tarea sin precedentes: portar el Silmaril en su frente como una estrella que brilla eternamente en el cielo de Arda. Se convirtió en Gil-Eärendil, símbolo de esperanza inmortal. Su viaje marcó el fin de la Primera Edad y el comienzo de la Guerra de la Cólera que destruyó a Morgoth.",
     protagonists: ["earendil"],
     antagonists: ["melkor"],
-    keyCharacters: ["tuor", "idril", "manwe", "elwing"],
-    relatedLocations: ["gondolin", "valinor", "puertos-sirion"],
-    relatedEvents: ["guerra_colera"],
-    themes: ["esperanza en la desesperación", "fe en lo divino", "redención final", "luz eterna"],
+    keyCharacters: ["tuor", "idril", "elwing", "manwe"],
+    relatedLocations: ["gondolin", "valinor"],
+    relatedEvents: ["t17"],
+    themes: ["hope and light", "intercession", "final battle", "stars and eternity"],
     needToKnow: [
-      "Eärendil navega a Valinor.",
-      "Los Valar le conceden un Silmaril.",
-      "Se convierte en una estrella.",
-      "Su acto derrota a Morgoth en la Guerra de la Cólera."
+      "Eärendil porpora un Silmaril en su frente como estrella",
+      "Viaja a Valinor a pesar del Prohibición sobre los Hombres",
+      "Los Valar le conceden la carga de llevar la luz",
+      "Se convierte en una estrella visible: Gil-Eärendil",
+      "Su llegada es el señal para la Guerra de la Cólera que destruye a Morgoth"
     ],
     afterReadingShouldKnow: [
-      "Un solo acto de fe puede cambiar el destino de una edad.",
-      "La esperanza no es ingenuidad: es poder.",
-      "Eärendil es la Estrella de la Mañana que Frodo ve en El Señor de los Anillos.",
-      "De la Primera Edad oscura viene luz eterna."
+      "La esperanza puede ser forjada en el acto de sacrificio",
+      "Los Valar pueden ser movidos por la fe y la desesperación de los mortales",
+      "Eärendil es el punto de giro: su victoria no es personal sino cósmica",
+      "Un Silmaril escapa a las tinieblas y se convierte en luz eterna",
+      "La Primera Edad termina con un acto de redención que trasciende el tiempo"
     ],
     startChapter: 24,
     endChapter: 24
   }
 ];
 
-// ==================== THEMES ====================
 export const themesData: Theme[] = [
+  {
+    id: "divine-hierarchy",
+    name: "La Jerarquía Divina",
+    analysis: "Los Valar (14) gobiernan bajo la autoridad de Ilúvatar, los Maiar sirven a los Valar, y todo está ordenado en una cadena clara de responsabilidad. Manwë es el Rey designado, pero todos están sometidos a la voluntad suprema de Ilúvatar. Esta jerarquía refleja el orden mismo de la creación.",
+    relatedGreatTales: [],
+    relatedCharacters: ["manwe", "varda", "ulmo", "iluvatar"]
+  },
+  {
+    id: "forms-as-garments",
+    name: "Las Formas como Vestiduras",
+    analysis: "Los Valar pueden ir sin forma; sus apariencias visibles son como ropas que visten, no su esencia. La diferencia de género entre ellos viene de temperamento y naturaleza, no de la forma corporal. Esto refleja la naturaleza espiritual de los Ainur, que tienen poder sobre la materia pero no están confinados a ella.",
+    relatedGreatTales: [],
+    relatedCharacters: ["manwe", "varda", "aule", "yavanna"]
+  },
+  {
+    id: "diversity-of-domains",
+    name: "Diversidad de Dominios",
+    analysis: "Cada Vala tiene un dominio específico (aire, agua, tierra, vida, muerte, sueños, fuerza, caza) que refleja la riqueza y complejidad de la creación. Estas esferas de influencia no entran en conflicto sino que se complementan, mostrando cómo la armonía puede existir dentro de la diferencia.",
+    relatedGreatTales: [],
+    relatedCharacters: ["manwe", "ulmo", "aule", "yavanna", "mandos", "nienna", "orome", "tulkas"]
+  },
+  {
+    id: "divine-sovereignty",
+    name: "La Soberanía Absoluta de Ilúvatar",
+    analysis: "Ilúvatar es el Único cuya voluntad no puede ser frustrada. Incluso la maldad de Melkor, introducida en tres ocasiones en la Música, es transformada por Ilúvatar en parte de Su propósito supremo. Esto sugiere una visión del destino donde la libertad de las criaturas existe dentro de un plan divino inviolable. No hay conflicto entre la soberanía de Dios y la libertad humana; ambas son verdaderas simultáneamente.",
+    relatedGreatTales: ["creation-music", "eternal-struggle"],
+    relatedCharacters: ["iluvatar", "manwe", "melkor"]
+  },
+  {
+    id: "good-evil-intertwined",
+    name: "El Bien y el Mal Entretejidos",
+    analysis: "Desde la Música misma, el bien y el mal no son fuerzas totalmente separadas sino aspectos de una realidad única. La discordancia de Melkor es incorporada a la Música, no eliminada de ella. Esto refleja una visión sofisticada donde el sufrimiento y el conflicto no son accidentes sino partes intencionales del diseño divino. La victoria sobre el mal no será su aniquilación sino su redención mediante Ilúvatar.",
+    relatedGreatTales: ["creation-music", "eternal-struggle"],
+    relatedCharacters: ["iluvatar", "melkor", "manwe"]
+  },
+  {
+    id: "freedom-creation",
+    name: "La Libertad en la Creación",
+    analysis: "Los Ainur son creados con potencia para participar en la Música, no como marionetas. Incluso Melkor tiene verdadera libertad para rechazar los propósitos de Ilúvatar. Los Hijos de Ilúvatar—Elfos y Hombres—serán dotados de libertad tan profunda que sus elecciones importan eternamente. Esta libertad es el corazón del plan divino: Ilúvatar ama las criaturas libres, no criaturas forzadas a obediencia.",
+    relatedGreatTales: ["creation-music"],
+    relatedCharacters: ["iluvatar", "manwe"]
+  },
+  {
+    id: "vision-realization",
+    name: "Visión y Realización",
+    analysis: "La Música es la Visión en potencia; la Visión es la Música revelada; 'Eä' es la Música hecha carne. Existe un triple movimiento de abstracción hacia lo concreto. La Historia de Arda es el despliegue lento de la Música que ya existe eternamente. Nada que suceda en Arda será sorpresa para Ilúvatar; todo fue cantado desde el principio.",
+    relatedGreatTales: ["creation-music"],
+    relatedCharacters: ["iluvatar"]
+  },
+  {
+    id: "cosmic-order",
+    name: "El Orden en el Cosmos",
+    analysis: "Aunque la discordancia de Melkor introduce caos aparente en la Música, el orden fundamental permanece. Los Valar descienden a Arda no para crear de la nada sino para completar lo que la Música ya ha esbozado. El cosmos no es el resultado de accidente o de competencia sin fin, sino el cumplimiento ordenado de un plan eterno.",
+    relatedGreatTales: ["creation-music"],
+    relatedCharacters: ["iluvatar", "manwe", "aule", "yavanna"]
+  },
   {
     id: "inevitable-fall",
     name: "La Caída Inevitable",
-    analysis: "El orgullo y la obsesión llevan invariablemente a la ruina. Fëanor, Túrin, Thingol: todos cayeron por sus propios defectos. El Silmarillion sugiere que el destino resuena en nuestras elecciones.",
+    analysis: "El orgullo y la obsesión llevan invariablemente a la ruina. Fëanor, Túrin, Thingol: todos cayeron por sus propios defectos. Morgoth mismo, en su orgullo, no pudo imaginar que sería derrotado. El Silmarillion sugiere que el destino resuena en nuestras elecciones.",
     relatedGreatTales: ["beren-luthien", "turin", "fall-gondolin"],
     relatedCharacters: ["feanor", "turin", "thingol", "melkor"]
   },
   {
     id: "love-transcendence",
     name: "El Amor que Trasciende",
-    analysis: "El amor de Beren y Lúthien desafía las leyes naturales. Un mortal y un elfo logran lo imposible. El amor es la fuerza más poderosa del universo.",
+    analysis: "El amor de Beren y Lúthien desafía las leyes naturales. Un mortal y un elfo, de razas diferentes, logran lo imposible. Lúthien renuncia a la inmortalidad; Beren se convierte en leyenda. El amor es la fuerza más poderosa del universo, más fuerte que la magia o el poder.",
     relatedGreatTales: ["beren-luthien"],
     relatedCharacters: ["beren", "luthien", "thingol", "melian"]
   },
   {
     id: "corruption-power",
     name: "La Corrupción del Poder",
-    analysis: "El poder absoluto corrompe. Morgoth tenía poder casi ilimitado, pero su orgullo lo cegó. Incluso los Elfos no están a salvo de la ambición.",
+    analysis: "El poder absoluto corrompe. Morgoth, como Vala, tenía poder casi ilimitado, pero su orgullo lo cegó. El Silmaril mismo, aunque hermoso, se convierte en maldición. Incluso los Elfos, seres inmortales y sabios, no están a salvo de la ambición y la codicia.",
     relatedGreatTales: ["beren-luthien", "turin", "fall-gondolin"],
     relatedCharacters: ["melkor", "feanor", "thingol"]
   },
   {
     id: "mortality-gift",
     name: "La Mortalidad como Regalo",
-    analysis: "Los Hombres tienen vidas breves pero poseen libertad verdadera. La mortalidad no es maldición sino don. El Silmarillion sugiere que la brevedad hace valiosa la vida.",
+    analysis: "Los Hombres, aunque tienen vidas breves, poseen algo que los Elfos no: la libertad verdadera. La mortalidad no es una maldición sino un don. Lúthien elige la mortalidad; Eärendil transcendencia. El Silmarillion sugiere que la brevedad de la vida humana es lo que la hace valiosa.",
     relatedGreatTales: ["beren-luthien", "earendil"],
     relatedCharacters: ["beren", "earendil", "luthien"]
   },
   {
     id: "light-darkness",
     name: "La Luz Contra la Oscuridad",
-    analysis: "El conflicto entre la luz y la oscuridad es el hilo conductor. Pero la oscuridad nunca extingue completamente la luz. Eärendil es estrella eterna.",
+    analysis: "El conflicto entre la luz (Valinor, los Silmarils, el bien) y la oscuridad (Morgoth, Angband) es el hilo conductor de toda la época. Pero la oscuridad nunca puede extinguir completamente la luz. Eärendil se convierte en estrella, símbolo eterno de esperanza.",
     relatedGreatTales: ["beren-luthien", "turin", "fall-gondolin", "earendil"],
     relatedCharacters: ["melkor", "earendil", "luthien", "fingolfin"]
   },
   {
     id: "fate-free-will",
     name: "El Destino y el Libre Albedrío",
-    analysis: "¿Es nuestro destino inevitable o somos libres de elegir? Túrin lucha contra su maldición pero no puede escapar. El Silmarillion mantiene esta tensión sin resolverla.",
+    analysis: "¿Es nuestro destino inevitable o somos libres de elegir? Túrin lucha contra la maldición de Morgoth pero al final no puede escapar. Sin embargo, sus elecciones importan. El Silmarillion mantiene esta tensión sin resolverla, reflejando la naturaleza del drama humano.",
     relatedGreatTales: ["beren-luthien", "turin", "fall-gondolin"],
     relatedCharacters: ["turin", "feanor", "earendil"]
   }
 ];
 
-// ==================== FLOW VISUALIZATION ====================
 export const flowNodesData: FlowNode[] = [
-  // Level 0: Ainulindalë
-  { id: "iluvatar", characterId: "iluvatar", position: { x: 600, y: 0 } },
+  // Level 0: Ilúvatar (centered, supreme creator)
+  { id: "iluvatar", characterId: "iluvatar", position: { x: 1050, y: 0 } },
 
-  // Level 1: Valar del Ainulindalë
-  { id: "manwe", characterId: "manwe", position: { x: 200, y: 200 } },
-  { id: "melkor", characterId: "melkor", position: { x: 600, y: 200 } },
-  { id: "aule", characterId: "aule", position: { x: 800, y: 200 } },
-  { id: "ulmo", characterId: "ulmo", position: { x: 1000, y: 200 } },
+  // Level 1: All 14 Valar in SAME horizontal line - well separated
+  // Melkor (The adversary, at left)
+  { id: "melkor", characterId: "melkor", position: { x: 100, y: 150 } },
 
-  // Level 2: Cap 6 - Casa de Finwë
-  { id: "finwe", characterId: "finwe", position: { x: 150, y: 400 } },
+  // Pair 1: Manwë and Varda (King and Queen)
+  { id: "manwe", characterId: "manwe", position: { x: 320, y: 150 } },
+  { id: "varda", characterId: "varda", position: { x: 540, y: 150 } },
+
+  // Pair 2: Aulë and Yavanna (Crafter and Life)
+  { id: "aule", characterId: "aule", position: { x: 760, y: 150 } },
+  { id: "yavanna", characterId: "yavanna", position: { x: 980, y: 150 } },
+
+  // Ulmo (Ally of Manwë)
+  { id: "ulmo", characterId: "ulmo", position: { x: 1200, y: 150 } },
+
+  // Pair 3: Mandos and Vairë (Death and History)
+  { id: "mandos", characterId: "mandos", position: { x: 1420, y: 150 } },
+  { id: "vaire", characterId: "vaire", position: { x: 1640, y: 150 } },
+
+  // Pair 4: Irmo and Estë (Dreams and Rest)
+  { id: "irmo", characterId: "irmo", position: { x: 1860, y: 150 } },
+  { id: "este", characterId: "este", position: { x: 2080, y: 150 } },
+
+  // Nienna (Compassion)
+  { id: "nienna", characterId: "nienna", position: { x: 2300, y: 150 } },
+
+  // Pair 5: Tulkas and Nessa (Strength and Dance)
+  { id: "tulkas", characterId: "tulkas", position: { x: 2520, y: 150 } },
+  { id: "nessa", characterId: "nessa", position: { x: 2740, y: 150 } },
+
+  // Pair 6: Oromë and Vána (Hunt and Youth)
+  { id: "orome", characterId: "orome", position: { x: 2960, y: 150 } },
+  { id: "vana", characterId: "vana", position: { x: 3180, y: 150 } },
+
+  // Level 2: Maiar and Elven characters
+  { id: "finwe", characterId: "finwe", position: { x: 100, y: 400 } },
+  { id: "olorin", characterId: "olorin", position: { x: 400, y: 400 } },
+  { id: "melian", characterId: "melian", position: { x: 700, y: 400 } },
+  { id: "thingol", characterId: "thingol", position: { x: 1000, y: 400 } },
+
+  // Level 3: Children of Finwë and others
   { id: "feanor", characterId: "feanor", position: { x: 50, y: 600 } },
-  { id: "fingolfin", characterId: "fingolfin", position: { x: 200, y: 600 } },
-  { id: "finarfin", characterId: "finarfin", position: { x: 350, y: 600 } },
+  { id: "fingolfin", characterId: "fingolfin", position: { x: 150, y: 600 } },
+  { id: "finarfin", characterId: "finarfin", position: { x: 250, y: 600 } },
+  { id: "luthien", characterId: "luthien", position: { x: 850, y: 600 } },
+  { id: "turin", characterId: "turin", position: { x: 1250, y: 600 } },
 
-  // Level 3: Cap 5 - Thingol y Melian
-  { id: "thingol", characterId: "thingol", position: { x: 600, y: 400 } },
-  { id: "melian", characterId: "melian", position: { x: 750, y: 400 } },
-  { id: "luthien", characterId: "luthien", position: { x: 700, y: 600 } },
-
-  // Level 4: Cap 12+ - Beren
-  { id: "beren", characterId: "beren", position: { x: 900, y: 600 } },
-
-  // Level 5: Cap 23+ - Tuor y Gondolin
-  { id: "turgon", characterId: "turgon", position: { x: 350, y: 800 } },
-  { id: "tuor", characterId: "tuor", position: { x: 500, y: 800 } },
-  { id: "idril", characterId: "idril", position: { x: 650, y: 800 } },
-  { id: "earendil", characterId: "earendil", position: { x: 800, y: 800 } }
+  // Level 4: Later generations
+  { id: "galadriel", characterId: "galadriel", position: { x: 250, y: 800 } },
+  { id: "beren", characterId: "beren", position: { x: 900, y: 800 } },
+  { id: "earendil", characterId: "earendil", position: { x: 1250, y: 800 } }
 ];
 
 export const flowEdgesData: FlowEdge[] = [
-  // Ilúvatar a los Valar del Ainulindalë
-  { id: "e0-1", source: "iluvatar", target: "manwe", label: "crea" },
-  { id: "e0-2", source: "iluvatar", target: "melkor", label: "crea" },
-  { id: "e0-3", source: "iluvatar", target: "aule", label: "crea" },
-  { id: "e0-4", source: "iluvatar", target: "ulmo", label: "crea" },
-
-  // Finwë y sus hijos (Cap 6)
-  { id: "e1-1", source: "finwe", target: "feanor", label: "hijo" },
-  { id: "e1-2", source: "finwe", target: "fingolfin", label: "hijo" },
-  { id: "e1-3", source: "finwe", target: "finarfin", label: "hijo" },
-
-  // Finarfin y sus hijos
-  { id: "e1-4", source: "finarfin", target: "galadriel", label: "hija" },
-
-  // Thingol y Melian (Cap 5)
-  { id: "e2-1", source: "thingol", target: "melian", label: "esposos" },
-  { id: "e2-2", source: "thingol", target: "luthien", label: "hija" },
-  { id: "e2-3", source: "melian", target: "luthien", label: "hija" },
-
-  // Beren y Lúthien (Cap 12)
-  { id: "e3-1", source: "beren", target: "luthien", label: "esposos" },
-
-  // Turgon, Tuor, Idril (Cap 23)
-  { id: "e4-1", source: "turgon", target: "idril", label: "hija" },
-  { id: "e4-2", source: "tuor", target: "idril", label: "esposos" },
-  { id: "e4-3", source: "idril", target: "earendil", label: "hijo" },
-
-  // Relaciones del conflicto cósmico
-  { id: "e5-1", source: "melkor", target: "manwe", label: "enemigos" },
-  { id: "e5-2", source: "melkor", target: "aule", label: "enemigos" },
-  { id: "e5-3", source: "melkor", target: "ulmo", label: "enemigos" }
+  // Level 0-1: Ilúvatar creates Valar
+  // Valar relationships - Spouses only (clean, no clutter)
+  { id: "e-manwe-varda", source: "manwe", target: "varda", label: "esposos" },
+  { id: "e-aule-yavanna", source: "aule", target: "yavanna", label: "esposos" },
+  { id: "e-mandos-vaire", source: "mandos", target: "vaire", label: "esposos" },
+  { id: "e-irmo-este", source: "irmo", target: "este", label: "esposos" },
+  { id: "e-tulkas-nessa", source: "tulkas", target: "nessa", label: "esposos" },
+  { id: "e-orome-vana", source: "orome", target: "vana", label: "esposos" },
+  // Level 1-2: Other relationships from Ainulindalë forward
+  { id: "e-finwe-feanor", source: "finwe", target: "feanor", label: "hijo" },
+  { id: "e-finwe-fingolfin", source: "finwe", target: "fingolfin", label: "hijo" },
+  { id: "e-finwe-finarfin", source: "finwe", target: "finarfin", label: "hijo" },
+  { id: "e-finarfin-galadriel", source: "finarfin", target: "galadriel", label: "hija" },
+  { id: "e-thingol-luthien", source: "thingol", target: "luthien", label: "hija" },
+  { id: "e-melian-luthien", source: "melian", target: "luthien", label: "hija" },
+  { id: "e-beren-luthien", source: "beren", target: "luthien", label: "esposos" }
 ];
