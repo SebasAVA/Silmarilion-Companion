@@ -162,7 +162,7 @@ export const chaptersData: Chapter[] = [
 ];
 
 // ==================== CHARACTERS - AINUR ====================
-export const characterAinurData: Character[] = [
+export const charactersData: Character[] = [
   {
     id: "iluvatar",
     name: "Ilúvatar",
@@ -414,7 +414,7 @@ export const locationsData: Location[] = [
 ];
 
 // ==================== TIMELINE EVENTS ====================
-export const timelineEventsData: TimelineEvent[] = [
+export const timelineData: TimelineEvent[] = [
   {
     id: "musica_ainur",
     year: "El Principio",
