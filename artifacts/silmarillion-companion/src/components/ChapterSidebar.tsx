@@ -94,7 +94,11 @@ export function ChapterSidebar({ showCompendium, onToggleCompendium }: Props) {
                       isCurrent ? "text-primary" : ""
                     )}
                   >
-                    {chapter.id === 0 ? "Prólogo" : `Capítulo ${chapter.id}`}
+                    {chapter.id === 0
+                      ? "Prólogo"
+                      : chapter.id === 1
+                      ? "Valaquenta"
+                      : `Capítulo ${chapter.id - 1}`}
                   </span>
                   <span
                     className={cn(
