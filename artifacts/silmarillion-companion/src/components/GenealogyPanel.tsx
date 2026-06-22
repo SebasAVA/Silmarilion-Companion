@@ -42,20 +42,15 @@ export function GenealogyPanel() {
           id: n.id,
           position: n.position,
           data: {
+            characterId: char.id,
             label: (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedCharacterId(char.id);
-                }}
-                className="flex flex-col items-center w-full cursor-pointer hover:opacity-80 transition-opacity"
-              >
+              <div className="flex flex-col items-center pointer-events-none">
                 <span className="font-serif font-bold text-sm mb-1">{char.name}</span>
                 <span className="text-[10px] uppercase tracking-wider text-muted-foreground">{char.race}</span>
-              </button>
+              </div>
             )
           },
-          style: isActive ? activeNodeStyle : nodeStyle,
+          style: { ...isActive ? activeNodeStyle : nodeStyle, cursor: 'pointer' },
         };
       });
   }, [currentChapterIndex]);
@@ -105,6 +100,11 @@ export function GenealogyPanel() {
           minZoom={0.2}
           maxZoom={2}
           proOptions={{ hideAttribution: true }}
+          onNodeClick={(event, node: any) => {
+            if (node.data?.characterId) {
+              setSelectedCharacterId(node.data.characterId);
+            }
+          }}
         >
           <Background color="#333" gap={16} />
           <Controls className="fill-foreground !bg-card !border-border" />
