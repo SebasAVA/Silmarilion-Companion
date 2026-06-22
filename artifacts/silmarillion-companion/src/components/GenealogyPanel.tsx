@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
-import { ReactFlow, Background, Controls, MiniMap } from '@xyflow/react';
+import React, { useMemo, useState } from 'react';
+import { ReactFlow, Background, Controls, MiniMap, useReactFlow } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { useSilmarillion } from '@/context/SilmarillionContext';
 import { flowNodesData, flowEdgesData, charactersData } from '@/data/silmarillion-data';
+import { CharacterDetailSheet } from './CharacterDetailSheet';
 
 // Custom node styling requires inline styles or tailwind classes passed through ReactFlow
 const nodeStyle = {
@@ -25,6 +26,7 @@ const activeNodeStyle = {
 
 export function GenealogyPanel() {
   const { currentChapterIndex } = useSilmarillion();
+  const [selectedCharacterId, setSelectedCharacterId] = useState<string | null>(null);
 
   const nodes = useMemo(() => {
     return flowNodesData
@@ -41,10 +43,16 @@ export function GenealogyPanel() {
           position: n.position,
           data: {
             label: (
-              <div className="flex flex-col items-center">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedCharacterId(char.id);
+                }}
+                className="flex flex-col items-center w-full cursor-pointer hover:opacity-80 transition-opacity"
+              >
                 <span className="font-serif font-bold text-sm mb-1">{char.name}</span>
                 <span className="text-[10px] uppercase tracking-wider text-muted-foreground">{char.race}</span>
-              </div>
+              </button>
             )
           },
           style: isActive ? activeNodeStyle : nodeStyle,
@@ -88,23 +96,30 @@ export function GenealogyPanel() {
   }, [nodes]);
 
   return (
-    <div className="w-full h-full relative bg-background">
-      <ReactFlow 
-        nodes={nodes} 
-        edges={edges} 
-        fitView
-        minZoom={0.2}
-        maxZoom={2}
-        proOptions={{ hideAttribution: true }}
-      >
-        <Background color="#333" gap={16} />
-        <Controls className="fill-foreground !bg-card !border-border" />
-        <MiniMap 
-          nodeColor="hsl(var(--card))" 
-          maskColor="hsl(var(--background) / 0.8)"
-          className="!bg-background !border-border"
-        />
-      </ReactFlow>
-    </div>
+    <>
+      <div className="w-full h-full relative bg-background">
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          fitView
+          minZoom={0.2}
+          maxZoom={2}
+          proOptions={{ hideAttribution: true }}
+        >
+          <Background color="#333" gap={16} />
+          <Controls className="fill-foreground !bg-card !border-border" />
+          <MiniMap
+            nodeColor="hsl(var(--card))"
+            maskColor="hsl(var(--background) / 0.8)"
+            className="!bg-background !border-border"
+          />
+        </ReactFlow>
+      </div>
+      <CharacterDetailSheet
+        characterId={selectedCharacterId}
+        onClose={() => setSelectedCharacterId(null)}
+        onCharacterSelect={setSelectedCharacterId}
+      />
+    </>
   );
 }
