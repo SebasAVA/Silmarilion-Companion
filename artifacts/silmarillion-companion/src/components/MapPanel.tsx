@@ -1,5 +1,5 @@
-import React from 'react';
-import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet';
+import React, { useState } from 'react';
+import { MapContainer, ImageOverlay, Marker, Popup, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
@@ -26,34 +26,110 @@ const goldIcon = new L.DivIcon({
   popupAnchor: [0, -32],
 });
 
+// Component to show cursor position on map
+function CoordinateDisplayLayer() {
+  const [cursorPos, setCursorPos] = useState<{ lat: number; lng: number } | null>(null);
+  useMapEvents({
+    mousemove(e) {
+      setCursorPos({ lat: e.latlng.lat, lng: e.latlng.lng });
+    },
+  });
+
+  return (
+    <>
+      {cursorPos && (
+        <div
+          style={{
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            background: 'hsl(var(--card))',
+            border: '2px solid hsl(var(--primary))',
+            borderRadius: '4px',
+            padding: '12px',
+            fontSize: '13px',
+            fontFamily: 'monospace',
+            zIndex: 1000,
+            color: 'hsl(var(--primary))',
+            fontWeight: 'bold',
+          }}
+        >
+          <div>Lat: {cursorPos.lat.toFixed(2)}</div>
+          <div>Lng: {cursorPos.lng.toFixed(2)}</div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export function MapPanel() {
   const { currentChapterIndex } = useSilmarillion();
 
-  const visibleLocations = locationsData.filter(loc => loc.firstChapter <= currentChapterIndex);
+  const visibleLocations = locationsData.filter(loc =>
+    loc.firstChapter <= currentChapterIndex &&
+    (!loc.lastChapter || loc.lastChapter >= currentChapterIndex)
+  );
 
   // Bounds for the complete Middle-earth map image
   // [[south, west], [north, east]] - adjusted for the full map canvas
-  const middleEarthBounds = [[-100, -240], [100, 340]];
+  const middleEarthBounds = [[-120, -300], [120, 360]];
+
+  // Determine which map to show based on chapter
+  const isAinulindale = currentChapterIndex === 0;
+  const isValaquenta = currentChapterIndex === 1;
+  const showCustomMap = isAinulindale || isValaquenta;
+  const hideMarkers = isAinulindale;
+
+  let mapImageUrl: string;
+  let imageBounds: [[number, number], [number, number]];
+  let boundsValue: [[number, number], [number, number]] | undefined;
+  let mapCenter: [number, number];
+  let mapZoom: number;
+  let maxBoundsValue: [[number, number], [number, number]] | undefined;
+
+  if (isAinulindale) {
+    mapImageUrl = '/maps/ainulindale-circles.jpg';
+    imageBounds = [[-150, -150], [150, 150]];
+    boundsValue = imageBounds;
+    mapCenter = [0, 0];
+    mapZoom = 2;
+    maxBoundsValue = imageBounds;
+  } else if (isValaquenta) {
+    mapImageUrl = '/maps/valaquenta-map.png';
+    imageBounds = [[-150, -150], [150, 150]];
+    boundsValue = imageBounds;
+    mapCenter = [0, 0];
+    mapZoom = 2;
+    maxBoundsValue = imageBounds;
+  } else {
+    mapImageUrl = '/maps/middleearth.jpg';
+    imageBounds = middleEarthBounds;
+    boundsValue = undefined;
+    mapCenter = [65, -120];
+    mapZoom = 2.5;
+    maxBoundsValue = undefined;
+  }
 
   return (
     <div className="w-full h-full relative z-0">
       <MapContainer
-        center={[65, -120]}
-        zoom={2.5}
+        center={mapCenter}
+        zoom={mapZoom}
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
-        bounds={middleEarthBounds}
-        maxBounds={middleEarthBounds}
-        maxBoundsViscosity={1.0}
+        bounds={boundsValue}
+        maxBounds={maxBoundsValue}
       >
         <ImageOverlay
-          url="/maps/middleearth.jpg"
-          bounds={middleEarthBounds}
+          url={mapImageUrl}
+          bounds={imageBounds}
         />
-        
-        {visibleLocations.map(loc => (
-          <Marker 
-            key={loc.id} 
+
+        <CoordinateDisplayLayer />
+
+        {!hideMarkers && visibleLocations.filter(loc => loc.id !== 'ocean').map(loc => (
+          <Marker
+            key={loc.id}
             position={[loc.lat, loc.lng]}
             icon={goldIcon}
           >

@@ -13,7 +13,7 @@ export default function Companion() {
   const [showCompendium, setShowCompendium] = useState(false);
 
   return (
-    <div className="flex h-screen w-full bg-background overflow-hidden selection:bg-primary/30 text-foreground">
+    <div className="flex h-screen w-full bg-background overflow-hidden selection:bg-primary/30 text-foreground relative">
       {/* Left Sidebar - 260px */}
       <ChapterSidebar
         showCompendium={showCompendium}
@@ -99,6 +99,15 @@ export default function Companion() {
           </div>
         </>
       )}
+
+      {/* Footer Credit */}
+      <div className="fixed bottom-4 left-4 text-xs text-muted-foreground hover:text-foreground transition-colors pointer-events-none">
+        <p>
+          Made with <span className="text-primary">♥</span> by{' '}
+          <span className="text-primary font-semibold">its_perri</span> aka{' '}
+          <span className="text-primary font-semibold">Sebastian Rojas</span>
+        </p>
+      </div>
     </div>
   );
 }
