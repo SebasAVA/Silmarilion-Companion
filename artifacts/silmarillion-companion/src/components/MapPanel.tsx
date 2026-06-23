@@ -84,26 +84,26 @@ export function MapPanel() {
   let currentBounds: [[number, number], [number, number]];
   let mapCenter: [number, number];
   let mapZoom: number;
-  let boundsViscosity: number;
+  let maxBoundsValue: [[number, number], [number, number]] | undefined;
 
   if (isAinulindale) {
     mapImageUrl = '/maps/ainulindale-circles.jpg';
     currentBounds = [[-150, -150], [150, 150]];
     mapCenter = [0, 0];
     mapZoom = 2;
-    boundsViscosity = 1.0;
+    maxBoundsValue = currentBounds;
   } else if (isValaquenta) {
     mapImageUrl = '/maps/valaquenta-map.png';
     currentBounds = [[-150, -150], [150, 150]];
     mapCenter = [0, 0];
     mapZoom = 2;
-    boundsViscosity = 1.0;
+    maxBoundsValue = currentBounds;
   } else {
     mapImageUrl = '/maps/middleearth.jpg';
     currentBounds = middleEarthBounds;
     mapCenter = [65, -120];
     mapZoom = 2.5;
-    boundsViscosity = 0;
+    maxBoundsValue = undefined;
   }
 
   return (
@@ -114,8 +114,7 @@ export function MapPanel() {
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
         bounds={currentBounds}
-        maxBounds={currentBounds}
-        maxBoundsViscosity={boundsViscosity}
+        maxBounds={maxBoundsValue}
       >
         <ImageOverlay
           url={mapImageUrl}
