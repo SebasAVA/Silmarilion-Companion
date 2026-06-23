@@ -129,7 +129,7 @@ function CoordinateGridLayer() {
         <div
           style={{
             position: 'fixed',
-            bottom: '20px',
+            top: '20px',
             right: '20px',
             background: 'hsl(var(--card))',
             border: '2px solid hsl(var(--primary))',
