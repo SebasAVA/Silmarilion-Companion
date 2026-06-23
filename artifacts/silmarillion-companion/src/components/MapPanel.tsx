@@ -81,26 +81,30 @@ export function MapPanel() {
   const hideMarkers = isAinulindale;
 
   let mapImageUrl: string;
-  let currentBounds: [[number, number], [number, number]];
+  let imageBounds: [[number, number], [number, number]];
+  let boundsValue: [[number, number], [number, number]] | undefined;
   let mapCenter: [number, number];
   let mapZoom: number;
   let maxBoundsValue: [[number, number], [number, number]] | undefined;
 
   if (isAinulindale) {
     mapImageUrl = '/maps/ainulindale-circles.jpg';
-    currentBounds = [[-150, -150], [150, 150]];
+    imageBounds = [[-150, -150], [150, 150]];
+    boundsValue = imageBounds;
     mapCenter = [0, 0];
     mapZoom = 2;
-    maxBoundsValue = currentBounds;
+    maxBoundsValue = imageBounds;
   } else if (isValaquenta) {
     mapImageUrl = '/maps/valaquenta-map.png';
-    currentBounds = [[-150, -150], [150, 150]];
+    imageBounds = [[-150, -150], [150, 150]];
+    boundsValue = imageBounds;
     mapCenter = [0, 0];
     mapZoom = 2;
-    maxBoundsValue = currentBounds;
+    maxBoundsValue = imageBounds;
   } else {
     mapImageUrl = '/maps/middleearth.jpg';
-    currentBounds = middleEarthBounds;
+    imageBounds = middleEarthBounds;
+    boundsValue = undefined;
     mapCenter = [65, -120];
     mapZoom = 2.5;
     maxBoundsValue = undefined;
@@ -113,12 +117,12 @@ export function MapPanel() {
         zoom={mapZoom}
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
-        bounds={currentBounds}
+        bounds={boundsValue}
         maxBounds={maxBoundsValue}
       >
         <ImageOverlay
           url={mapImageUrl}
-          bounds={currentBounds}
+          bounds={imageBounds}
         />
 
         <CoordinateDisplayLayer />
