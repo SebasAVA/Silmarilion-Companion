@@ -39,20 +39,23 @@ export function MapPanel() {
   const isAinulindale = currentChapterIndex === 0;
   const mapImageUrl = isAinulindale ? '/maps/ainulindale-circles.jpg' : '/maps/middleearth.jpg';
 
+  // Use different bounds for Ainulindale to avoid stretching
+  const currentBounds = isAinulindale ? [[-150, -150], [150, 150]] : middleEarthBounds;
+
   return (
     <div className="w-full h-full relative z-0">
       <MapContainer
-        center={[65, -120]}
-        zoom={2.5}
+        center={isAinulindale ? [0, 0] : [65, -120]}
+        zoom={isAinulindale ? 2 : 2.5}
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
-        bounds={middleEarthBounds}
-        maxBounds={middleEarthBounds}
+        bounds={currentBounds}
+        maxBounds={currentBounds}
         maxBoundsViscosity={1.0}
       >
         <ImageOverlay
           url={mapImageUrl}
-          bounds={middleEarthBounds}
+          bounds={currentBounds}
         />
 
         {!isAinulindale && visibleLocations.map(loc => (
