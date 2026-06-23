@@ -35,6 +35,10 @@ export function MapPanel() {
   // [[south, west], [north, east]] - adjusted for the full map canvas
   const middleEarthBounds = [[-100, -240], [100, 340]];
 
+  // For Ainulindale chapter, show the circles of the world instead
+  const isAinulindale = currentChapterIndex === 0;
+  const mapImageUrl = isAinulindale ? '/maps/ainulindale-circles.jpg' : '/maps/middleearth.jpg';
+
   return (
     <div className="w-full h-full relative z-0">
       <MapContainer
@@ -47,13 +51,13 @@ export function MapPanel() {
         maxBoundsViscosity={1.0}
       >
         <ImageOverlay
-          url="/maps/middleearth.jpg"
+          url={mapImageUrl}
           bounds={middleEarthBounds}
         />
-        
-        {visibleLocations.map(loc => (
-          <Marker 
-            key={loc.id} 
+
+        {!isAinulindale && visibleLocations.map(loc => (
+          <Marker
+            key={loc.id}
             position={[loc.lat, loc.lng]}
             icon={goldIcon}
           >
