@@ -183,15 +183,15 @@ export function CharacterGrid() {
                       <div
                         key={char.id}
                         onClick={() => setSelectedDetailCharacterId(char.id)}
-                        className="p-3 border border-border rounded-lg hover:bg-accent hover:border-primary transition-all cursor-pointer group"
+                        className="p-3 border border-border rounded-lg hover:bg-primary/5 hover:border-primary/50 transition-all cursor-pointer group"
                       >
                         {/* Header */}
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-semibold text-sm group-hover:text-primary truncate">
+                            <h4 className="font-semibold text-sm text-foreground group-hover:text-primary truncate transition-colors">
                               {char.name}
                             </h4>
-                            <p className="text-xs text-muted-foreground truncate">{char.role}</p>
+                            <p className="text-xs text-muted-foreground group-hover:text-muted-foreground truncate">{char.role}</p>
                           </div>
                           <Badge className={importanceBadgeColors[char.importance]}>
                             {char.importance}
