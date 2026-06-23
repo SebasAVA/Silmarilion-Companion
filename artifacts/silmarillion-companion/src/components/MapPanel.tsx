@@ -205,7 +205,7 @@ export function MapPanel() {
 
         <CoordinateGridLayer />
 
-        {!hideMarkers && visibleLocations.map(loc => (
+        {!hideMarkers && visibleLocations.filter(loc => loc.id !== 'ocean').map(loc => (
           <Marker
             key={loc.id}
             position={[loc.lat, loc.lng]}
