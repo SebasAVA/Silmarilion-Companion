@@ -72,7 +72,7 @@ export function MapPanel() {
 
   // Bounds for the complete Middle-earth map image
   // [[south, west], [north, east]] - adjusted for the full map canvas
-  const middleEarthBounds = [[-100, -240], [100, 340]];
+  const middleEarthBounds = [[-120, -300], [120, 360]];
 
   // Determine which map to show based on chapter
   const isAinulindale = currentChapterIndex === 0;
