@@ -35,7 +35,7 @@ function CoordinateGridLayer() {
     },
   });
 
-  // Create latitude lines (horizontal)
+  // Create latitude lines (horizontal) with labels
   const latLines = [];
   for (let lat = -150; lat <= 150; lat += 30) {
     latLines.push(
@@ -43,14 +43,13 @@ function CoordinateGridLayer() {
         key={`lat-${lat}`}
         positions={[[lat, -150], [lat, 150]]}
         color="hsl(var(--primary))"
-        weight={1}
-        opacity={0.3}
-        dashArray="5,5"
+        weight={2}
+        opacity={0.6}
       />
     );
   }
 
-  // Create longitude lines (vertical)
+  // Create longitude lines (vertical) with labels
   const lngLines = [];
   for (let lng = -150; lng <= 150; lng += 30) {
     lngLines.push(
@@ -58,10 +57,63 @@ function CoordinateGridLayer() {
         key={`lng-${lng}`}
         positions={[[-150, lng], [150, lng]]}
         color="hsl(var(--primary))"
-        weight={1}
-        opacity={0.3}
-        dashArray="5,5"
+        weight={2}
+        opacity={0.6}
       />
+    );
+  }
+
+  // Create latitude labels
+  const latLabels = [];
+  for (let lat = -150; lat <= 150; lat += 30) {
+    latLabels.push(
+      <div
+        key={`lat-label-${lat}`}
+        style={{
+          position: 'absolute',
+          left: '10px',
+          top: `${((lat + 150) / 300) * 100}%`,
+          transform: 'translateY(-50%)',
+          background: 'hsl(var(--card))',
+          border: '1px solid hsl(var(--primary))',
+          padding: '2px 6px',
+          fontSize: '11px',
+          fontWeight: 'bold',
+          color: 'hsl(var(--primary))',
+          zIndex: 500,
+          borderRadius: '2px',
+          fontFamily: 'monospace',
+        }}
+      >
+        {lat}°
+      </div>
+    );
+  }
+
+  // Create longitude labels
+  const lngLabels = [];
+  for (let lng = -150; lng <= 150; lng += 30) {
+    lngLabels.push(
+      <div
+        key={`lng-label-${lng}`}
+        style={{
+          position: 'absolute',
+          left: `${((lng + 150) / 300) * 100}%`,
+          top: '10px',
+          transform: 'translateX(-50%)',
+          background: 'hsl(var(--card))',
+          border: '1px solid hsl(var(--primary))',
+          padding: '2px 6px',
+          fontSize: '11px',
+          fontWeight: 'bold',
+          color: 'hsl(var(--primary))',
+          zIndex: 500,
+          borderRadius: '2px',
+          fontFamily: 'monospace',
+        }}
+      >
+        {lng}°
+      </div>
     );
   }
 
@@ -69,6 +121,10 @@ function CoordinateGridLayer() {
     <>
       {latLines}
       {lngLines}
+      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+        {latLabels}
+        {lngLabels}
+      </div>
       {cursorPos && (
         <div
           style={{
@@ -76,13 +132,14 @@ function CoordinateGridLayer() {
             bottom: '20px',
             right: '20px',
             background: 'hsl(var(--card))',
-            border: '1px solid hsl(var(--border))',
+            border: '2px solid hsl(var(--primary))',
             borderRadius: '4px',
-            padding: '10px',
-            fontSize: '12px',
+            padding: '12px',
+            fontSize: '13px',
             fontFamily: 'monospace',
             zIndex: 1000,
-            color: 'hsl(var(--foreground))',
+            color: 'hsl(var(--primary))',
+            fontWeight: 'bold',
           }}
         >
           <div>Lat: {cursorPos.lat.toFixed(2)}</div>
