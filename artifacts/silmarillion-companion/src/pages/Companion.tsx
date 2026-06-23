@@ -101,8 +101,8 @@ export default function Companion() {
       )}
 
       {/* Footer Credit */}
-      <div className="fixed bottom-4 right-4 text-xs text-muted-foreground hover:text-foreground transition-colors pointer-events-none">
-        <p className="text-right">
+      <div className="fixed bottom-4 left-4 text-xs text-muted-foreground hover:text-foreground transition-colors pointer-events-none">
+        <p>
           Made with <span className="text-primary">♥</span> by{' '}
           <span className="text-primary font-semibold">its_perri</span> aka{' '}
           <span className="text-primary font-semibold">Sebastian Rojas</span>
