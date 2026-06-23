@@ -39,6 +39,7 @@ export function MapPanel() {
   const isAinulindale = currentChapterIndex === 0;
   const isValaquenta = currentChapterIndex === 1;
   const showCustomMap = isAinulindale || isValaquenta;
+  const hideMarkers = isAinulindale;
 
   let mapImageUrl: string;
   let currentBounds: [[number, number], [number, number]];
@@ -78,7 +79,7 @@ export function MapPanel() {
           bounds={currentBounds}
         />
 
-        {!showCustomMap && visibleLocations.map(loc => (
+        {!hideMarkers && visibleLocations.map(loc => (
           <Marker
             key={loc.id}
             position={[loc.lat, loc.lng]}
