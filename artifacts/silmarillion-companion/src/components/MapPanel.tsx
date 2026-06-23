@@ -35,18 +35,38 @@ export function MapPanel() {
   // [[south, west], [north, east]] - adjusted for the full map canvas
   const middleEarthBounds = [[-100, -240], [100, 340]];
 
-  // For Ainulindale chapter, show the circles of the world instead
+  // Determine which map to show based on chapter
   const isAinulindale = currentChapterIndex === 0;
-  const mapImageUrl = isAinulindale ? '/maps/ainulindale-circles.jpg' : '/maps/middleearth.jpg';
+  const isValaquenta = currentChapterIndex === 1;
+  const showCustomMap = isAinulindale || isValaquenta;
 
-  // Use different bounds for Ainulindale to avoid stretching
-  const currentBounds = isAinulindale ? [[-150, -150], [150, 150]] : middleEarthBounds;
+  let mapImageUrl: string;
+  let currentBounds: [[number, number], [number, number]];
+  let mapCenter: [number, number];
+  let mapZoom: number;
+
+  if (isAinulindale) {
+    mapImageUrl = '/maps/ainulindale-circles.jpg';
+    currentBounds = [[-150, -150], [150, 150]];
+    mapCenter = [0, 0];
+    mapZoom = 2;
+  } else if (isValaquenta) {
+    mapImageUrl = '/maps/valaquenta-map.png';
+    currentBounds = [[-150, -150], [150, 150]];
+    mapCenter = [0, 0];
+    mapZoom = 2;
+  } else {
+    mapImageUrl = '/maps/middleearth.jpg';
+    currentBounds = middleEarthBounds;
+    mapCenter = [65, -120];
+    mapZoom = 2.5;
+  }
 
   return (
     <div className="w-full h-full relative z-0">
       <MapContainer
-        center={isAinulindale ? [0, 0] : [65, -120]}
-        zoom={isAinulindale ? 2 : 2.5}
+        center={mapCenter}
+        zoom={mapZoom}
         style={{ height: '100%', width: '100%', background: 'hsl(var(--background))' }}
         zoomControl={false}
         bounds={currentBounds}
@@ -58,7 +78,7 @@ export function MapPanel() {
           bounds={currentBounds}
         />
 
-        {!isAinulindale && visibleLocations.map(loc => (
+        {!showCustomMap && visibleLocations.map(loc => (
           <Marker
             key={loc.id}
             position={[loc.lat, loc.lng]}
