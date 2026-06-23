@@ -1,5 +1,5 @@
-import React from 'react';
-import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet';
+import React, { useState } from 'react';
+import { MapContainer, ImageOverlay, Marker, Popup, Polyline, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
@@ -25,6 +25,73 @@ const goldIcon = new L.DivIcon({
   iconAnchor: [16, 32],
   popupAnchor: [0, -32],
 });
+
+// Component to show coordinate grid and cursor position
+function CoordinateGridLayer() {
+  const [cursorPos, setCursorPos] = useState<{ lat: number; lng: number } | null>(null);
+  const map = useMapEvents({
+    mousemove(e) {
+      setCursorPos({ lat: e.latlng.lat, lng: e.latlng.lng });
+    },
+  });
+
+  // Create latitude lines (horizontal)
+  const latLines = [];
+  for (let lat = -150; lat <= 150; lat += 30) {
+    latLines.push(
+      <Polyline
+        key={`lat-${lat}`}
+        positions={[[lat, -150], [lat, 150]]}
+        color="hsl(var(--primary))"
+        weight={1}
+        opacity={0.3}
+        dashArray="5,5"
+      />
+    );
+  }
+
+  // Create longitude lines (vertical)
+  const lngLines = [];
+  for (let lng = -150; lng <= 150; lng += 30) {
+    lngLines.push(
+      <Polyline
+        key={`lng-${lng}`}
+        positions={[[-150, lng], [150, lng]]}
+        color="hsl(var(--primary))"
+        weight={1}
+        opacity={0.3}
+        dashArray="5,5"
+      />
+    );
+  }
+
+  return (
+    <>
+      {latLines}
+      {lngLines}
+      {cursorPos && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            background: 'hsl(var(--card))',
+            border: '1px solid hsl(var(--border))',
+            borderRadius: '4px',
+            padding: '10px',
+            fontSize: '12px',
+            fontFamily: 'monospace',
+            zIndex: 1000,
+            color: 'hsl(var(--foreground))',
+          }}
+        >
+          <div>Lat: {cursorPos.lat.toFixed(2)}</div>
+          <div>Lng: {cursorPos.lng.toFixed(2)}</div>
+        </div>
+      )}
+    </>
+  );
+}
 
 export function MapPanel() {
   const { currentChapterIndex } = useSilmarillion();
@@ -78,6 +145,8 @@ export function MapPanel() {
           url={mapImageUrl}
           bounds={currentBounds}
         />
+
+        <CoordinateGridLayer />
 
         {!hideMarkers && visibleLocations.map(loc => (
           <Marker
