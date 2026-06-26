@@ -88,7 +88,7 @@ export function MapPanel() {
   let maxBoundsValue: [[number, number], [number, number]] | undefined;
 
   if (isAinulindale) {
-    mapImageUrl = '/maps/ainulindale-circles.jpg';
+    mapImageUrl = '/maps/ea-arda-map.jpg';
     imageBounds = [[-150, -150], [150, 150]];
     boundsValue = imageBounds;
     mapCenter = [0, 0];

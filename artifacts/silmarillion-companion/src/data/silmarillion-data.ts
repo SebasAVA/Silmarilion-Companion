@@ -93,6 +93,20 @@ export type Theme = {
   relatedCharacters: string[];
 };
 
+export type ElvenRace = {
+  id: string;
+  name: string;
+  aliases?: string[];
+  description: string;
+  details: string;
+  characteristics: string[];
+  origin: string;
+  locations: string[];
+  notableFigures: string[];
+  color: string;
+  firstChapter: number;
+};
+
 export type FlowNode = {
   id: string;
   characterId: string;
@@ -900,4 +914,121 @@ export const flowEdgesData: FlowEdge[] = [
   { id: "e-thingol-luthien", source: "thingol", target: "luthien", label: "hija" },
   { id: "e-melian-luthien", source: "melian", target: "luthien", label: "hija" },
   { id: "e-beren-luthien", source: "beren", target: "luthien", label: "esposos" }
+];
+
+export const elvenRacesData: ElvenRace[] = [
+  {
+    id: "noldor",
+    name: "Noldor",
+    aliases: ["El Pueblo de la Destreza", "Los Hábiles"],
+    description: "Los Noldor son conocidos por su genio creativo, especialmente en la artesanía. Aprendieron del maestro Aulë y desarrollaron habilidades incomparables en la forja y el tejido.",
+    details: "Los Noldor, segunda hueste de los Eldar, se destacaron por su talento en artes y oficios. Durante su estancia en Valinor, descubrieron gemas preciosas y las tallaron con gran destreza. Fueron liderados por Finwë y luego por sus hijos Fëanor, Fingolfin y Finarfin. El orgullo de Fëanor y su creación de los Silmarils precipitó la rebelión de los Noldor contra los Valar, llevándolos a la Tierra Media en busca de redención y venganza. Los Noldor se establecieron en Hithlum, Nargothrond y otras fortalezas de Beleriand, donde durante la Primera Edad resistieron valientemente contra Morgoth.",
+    characteristics: [
+      "Maestría en artes y oficios",
+      "Genio creativo y técnico",
+      "Orgullo en sus creaciones",
+      "Valentía y resistencia",
+      "Capacidad de liderazgo"
+    ],
+    origin: "Despertaron en Cuiviénen, fueron la segunda hueste de los Eldar convocados a Valinor",
+    locations: ["Tirion", "Hithlum", "Nargothrond", "Gondolin", "Valinor"],
+    notableFigures: ["Fëanor", "Fingolfin", "Finarfin", "Turgon", "Finrod"],
+    color: "hsl(39, 84%, 50%)",
+    firstChapter: 4
+  },
+  {
+    id: "sindar",
+    name: "Sindar",
+    aliases: ["Elfos Grises", "Elfos del Crepúsculo", "Elfos de Beleriand"],
+    description: "Los Sindar son los Elfos que se quedaron en la Tierra Media y desarrollaron su propia civilización bajo el liderazgo de Thingol y la protección de Melian.",
+    details: "Los Sindar descendían de los Teleri que no completaron el viaje a Valinor. Bajo el liderazgo de Elwë (posteriormente Elu Thingol), quien se enamoró de la Maia Melian, los Sindar fundaron el reino de Doriath en Beleriand, protegido por la Cintura de Melian. Aunque nunca vieron directamente la luz de los Dos Árboles, aprendieron de los Noldor tras su llegada. Los Sindar desarrollaron su propia lengua y cultura, convirtiéndose en los gobernantes de facto de Beleriand. Su reino de Doriath fue el más duradero y hermoso, aunque finalmente cayó bajo la maldición de los Silmarils.",
+    characteristics: [
+      "Sabiduría y moderación",
+      "Conexión con la magia y la naturaleza",
+      "Maestría en lengua y música",
+      "Valentía defensiva",
+      "Belleza serena"
+    ],
+    origin: "Teleri que se quedaron en la Tierra Media cuando Elwë encontró a Melian",
+    locations: ["Doriath", "Menegroth", "Brethil", "Beleriand"],
+    notableFigures: ["Elu Thingol", "Melian", "Lúthien", "Galadriel"],
+    color: "hsl(209, 89%, 45%)",
+    firstChapter: 5
+  },
+  {
+    id: "vanyar",
+    name: "Vanyar",
+    aliases: ["El Pueblo Hermoso", "Los Primeros"],
+    description: "Los Vanyar, la primera hueste de los Eldar, se quedaron en Valinor más cerca que nadie de los Valar, adorándolos en el Monte Taniquetil.",
+    details: "Los Vanyar, liderados por Ingwë, fueron la primera hueste de los Eldar en llegar a Valinor. Entre todos los Elfos, los Vanyar permanecieron más cerca de los Valar, habitando las laderas del Monte Taniquetil bajo la protección directa de Manwë. Aunque participaron inicialmente en los eventos de Valinor, gradualmente se separaron de los asuntos de la Tierra Media. Ninguno de los Vanyar se rebeló con los Noldor, permaneciendo leales a los Valar. Se dice que ningún Vanya nunca vio la Tierra Media después de partir a Valinor.",
+    characteristics: [
+      "Devoción a los Valar",
+      "Belleza excepcional",
+      "Lealtad inquebrantable",
+      "Paz y armonía",
+      "Alejamiento de conflictos mundanos"
+    ],
+    origin: "Primera hueste de los Eldar, convocados a Valinor por los Valar",
+    locations: ["Valinor", "Taniquetil", "Tirion"],
+    notableFigures: ["Ingwë", "Aulë"],
+    color: "hsl(276, 70%, 55%)",
+    firstChapter: 4
+  },
+  {
+    id: "teleri",
+    name: "Teleri",
+    aliases: ["El Pueblo del Mar", "Los Finales"],
+    description: "Los Teleri, la tercera hueste de los Eldar, desarrollaron una pasión especial por el mar y la navegación bajo la instrucción de Ossë.",
+    details: "Los Teleri, liderados inicialmente por Elwë (quien se quedó en la Tierra Media) y luego por Olwë, fue la tercera hueste de los Eldar. Una rama, los Falathrim bajo Círdan, se quedó en las costas de Beleriand y se convirtió en los primeros marineros de la Tierra Media. La mayoría de los Teleri fueron transportados a Tol Eressëa en la Bahía de Eldamar, donde aprendieron del Señor de los Mares, Ossë. Construyeron hermosas naves de cisnes y finalmente llegaron a Aman, fundando Alqualondë, el Puerto de los Cisnes, una ciudad de gran belleza arquitectónica. Los Teleri en Aman permanecieron en general leales a los Valar, aunque fueron tocados indirectamente por la tragedia de los Noldor.",
+    characteristics: [
+      "Habilidad marinera excepcional",
+      "Amor por el mar y el viaje",
+      "Maestría en construcción de barcos",
+      "Belleza y elegancia",
+      "Paciencia y prudencia"
+    ],
+    origin: "Tercera hueste de los Eldar, algunos se quedaron en Beleriand, otros viajaron a Aman",
+    locations: ["Alqualondë", "Tol Eressëa", "Falas", "Brithombar", "Eglarest"],
+    notableFigures: ["Olwë", "Círdan", "Ossë"],
+    color: "hsl(173, 80%, 45%)",
+    firstChapter: 4
+  },
+  {
+    id: "avari",
+    name: "Avari",
+    aliases: ["Los Rechazadores", "Los Que Se Quedaron"],
+    description: "Los Avari son los Elfos que rechazaron la convocatoria de los Valar y eligieron permanecer en la Tierra Media.",
+    details: "Los Avari fueron aquellos Quendi (Elfos despertados) que, cuando Oromë los encontró, rechazaron viajar a Valinor. Su nombre significa 'Los Rechazadores'. Eligieron permanecer en la Tierra Media, confiando en su propia libertad más que en la protección de los Valar. Poco se conoce de sus historias en el Silmarillion, ya que permanecieron alejados de los grandes eventos que involucraban a los Eldar. Se quedaron en diversos lugares de la Tierra Media del Este, desarrollando sus propias culturas en la sombra. Su elección responde al tema central del Silmarillion: la tensión entre aceptar la guía de los Poderes y mantener la libertad individual.",
+    characteristics: [
+      "Independencia radical",
+      "Desconfianza en los Valar",
+      "Libertad personal valorada sobre seguridad",
+      "Misterio y aislamiento",
+      "Sabiduría reflexiva"
+    ],
+    origin: "Quendi que rechazaron la convocatoria de Oromë a Valinor",
+    locations: ["Tierra Media Oriental", "Regiones desconocidas"],
+    notableFigures: [],
+    color: "hsl(0, 0%, 45%)",
+    firstChapter: 4
+  },
+  {
+    id: "nandor",
+    name: "Nandor",
+    aliases: ["Los Que Se Quedaron", "Pueblo del Bosque"],
+    description: "Los Nandor fueron Teleri que se separaron durante la Gran Marcha, eligiendo quedarse en los bosques de la Tierra Media bajo el liderazgo de Lenwë.",
+    details: "Durante la Gran Marcha de los Elfos a Valinor, un grupo de Teleri liderados por Lenwë se separó de la hueste principal en los bosques de la Tierra Media Oriental. Estos Nandor ('Los Que Se Quedaron') eligieron abandonar el viaje hacia Occidente, prefiriendo permanecer en los bosques donde encontraban paz y comunión con la naturaleza. Aunque algunos de sus descendientes eventualmente encontraron su camino a Beleriand, donde algunos se asentaron con los Sindar, los Nandor permanecieron en general alejados de los grandes conflictos de la Primera Edad. Representan una rama diferente de los Elfos, más conectada con la naturaleza salvaje que con las civilizaciones construidas.",
+    characteristics: [
+      "Amor por los bosques",
+      "Vida nómada",
+      "Simplicidad y naturalidad",
+      "Conexión profunda con la naturaleza",
+      "Rechazo a las estructuras complejas"
+    ],
+    origin: "Teleri que se separaron durante la Gran Marcha en los bosques de la Tierra Media",
+    locations: ["Ossirand", "Bosques de Beleriand", "Tierra Media Oriental"],
+    notableFigures: ["Lenwë"],
+    color: "hsl(120, 60%, 50%)",
+    firstChapter: 4
+  }
 ];

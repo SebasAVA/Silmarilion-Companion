@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import { Character, charactersData } from "@/data/silmarillion-data";
+import { Character, charactersData, elvenRacesData } from "@/data/silmarillion-data";
 import { useSilmarillion } from "@/context/SilmarillionContext";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AlertCircle, Book, Sword, Users, MapPin } from "lucide-react";
+import { AlertCircle, Book, Sword, Users, MapPin, Crown } from "lucide-react";
 
 interface CharacterDetailCardProps {
   characterId: string;
@@ -18,6 +18,12 @@ export function CharacterDetailCard({ characterId, onCharacterSelect }: Characte
     () => charactersData.find((c) => c.id === characterId),
     [characterId]
   );
+
+  const getRaceColor = (race: string) => {
+    const raceName = race.split(" ")[0].toLowerCase();
+    const raceData = elvenRacesData.find(r => r.id === raceName);
+    return raceData?.color || "hsl(209, 89%, 45%)";
+  };
 
   if (!character) {
     return <div className="p-4 text-muted-foreground">Personaje no encontrado</div>;
@@ -85,16 +91,29 @@ export function CharacterDetailCard({ characterId, onCharacterSelect }: Characte
         </div>
 
         {/* Basic info */}
-        <div className="flex flex-wrap gap-4 mt-4 text-sm text-muted-foreground">
-          <div>
-            <span className="font-semibold text-foreground">Raza:</span> {character.race}
+        <div className="flex flex-wrap gap-4 mt-4 text-sm">
+          <div className="flex items-center gap-2">
+            <span className="font-semibold text-foreground">Raza:</span>
+            <Badge
+              className="text-white border"
+              style={{
+                backgroundColor: getRaceColor(character.race),
+                borderColor: getRaceColor(character.race),
+              }}
+            >
+              {character.race}
+            </Badge>
           </div>
           <div>
-            <span className="font-semibold text-foreground">Alineación:</span> {character.alignment}
+            <span className="font-semibold text-foreground">Alineación:</span>{" "}
+            <span className="text-muted-foreground capitalize">{character.alignment}</span>
           </div>
           <div>
-            <span className="font-semibold text-foreground">Aparición:</span> Cap. {character.firstChapter}
-            {character.lastChapter && ` - Cap. ${character.lastChapter}`}
+            <span className="font-semibold text-foreground">Aparición:</span>{" "}
+            <span className="text-muted-foreground">
+              Cap. {character.firstChapter}
+              {character.lastChapter && ` - Cap. ${character.lastChapter}`}
+            </span>
           </div>
         </div>
       </CardHeader>
