@@ -303,7 +303,13 @@ export const timelineData: TimelineEvent[] = [
   { id: "melian-departs", year: "Años de los Árboles (tempranos)", title: "Melian parte de Valinor a la Tierra Media", description: "Melian, la Maia más hermosa y sabia de los jardines de Lórien, parte a la Tierra Media cuando los Quendi despiertan. Su voz y los pájaros que la siguen llenan el silencio de la Tierra Media.", importance: "HIGH", category: "Journey", firstChapter: 5, relatedCharacters: ["melian"], relatedLocations: ["lorien"], greatTaleId: "amor-thingol-melian" },
   { id: "encounter-elwe-melian", year: "Años de los Árboles (tempranos)", title: "Encuentro de Elwë y Melian en Nan Elmoth", description: "Elwë Singollo, buscando a su amigo Finwë, llega al bosque de Nan Elmoth. Oye el canto de los ruiseñores de Melian y cae un hechizo sobre él. La encuentra en un claro abierto a las estrellas, ve la luz de Aman en su rostro, le toma la mano. Ambos permanecen inmóviles durante años mientras los árboles crecen altos y oscuros.", importance: "CRITICAL", category: "Other", firstChapter: 5, relatedCharacters: ["elwe-singollo", "melian"], relatedLocations: ["nan-elmoth"], greatTaleId: "amor-thingol-melian" },
   { id: "doriath-founded", year: "Años de los Árboles (tempranos)", title: "Fundación del reino de Doriath", description: "Elwë despierta del trance como Elu Thingol, Rey Mantogrís, transformado por el poder de Melian. Se reúne con su pueblo y establece el reino de Doriath bajo su gobierno. Thingol y Melian reinan en Menegroth, las Mil Cavernas. Doriath se convierte en el más bello y protegido de los reinos élficos.", importance: "CRITICAL", category: "Creation", firstChapter: 5, relatedCharacters: ["elwe-singollo", "melian"], relatedLocations: ["menegroth", "doriath", "nan-elmoth"], greatTaleId: "amor-thingol-melian" },
-  { id: "t5", year: "Años de los Árboles", title: "Nacimiento de Fëanor", description: "Nace el más dotado de los Noldor; muerte de Míriel.", importance: "HIGH", category: "Birth", firstChapter: 7, relatedCharacters: ["feanor", "finwe"] },
+  { id: "rumil-letters", year: "Mediodía de Valinor", title: "Rúmil inventa las primeras letras élficas", description: "Rúmil de Tirion inventa los primeros signos adecuados para registrar el discurso y las canciones: algunas letras para grabar en metal o piedra, otras para dibujar con pluma. Se convierte en maestro de Tirion.", importance: "MEDIUM", category: "Creation", firstChapter: 6, relatedCharacters: ["rumil"], relatedLocations: ["tirion"], greatTaleId: "" },
+  { id: "feanor-birth-miriel-death", year: "Mediodía de Valinor", title: "Nacimiento de Fëanor y muerte espiritual de Míriel", description: "Nace Fëanor, hijo de Finwë y Míriel Serindë. El parto agota toda la fuerza espiritual de Míriel; advierte que nunca volverá a concebir. Se tiende a dormir en los jardines de Lórien, pero su espíritu parte a las estancias de Mandos, dejando su cuerpo incorrupto. Finwë la visita en vano.", importance: "CRITICAL", category: "Birth / Death", firstChapter: 6, relatedCharacters: ["feanor", "finwe", "miriel"], relatedLocations: ["tirion", "lorien", "mandos"], greatTaleId: "nacimiento-feanor" },
+  { id: "feanor-letters-gems", year: "Mediodía de Valinor", title: "Fëanor inventa nuevas letras y crea gemas artificiales", description: "Fëanor supera a Rúmil inventando las Tengwar, nuevas letras de gran belleza y poder. Crea las primeras gemas artificiales: blancas e incoloras que resplandecen con fuegos azules y plateados, y cristales con los que las cosas distantes pueden verse claras. Su genio brilla como fuego desde dentro.", importance: "HIGH", category: "Creation", firstChapter: 6, relatedCharacters: ["feanor", "rumil"], relatedLocations: ["tirion", "valinor"], greatTaleId: "" },
+  { id: "finwe-second-marriage", year: "Mediodía de Valinor", title: "Segundo matrimonio de Finwë con Indis", description: "Finwë toma como segunda esposa a Indis la Bella, pariente de Ingwë. De esta unión nacen Fingolfin y Finarfin. Fëanor resiente profundamente este matrimonio y vive apartado de sus medio hermanos. La casa real Noldor queda fracturada.", importance: "HIGH", category: "Other", firstChapter: 6, relatedCharacters: ["finwe", "indis", "feanor", "fingolfin", "finarfin"], relatedLocations: ["tirion", "valinor"], greatTaleId: "nacimiento-feanor" },
+  { id: "melkor-released", year: "Fin del Mediodía de Valinor", title: "Liberación de Melkor tras tres edades en Mandos", description: "Melkor cumple su condena de tres edades en las Casas de Mandos. Pidió perdón ante los tronos de los Valar. Nienna apoyó su alegato; Mandos permaneció en silencio. Manwë, en su bondad, le concedió el perdón. Ulmo no se engañó; Tulkas cerró los puños cada vez que lo veía pasar.", importance: "CRITICAL", category: "Other", firstChapter: 6, relatedCharacters: ["melkor", "manwe", "nienna", "ulmo", "tulkas"], relatedLocations: ["mandos", "valinor"], greatTaleId: "liberacion-melkor" },
+  { id: "melkor-corruption", year: "Fin del Mediodía de Valinor", title: "Melkor comienza a corromper a los Noldor", description: "Melkor, liberado, se acerca a los Noldor con hermosas palabras y enseñanzas ocultas. Codicia las gemas de los Noldor y busca sembrar discordia entre ellos y los Valar. Los Noldor lo escuchan. Fëanor fue el primero en llamarlo Morgoth y nunca trató con él, aunque Melkor mintió diciendo que lo había instruido.", importance: "CRITICAL", category: "Other", firstChapter: 6, relatedCharacters: ["melkor", "feanor"], relatedLocations: ["valinor", "tirion"], greatTaleId: "liberacion-melkor" },
+  { id: "t5", year: "Años de los Árboles", title: "Nacimiento de Fëanor", description: "Nace el más dotado de los Noldor; muerte de Míriel.", importance: "HIGH", category: "Birth", firstChapter: 6, relatedCharacters: ["feanor", "finwe"] },
   { id: "t6", year: "Años de los Árboles", title: "Forja de los Silmarils", description: "Fëanor captura la luz de los Dos Árboles en tres grandes joyas.", importance: "CRITICAL", category: "Creation", firstChapter: 8, relatedCharacters: ["feanor"] },
   { id: "t7", year: "Años de los Árboles", title: "Oscurecimiento de Valinor", description: "Melkor y Ungoliant destruyen los Árboles y roban los Silmarils.", importance: "CRITICAL", category: "Destruction", firstChapter: 9, relatedCharacters: ["melkor"], relatedLocations: ["valinor"] },
   { id: "t8", year: "Años de los Árboles", title: "Vuelo de los Noldor", description: "Rebelión de Fëanor y matanza de Alqualondë.", importance: "HIGH", category: "Oath", firstChapter: 10, relatedCharacters: ["feanor", "fingolfin", "finarfin"] },
@@ -373,6 +379,54 @@ export const greatTalesData: GreatTale[] = [
     ],
     startChapter: 4,
     endChapter: 4
+  },
+  {
+    id: "nacimiento-feanor",
+    title: "El Nacimiento de Fëanor y la Fractura de la Casa de Finwë",
+    description: "Nace Fëanor, el más dotado de los Noldor. Su parto consume el espíritu de Míriel, quien parte a Mandos dejando su cuerpo incorrupto. Finwë toma segunda esposa (Indis); Fëanor lo resiente y vive apartado de sus medio hermanos. Fëanor crece como el más hábil, superando incluso a Rúmil.",
+    details: "Durante el Mediodía de Valinor, en tiempos de paz y alegría, Rúmil de Tirion inventó las primeras letras élficas para registrar los discursos y canciones. Pero su gloria fue pronto eclipsada. Míriel Serindë, la primera esposa de Finwë, concibió un hijo cuyo parto agotaría todo su ser espiritual. Nació Fëanor, el más grande y más dotado de todos los Noldor en poder de mente y destreza de manos. Alto, hermoso, con ojos penetrantes y cabellos negros como plumas de cuervo, fue impulsado desde dentro por un fuego secreto que lo distinguía de todos sus hermanos. Míriel advirtió a Finwë que su fuerza se había agotado completamente; nunca volvería a concebir. Se tendió a dormir en los hermosos jardines de Lórien, pero su espíritu, agotado, partió a las estancias de Mandos, abandonando su cuerpo incorrupto en los sauces de plata. Finwë la visitó muchas veces, llamándola en vano. Su destino fue un debate entre los Valar, pues era sin precedentes que un Elfa eligiera abandonar la vida en el Reino Bendecido. Finwë, afligido, se dedicó completamente a Fëanor. Pero el tiempo pasó, y Finwë tomó como segunda esposa a Indis la Bella, pariente próxima de Ingwë de los Vanyar. De esta unión nacieron Fingolfin y Finarfin, ambos grandes y gloriosos. Sin embargo, Fëanor resintió profundamente este segundo matrimonio de su padre. Vivió apartado de sus medio hermanos, trabajando solo en sus artes. Superó a Rúmil inventando nuevas letras que llevaron su nombre: las Tengwar. Creó gemas artificiales de blancura inigualable que resplandecían con fuegos azules y plateados, y cristales de videncia con los que las cosas distantes podían verse claras. Su genio quemaba como fuego, pero su corazón guardaba rencor. La casa de Finwë se había fracturado, y de esta fractura nacerían los conflictos que destruirían la gloria de los Noldor.",
+    protagonists: ["feanor", "finwe", "miriel"],
+    antagonists: [],
+    keyCharacters: ["indis", "fingolfin", "finarfin", "rumil"],
+    relatedLocations: ["tirion", "lorien", "valinor"],
+    relatedEvents: ["rumil-letters", "feanor-birth-miriel-death", "feanor-letters-gems", "finwe-second-marriage"],
+    themes: ["Pérdida maternal", "Fractura familiar", "Fuego interior", "Genio y orgullo"],
+    needToKnow: [
+      "Míriel agotó toda su fuerza espiritual en el parto de Fëanor; su espíritu partió a Mandos",
+      "Fëanor creció como el más hábil de los Noldor, superando a Rúmil e inventando las Tengwar",
+      "Finwë tomó segunda esposa (Indis); Fëanor lo resintió y vivió apartado de Fingolfin y Finarfin"
+    ],
+    afterReadingShouldKnow: [
+      "La fractura de la casa de Finwë es la raíz de la división interna de los Noldor que estallará más adelante",
+      "Muchos juzgaron que si Finwë no se hubiera casado de nuevo, otros habrían sido los caminos de Fëanor",
+      "Sin embargo, los hijos de Indis fueron grandes y gloriosos; sin ellos la historia no habría tenido la misma grandeza"
+    ],
+    startChapter: 6,
+    endChapter: 6
+  },
+  {
+    id: "liberacion-melkor",
+    title: "La Liberación de Melkor",
+    description: "Melkor cumple su condena de tres edades en Mandos. Pidió perdón ante los Valar; Nienna apoyó su alegato. Manwë le concedió libertad. Pero Ulmo no se engañó, y Tulkas nunca olvidó. Melkor ocultó su odio bajo hermosas palabras y comenzó a corromper a los Noldor con enseñanzas ocultas.",
+    details: "Tras la Batalla de los Poderes, Melkor fue encarcelado en las Casas de Mandos por tres edades completas del mundo. Allí, en la prisión de los Poderes, pasó largos años contemplando sus crímenes y la ruina que había causado. Al fin, cuando el tiempo de su castigo se completó, pidió audiencia ante los tronos de los Valar. Se arrodilló ante Manwë y pidió perdón por todas sus transgresiones, por la Música desgarrada, por las Lámparas destruidas, por los Árboles arruinados, por los Elfos corrompidos en Orcos. Su petición fue apoyada por Nienna, la Dama del Llanto, quien siempre se compadece incluso del más culpable. Mandos, el Juez de los Muertos, no dijo nada. Manwë, cuyo corazón estaba lleno de bondad y cuya naturaleza no comprendía el mal, fue movido por compasión. No podía ver la mentira porque no había mal en él mismo. Concedió el perdón a Melkor y le permitió circular libremente nuevamente en Arda. Pero otros no fueron engañados. Ulmo, el Señor de las Aguas, vio a través del disfraz. Tulkas, el Poderoso, cerró los puños cada vez que pasaba Melkor, pues nunca olvidaría su furia al combatir contra el mal. Melkor caminaba nuevamente por Valinor, pero su odio ardía bajo una apariencia de hermosura y bondad. Pronto sus ojos se posaron en las gemas que los Noldor habían creado y tallado: las piedras preciosas que Fëanor había forjado con tal arte que resplandecían con vida propia. El corazón de Melkor fue consumido por la codicia. Vio que podría explotar el genio de los Noldor, apartarlos de los Valar con promesas de poder y conocimiento oculto. Se acercó especialmente a los Noldor, pues los Vanyar desconfiaban de él y despreciaba a los Teleri. Los Noldor, amantes del conocimiento, se deleitaron en sus enseñanzas ocultas. Solo Fëanor fue impenetrable: trabajaba solo, ardiendo en su propio fuego interior, y nunca buscó consejo de Melkor, aunque el Enemigo mintió diciendo que lo había instruido. Fue Fëanor quien primero lo llamó Morgoth (El Oscuro Enemigo) en lugar de por su nombre original.",
+    protagonists: ["manwe", "melkor"],
+    antagonists: ["melkor"],
+    keyCharacters: ["nienna", "ulmo", "tulkas", "feanor"],
+    relatedLocations: ["mandos", "valinor", "tirion"],
+    relatedEvents: ["melkor-released", "melkor-corruption"],
+    themes: ["Engaño", "Bondad como vulnerabilidad", "Semilla de la discordia", "Codicia"],
+    needToKnow: [
+      "Melkor cumplió tres edades en Mandos; Nienna apoyó su petición de perdón",
+      "Manwë, sin comprender el mal, concedió el perdón; Ulmo y Tulkas no se engañaron",
+      "Melkor codiciaba las gemas de los Noldor y comenzó a sembrar discordia con enseñanzas ocultas"
+    ],
+    afterReadingShouldKnow: [
+      "El perdón de Manwë fue un error nacido de la bondad: quien no comprende el mal no puede detectar la mentira",
+      "Los Noldor se complacían en el conocimiento oculto; los Vanyar sospechaban y los Teleri no importaban a Melkor",
+      "Fëanor fue el primero en llamarlo Morgoth y nunca trató con él, aunque fue atrapado en sus redes de malicia contra los Valar"
+    ],
+    startChapter: 6,
+    endChapter: 6
   },
   {
     id: "gran-marcha-division",
@@ -849,6 +903,27 @@ export const themesData: Theme[] = [
     analysis: "¿Es nuestro destino inevitable o somos libres de elegir? Túrin lucha contra la maldición de Morgoth pero al final no puede escapar. Sin embargo, sus elecciones importan. El Silmarillion mantiene esta tensión sin resolverla, reflejando la naturaleza del drama humano.",
     relatedGreatTales: ["beren-luthien", "turin", "fall-gondolin"],
     relatedCharacters: ["turin", "feanor", "earendil"]
+  },
+  {
+    id: "bondad-no-comprende-mal",
+    name: "La Bondad que No Comprende el Mal",
+    analysis: "Manwë perdonó a Melkor porque 'no había mal en Manwë y no podía comprenderlo'. Esta bondad ciega es la mayor vulnerabilidad de los Valar. Ulmo y Tulkas desconfiaron pero obedecieron, pues 'quienes defienden la autoridad contra la rebelión, no han de rebelarse ellos mismos'. La incapacidad para comprender el mal hace que incluso los más poderosos sean engañados por quien lo encarna perfectamente.",
+    relatedGreatTales: ["liberacion-melkor"],
+    relatedCharacters: ["manwe", "melkor", "ulmo", "tulkas", "nienna"]
+  },
+  {
+    id: "fractura-familiar",
+    name: "La Fractura Familiar",
+    analysis: "La muerte de Míriel, el segundo matrimonio de Finwë y el resentimiento de Fëanor fracturaron la casa real Noldor. Esta ruptura doméstica es la semilla de la división política que destruirá la unidad de los Noldor. Lo personal se convierte en lo político. Muchos elfos después juzgaron que si Finwë no se hubiera casado de nuevo, la historia hubiera sido distinta. Sin embargo, los hijos de Indis fueron grandes y gloriosos.",
+    relatedGreatTales: ["nacimiento-feanor"],
+    relatedCharacters: ["finwe", "miriel", "feanor", "indis", "fingolfin", "finarfin"]
+  },
+  {
+    id: "fuego-interior-feanor",
+    name: "El Fuego Interior de Fëanor",
+    analysis: "Fëanor es descrito como impulsado por un fuego secreto desde dentro. Trabaja solo, no pide consejo, es inquebrantable. Este fuego es fuente de su genio pero también de su caída futura. Nerdanel pudo retenerlo brevemente con su paciencia, pero luego dejaron de sentirse unidos. El fuego que crea belleza (las Tengwar, las gemas) es el mismo fuego que consume, que resiente, que jura y que condena.",
+    relatedGreatTales: ["nacimiento-feanor"],
+    relatedCharacters: ["feanor", "nerdanel", "finwe", "indis"]
   }
 ];
 
