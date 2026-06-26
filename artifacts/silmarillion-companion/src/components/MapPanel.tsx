@@ -65,10 +65,12 @@ function CoordinateDisplayLayer() {
 export function MapPanel() {
   const { currentChapterIndex } = useSilmarillion();
 
-  const visibleLocations = locationsData.filter(loc =>
-    loc.firstChapter <= currentChapterIndex &&
-    (!loc.lastChapter || loc.lastChapter >= currentChapterIndex)
-  );
+  const visibleLocations = locationsData.filter(loc => {
+    // No new points after chapter id 2
+    const maxAllowedFirstChapter = currentChapterIndex <= 2 ? currentChapterIndex : 2;
+    return loc.firstChapter <= maxAllowedFirstChapter &&
+      (!loc.lastChapter || loc.lastChapter >= currentChapterIndex);
+  });
 
   // Bounds for the complete Middle-earth map image
   // [[south, west], [north, east]] - adjusted for the full map canvas
