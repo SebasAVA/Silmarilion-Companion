@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { chaptersData, charactersData, locationsData, timelineData, Character } from "@/data/silmarillion-data";
+import { chaptersData, charactersData, locationsData, timelineData, elvenRacesData, Character } from "@/data/silmarillion-data";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -7,7 +7,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { cn } from "@/lib/utils";
 import {
   X, Search, Users, MapPin, Clock, BookOpen,
-  ChevronRight, Circle, Check
+  ChevronRight, Circle, Check, Crown
 } from "lucide-react";
 import { useSilmarillion } from "@/context/SilmarillionContext";
 import { CharacterGrid } from "@/components/CharacterGrid";
@@ -96,8 +96,8 @@ export function CompendiumPanel({ onClose }: Props) {
 
       {/* Tabs */}
       <Tabs defaultValue="characters" className="flex flex-col flex-1 min-h-0">
-        <div className="px-5 pt-3 shrink-0">
-          <TabsList className="bg-muted border border-border h-9 w-full grid grid-cols-4">
+        <div className="px-5 pt-3 shrink-0 overflow-x-auto">
+          <TabsList className="bg-muted border border-border h-9 w-full grid grid-cols-5 shrink-0">
             <TabsTrigger
               value="characters"
               className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-xs uppercase tracking-wider gap-1.5"
@@ -105,6 +105,14 @@ export function CompendiumPanel({ onClose }: Props) {
               <Users className="w-3 h-3" />
               <span className="hidden sm:inline">Personajes</span>
               <span className="text-[10px] opacity-70">({filteredChars.length})</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="races"
+              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-xs uppercase tracking-wider gap-1.5"
+            >
+              <Crown className="w-3 h-3" />
+              <span className="hidden sm:inline">Pueblos</span>
+              <span className="text-[10px] opacity-70">({elvenRacesData.length})</span>
             </TabsTrigger>
             <TabsTrigger
               value="locations"
@@ -136,6 +144,101 @@ export function CompendiumPanel({ onClose }: Props) {
         {/* PERSONAJES */}
         <TabsContent value="characters" className="flex-1 min-h-0 m-0 mt-3 outline-none">
           <CharacterGrid />
+        </TabsContent>
+
+        {/* PUEBLOS ÉLFICOS */}
+        <TabsContent value="races" className="flex-1 min-h-0 m-0 mt-3 outline-none">
+          <ScrollArea className="h-full">
+            <div className="px-5 pb-6 space-y-3">
+              {elvenRacesData.map((race) => (
+                <div
+                  key={race.id}
+                  className="border border-border bg-card rounded-sm p-4 hover:border-border/80 transition-colors"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div className="flex items-center gap-3 flex-1">
+                      <div
+                        className="w-4 h-4 rounded-full shrink-0"
+                        style={{ backgroundColor: race.color }}
+                      />
+                      <div className="flex-1">
+                        <h3 className="font-serif text-sm font-semibold text-foreground">{race.name}</h3>
+                        {race.aliases && race.aliases.length > 0 && (
+                          <p className="text-xs text-muted-foreground italic">{race.aliases.join(", ")}</p>
+                        )}
+                      </div>
+                    </div>
+                    <Badge
+                      variant="outline"
+                      className="text-[10px] border border-border text-muted-foreground shrink-0"
+                    >
+                      Cap. {race.firstChapter}
+                    </Badge>
+                  </div>
+
+                  <p className="text-xs text-foreground/80 leading-relaxed mb-3">{race.description}</p>
+
+                  <div className="space-y-2 text-xs">
+                    <div>
+                      <p className="font-semibold text-foreground/70 mb-1">Origen:</p>
+                      <p className="text-foreground/60">{race.origin}</p>
+                    </div>
+
+                    {race.characteristics && race.characteristics.length > 0 && (
+                      <div>
+                        <p className="font-semibold text-foreground/70 mb-1">Características:</p>
+                        <ul className="space-y-1 text-foreground/60">
+                          {race.characteristics.map((char, i) => (
+                            <li key={i} className="flex gap-2">
+                              <span className="text-primary shrink-0">•</span>
+                              <span>{char}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {race.locations && race.locations.length > 0 && (
+                      <div>
+                        <p className="font-semibold text-foreground/70 mb-1">Ubicaciones Principales:</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {race.locations.map((loc, i) => (
+                            <Badge key={i} variant="secondary" className="text-[9px]">
+                              {loc}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {race.notableFigures && race.notableFigures.length > 0 && (
+                      <div>
+                        <p className="font-semibold text-foreground/70 mb-1">Figuras Notables:</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {race.notableFigures.map((fig, i) => (
+                            <Badge key={i} variant="outline" className="text-[9px]">
+                              {fig}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {race.details && (
+                    <details className="mt-3 cursor-pointer">
+                      <summary className="text-xs font-semibold text-primary hover:text-primary/80 transition-colors">
+                        + Más información
+                      </summary>
+                      <p className="text-xs text-foreground/70 leading-relaxed mt-2 p-2 bg-muted/50 rounded">
+                        {race.details}
+                      </p>
+                    </details>
+                  )}
+                </div>
+              ))}
+            </div>
+          </ScrollArea>
         </TabsContent>
 
         {/* LUGARES */}
