@@ -61,7 +61,7 @@ export function ChapterSidebar({ showCompendium, onToggleCompendium }: Props) {
             {chaptersData.map((chapter, index) => {
             const isCompleted = index < currentChapterIndex;
             const isCurrent = index === currentChapterIndex;
-            const isLocked = index >= 7;
+            const isLocked = index >= 8;
 
             return (
               <Tooltip key={chapter.id}>

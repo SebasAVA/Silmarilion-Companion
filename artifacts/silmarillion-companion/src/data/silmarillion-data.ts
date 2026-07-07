@@ -957,15 +957,15 @@ export const flowNodesData: FlowNode[] = [
   { id: "vana", characterId: "vana", position: { x: 3180, y: 150 } },
 
   // Level 2: Maiar and Elven characters
-  { id: "finwe", characterId: "finwe", position: { x: 100, y: 400 } },
+  { id: "finwe", characterId: "finwe", position: { x: 100, y: 500 } },
   { id: "olorin", characterId: "olorin", position: { x: 400, y: 400 } },
   { id: "melian", characterId: "melian", position: { x: 700, y: 400 } },
   { id: "thingol", characterId: "thingol", position: { x: 1000, y: 400 } },
 
   // Level 3: Children of Finwë and others
   { id: "feanor", characterId: "feanor", position: { x: 50, y: 600 } },
-  { id: "fingolfin", characterId: "fingolfin", position: { x: 150, y: 600 } },
-  { id: "finarfin", characterId: "finarfin", position: { x: 250, y: 600 } },
+  { id: "fingolfin", characterId: "fingolfin", position: { x: 200, y: 500 } },
+  { id: "finarfin", characterId: "finarfin", position: { x: 350, y: 500 } },
   { id: "luthien", characterId: "luthien", position: { x: 850, y: 600 } },
   { id: "turin", characterId: "turin", position: { x: 1250, y: 600 } },
 
@@ -975,8 +975,8 @@ export const flowNodesData: FlowNode[] = [
   { id: "earendil", characterId: "earendil", position: { x: 1250, y: 800 } },
 
   // Chapter 7 additions: Family of Fëanor
-  { id: "miriel", characterId: "miriel", position: { x: 10, y: 500 } },
-  { id: "indis", characterId: "indis", position: { x: 110, y: 500 } },
+  { id: "miriel", characterId: "miriel", position: { x: 10, y: 450 } },
+  { id: "indis", characterId: "indis", position: { x: 280, y: 450 } },
   { id: "mahtan", characterId: "mahtan", position: { x: 350, y: 500 } },
   { id: "nerdanel", characterId: "nerdanel", position: { x: 100, y: 700 } },
   { id: "rumil", characterId: "rumil", position: { x: 1300, y: 400 } }
@@ -1008,8 +1008,7 @@ export const flowEdgesData: FlowEdge[] = [
   { id: "e-indis-finarfin", source: "indis", target: "finarfin", label: "hijo" },
   { id: "e-mahtan-nerdanel", source: "mahtan", target: "nerdanel", label: "hija" },
   { id: "e-feanor-nerdanel", source: "feanor", target: "nerdanel", label: "esposos" },
-  { id: "e-mahtan-feanor-mentor", source: "mahtan", target: "feanor", label: "tutor" },
-  { id: "e-melkor-feanor-corruption", source: "melkor", target: "feanor", label: "corrupción" }
+  { id: "e-mahtan-feanor-mentor", source: "mahtan", target: "feanor", label: "tutor" }
 ];
 
 export const elvenRacesData: ElvenRace[] = [
