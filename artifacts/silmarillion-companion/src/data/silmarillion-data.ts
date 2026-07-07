@@ -966,21 +966,21 @@ export const flowNodesData: FlowNode[] = [
   { id: "melian", characterId: "melian", position: { x: 700, y: 400 } },
   { id: "thingol", characterId: "thingol", position: { x: 1000, y: 400 } },
 
-  // Level 3: Children of Finwë (y: 700)
+  // Level 2.5: Mahtan (father of Nerdanel) - left side below Míriel
+  { id: "mahtan", characterId: "mahtan", position: { x: -100, y: 550 } },
+
+  // Level 3: Children of Finwë and Nerdanel (y: 700)
+  { id: "nerdanel", characterId: "nerdanel", position: { x: -50, y: 700 } },
   { id: "feanor", characterId: "feanor", position: { x: 100, y: 700 } },
-  { id: "fingolfin", characterId: "fingolfin", position: { x: 250, y: 700 } },
+  { id: "fingolfin", characterId: "fingolfin", position: { x: 200, y: 700 } },
   { id: "finarfin", characterId: "finarfin", position: { x: 400, y: 700 } },
   { id: "luthien", characterId: "luthien", position: { x: 850, y: 600 } },
   { id: "turin", characterId: "turin", position: { x: 1250, y: 600 } },
 
   // Level 4: Later generations
-  { id: "galadriel", characterId: "galadriel", position: { x: 250, y: 800 } },
+  { id: "galadriel", characterId: "galadriel", position: { x: 400, y: 800 } },
   { id: "beren", characterId: "beren", position: { x: 900, y: 800 } },
   { id: "earendil", characterId: "earendil", position: { x: 1250, y: 800 } },
-
-  // Chapter 7 additions: Other family members
-  { id: "mahtan", characterId: "mahtan", position: { x: 350, y: 600 } },
-  { id: "nerdanel", characterId: "nerdanel", position: { x: 100, y: 800 } },
   { id: "rumil", characterId: "rumil", position: { x: 1300, y: 400 } }
 ];
 
