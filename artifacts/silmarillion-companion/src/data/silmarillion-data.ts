@@ -956,16 +956,20 @@ export const flowNodesData: FlowNode[] = [
   { id: "orome", characterId: "orome", position: { x: 2960, y: 150 } },
   { id: "vana", characterId: "vana", position: { x: 3180, y: 150 } },
 
-  // Level 2: Maiar and Elven characters
-  { id: "finwe", characterId: "finwe", position: { x: 150, y: 500 } },
-  { id: "olorin", characterId: "olorin", position: { x: 400, y: 400 } },
+  // Level 2: Finwë and his spouses (same level - y: 500)
+  { id: "miriel", characterId: "miriel", position: { x: 0, y: 500 } },
+  { id: "finwe", characterId: "finwe", position: { x: 200, y: 500 } },
+  { id: "indis", characterId: "indis", position: { x: 400, y: 500 } },
+
+  // Level 2b: Other Maiar and Elven characters
+  { id: "olorin", characterId: "olorin", position: { x: 1600, y: 400 } },
   { id: "melian", characterId: "melian", position: { x: 700, y: 400 } },
   { id: "thingol", characterId: "thingol", position: { x: 1000, y: 400 } },
 
-  // Level 3: Children of Finwë and others
-  { id: "feanor", characterId: "feanor", position: { x: 50, y: 600 } },
-  { id: "fingolfin", characterId: "fingolfin", position: { x: 370, y: 500 } },
-  { id: "finarfin", characterId: "finarfin", position: { x: 590, y: 500 } },
+  // Level 3: Children of Finwë (y: 700)
+  { id: "feanor", characterId: "feanor", position: { x: 100, y: 700 } },
+  { id: "fingolfin", characterId: "fingolfin", position: { x: 250, y: 700 } },
+  { id: "finarfin", characterId: "finarfin", position: { x: 400, y: 700 } },
   { id: "luthien", characterId: "luthien", position: { x: 850, y: 600 } },
   { id: "turin", characterId: "turin", position: { x: 1250, y: 600 } },
 
@@ -974,11 +978,9 @@ export const flowNodesData: FlowNode[] = [
   { id: "beren", characterId: "beren", position: { x: 900, y: 800 } },
   { id: "earendil", characterId: "earendil", position: { x: 1250, y: 800 } },
 
-  // Chapter 7 additions: Family of Fëanor
-  { id: "miriel", characterId: "miriel", position: { x: 0, y: 450 } },
-  { id: "indis", characterId: "indis", position: { x: 480, y: 450 } },
-  { id: "mahtan", characterId: "mahtan", position: { x: 350, y: 500 } },
-  { id: "nerdanel", characterId: "nerdanel", position: { x: 100, y: 700 } },
+  // Chapter 7 additions: Other family members
+  { id: "mahtan", characterId: "mahtan", position: { x: 350, y: 600 } },
+  { id: "nerdanel", characterId: "nerdanel", position: { x: 100, y: 800 } },
   { id: "rumil", characterId: "rumil", position: { x: 1300, y: 400 } }
 ];
 
