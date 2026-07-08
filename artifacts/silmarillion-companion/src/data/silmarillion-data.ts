@@ -1277,7 +1277,21 @@ export const flowNodesData: FlowNode[] = [
 
   // Chapter 11: Sindar and related characters
   { id: "denethor", characterId: "denethor", position: { x: 1100, y: 600 } },
-  { id: "daeron", characterId: "daeron", position: { x: 600, y: 500 } }
+  { id: "daeron", characterId: "daeron", position: { x: 600, y: 500 } },
+
+  // Seven Sons of Fëanor (vertical column below Fëanor at x: 0)
+  { id: "maedhros", characterId: "maedhros", position: { x: 0, y: 800 } },
+  { id: "maglor", characterId: "maglor", position: { x: 0, y: 880 } },
+  { id: "celegorm", characterId: "celegorm", position: { x: 0, y: 960 } },
+  { id: "caranthir", characterId: "caranthir", position: { x: 0, y: 1040 } },
+  { id: "curufin", characterId: "curufin", position: { x: 0, y: 1120 } },
+  { id: "amrod", characterId: "amrod", position: { x: 0, y: 1200 } },
+  { id: "amras", characterId: "amras", position: { x: 0, y: 1280 } },
+
+  // Three Children of Fingolfin (vertical column below Fingolfin at x: 200)
+  { id: "fingon", characterId: "fingon", position: { x: 200, y: 820 } },
+  { id: "turgon", characterId: "turgon", position: { x: 200, y: 920 } },
+  { id: "aredhel", characterId: "aredhel", position: { x: 200, y: 1020 } }
 ];
 
 export const flowEdgesData: FlowEdge[] = [
@@ -1312,7 +1326,21 @@ export const flowEdgesData: FlowEdge[] = [
 
   // Chapter 11: Thingol and Melian relationships
   { id: "e-thingol-daeron", source: "thingol", target: "daeron", label: "patrocinador" },
-  { id: "e-denethor-thingol", source: "denethor", target: "thingol", label: "aliado" }
+  { id: "e-denethor-thingol", source: "denethor", target: "thingol", label: "aliado" },
+
+  // Seven Sons of Fëanor edges
+  { id: "e-feanor-maedhros", source: "feanor", target: "maedhros", label: "hijo" },
+  { id: "e-feanor-maglor", source: "feanor", target: "maglor", label: "hijo" },
+  { id: "e-feanor-celegorm", source: "feanor", target: "celegorm", label: "hijo" },
+  { id: "e-feanor-caranthir", source: "feanor", target: "caranthir", label: "hijo" },
+  { id: "e-feanor-curufin", source: "feanor", target: "curufin", label: "hijo" },
+  { id: "e-feanor-amrod", source: "feanor", target: "amrod", label: "hijo" },
+  { id: "e-feanor-amras", source: "feanor", target: "amras", label: "hijo" },
+
+  // Three Children of Fingolfin edges
+  { id: "e-fingolfin-fingon", source: "fingolfin", target: "fingon", label: "hijo" },
+  { id: "e-fingolfin-turgon", source: "fingolfin", target: "turgon", label: "hijo" },
+  { id: "e-fingolfin-aredhel", source: "fingolfin", target: "aredhel", label: "hija" }
 ];
 
 export const elvenRacesData: ElvenRace[] = [
