@@ -199,7 +199,19 @@ export const charactersData: Character[] = [
   { id: "indis", name: "Indis", aliases: ["Indis de los Vanyar", "Reina de los Noldor"], race: "Elfa Vanyar", alignment: "good", role: "Segunda esposa de Finwë, madre de Fingolfin y Finarfin", description: "Hermosa mujer de los Vanyar que se casó con Finwë tras la muerte de Míriel. Madre de Fingolfin y Finarfin, causando discordia en la casa de Finwë.", details: "Indis era hermosa como la luz de Laurelin, de cabellos dorados y aspecto radiante. Pertenecía a los Vanyar, el pueblo más cercano a los Valar. Se casó con Finwë después de la muerte de Míriel, pero su matrimonio fue causa de dolor para Fëanor, quien resintió la intención de su padre de sustituir a su madre. De su unión nacieron Fingolfin el Valeroso y Finarfin el Hermoso, cuyos temperamentos y linajes rivalizarían con el de Fëanor. Esta segunda unión fracturó la Casa de Finwë en dos líneas que eventualmente se separarían en la rebelión de los Noldor.", titles: [{chapter: 7, text: "Reina de los Noldor"}, {chapter: 7, text: "Madre de Fingolfin y Finarfin"}], notableDeeds: [{chapter: 7, text: "Se casó con Finwë"}, {chapter: 7, text: "Engendrió a Fingolfin y Finarfin"}], importance: "MEDIUM", firstChapter: 7, relationships: [{characterId: "finwe", type: "spouse"}, {characterId: "fingolfin", type: "child"}, {characterId: "finarfin", type: "child"}], locations: ["Valinor", "Tirion"], events: ["Boda de Finwë e Indis"], greatTales: [] },
   { id: "nerdanel", name: "Nerdanel", aliases: ["Nerdanel la Hermosa", "La Esposa de Fëanor"], race: "Elfa Noldor", alignment: "good", role: "Esposa de Fëanor, madre de los Siete Hijos", description: "Hija del gran maestro Mahtan, esposa de Fëanor. Su naturaleza paciente contrastaba con el temperamento ardiente de su esposo.", details: "Nerdanel era hermosa y sabía, hija del gran herrero Mahtan, hijo de Aulë. Tenía cabellos castaños rojizos (como cobre pulido) y era de temperamento paciente y reflexivo, un contraste perfecto con el ardor de Fëanor. Se enamoró de Fëanor viendo su genio en el trabajo del arte y se casaron, de lo que nacieron siete hijos: Maedhros, Maglor, Celegorm, Caranthir, Curufin, Amrod y Amras. Aunque sus siete hijos eran tan apasionados como su padre, ella fue madre de los grandes príncipes que sostendrían la resistencia élfica en Beleriand. Su paciencia y sabiduría fueron un tempering a la pasión de Fëanor, aunque finalmente no pudieron evitar la tragedia que vendría.", titles: [{chapter: 7, text: "Esposa de Fëanor"}, {chapter: 7, text: "Madre de los Siete"}], notableDeeds: [{chapter: 7, text: "Se casó con Fëanor"}, {chapter: 7, text: "Engendró a los Siete Hijos"}], importance: "MEDIUM", firstChapter: 7, relationships: [{characterId: "feanor", type: "spouse"}, {characterId: "mahtan", type: "father"}], locations: ["Valinor", "Tirion"], events: ["Boda de Fëanor y Nerdanel"], greatTales: [] },
   { id: "mahtan", name: "Mahtan", aliases: ["Mahtan el Herrero", "Hijo de Aulë"], race: "Elfo Noldor", alignment: "good", role: "Gran maestro herrero, favorito de Aulë", description: "Hijo de Aulë, gran maestro de los herreros de los Noldor. Enseñó a Fëanor los secretos de la forja. Su hija fue Nerdanel.", details: "Mahtan era el maestro herrero más famoso de los Noldor, favorito de Aulë. Cuando Fëanor llegó a edad de aprender, fue puesto bajo la tutela de Mahtan, quien le enseñó todos los secretos de la forja y el trabajo con metales y gemas. Mahtan admiraba el genio de Fëanor pero se percataba de su peligro: su ardor era como una llama que nunca se apagaba. Tuvo una hija, Nerdanel, la más sabia de las Elfas de su tiempo, quien se casaría con Fëanor. Mahtan fue una figura de estabilidad en Valinor, siempre dedicado a su oficio y a enseñar a otros, nunca permitiendo que la pasión de los Noldor lo arrastrara al orgullo. Cuando Fëanor fue exiliado a Formenos, Mahtan lamentó profundamente los eventos que llevaron a la rebelión, viendo en su antiguo alumno el fuego ardiente que nunca había podido ser templado.", titles: [{chapter: 7, text: "Maestro Herrero"}, {chapter: 7, text: "Hijo de Aulë"}, {chapter: 7, text: "Tutor de Fëanor"}, {chapter: 8, text: "El que Lamenta"}], notableDeeds: [{chapter: 7, text: "Enseñó a Fëanor los secretos de la forja"}, {chapter: 7, text: "Fue favorito de Aulë"}, {chapter: 8, text: "Lamentó los eventos que llevaron al exilio de Fëanor"}], importance: "LOW", firstChapter: 7, relationships: [{characterId: "aule", type: "father"}, {characterId: "nerdanel", type: "child"}, {characterId: "feanor", type: "ally"}], locations: ["Valinor", "Tirion"], events: ["Instrucción de Fëanor", "Lamento del Maestro"], greatTales: [] },
-  { id: "rumil", name: "Rúmil", aliases: ["Rúmil el Maestro", "Inventor de Letras"], race: "Elfo Noldor", alignment: "good", role: "Maestro de letras, inventor de los primeros Tengwar", description: "Maestro loremaster y lingüista de los Noldor. Inventó las primeras letras, siendo después superado por Fëanor.", details: "Rúmil fue uno de los maestros más sabios de los Noldor en Valinor, conocedor de historias antiguas y lenguajes. Inventó las primeras letras para registrar la lengua hablada, creando lo que después se conocería como los Tengwar. Sin embargo, cuando Fëanor vio su invención, mejoró el sistema considerablemente, creando un alfabeto más perfecto y hermoso. Aunque Rúmil se percataba de su propia inferioridad en arte de la forja y el diseño, nunca resintió a Fëanor, reconociendo su genio. Rúmil permaneció en Valinor durante la rebelión de los Noldor, dedicado a preservar el conocimiento de los Elfos.", titles: [{chapter: 7, text: "Maestro de Letras"}, {chapter: 7, text: "Loremaster"}], notableDeeds: [{chapter: 7, text: "Inventó las primeras letras"}, {chapter: 7, text: "Fue superado por Fëanor"}], importance: "LOW", firstChapter: 7, relationships: [], locations: ["Valinor", "Tirion"], events: ["Invención de las letras"], greatTales: [] }
+  { id: "rumil", name: "Rúmil", aliases: ["Rúmil el Maestro", "Inventor de Letras"], race: "Elfo Noldor", alignment: "good", role: "Maestro de letras, inventor de los primeros Tengwar", description: "Maestro loremaster y lingüista de los Noldor. Inventó las primeras letras, siendo después superado por Fëanor.", details: "Rúmil fue uno de los maestros más sabios de los Noldor en Valinor, conocedor de historias antiguas y lenguajes. Inventó las primeras letras para registrar la lengua hablada, creando lo que después se conocería como los Tengwar. Sin embargo, cuando Fëanor vio su invención, mejoró el sistema considerablemente, creando un alfabeto más perfecto y hermoso. Aunque Rúmil se percataba de su propia inferioridad en arte de la forja y el diseño, nunca resintió a Fëanor, reconociendo su genio. Rúmil permaneció en Valinor durante la rebelión de los Noldor, dedicado a preservar el conocimiento de los Elfos.", titles: [{chapter: 7, text: "Maestro de Letras"}, {chapter: 7, text: "Loremaster"}], notableDeeds: [{chapter: 7, text: "Inventó las primeras letras"}, {chapter: 7, text: "Fue superado por Fëanor"}], importance: "LOW", firstChapter: 7, relationships: [], locations: ["Valinor", "Tirion"], events: ["Invención de las letras"], greatTales: [] },
+
+  // Chapter 9: Ungoliant (Dark entity)
+  { id: "ungoliant", name: "Ungoliant", aliases: ["La Araña Antigua", "La Devoradora de Luz"], race: "Entidad Oscura", alignment: "evil", role: "Aliada de Melkor, devoradora de luz", description: "Una criatura de inteligencia malévola en forma de araña gigante que devoraba luz. Ungoliant se alió con Melkor para destruir los Dos Árboles de Valinor.", details: "Ungoliant fue una criatura antigua de inteligencia y voluntad propias, de forma de araña colosal. Habita en los vacíos salvajes del sur, Avathar, devorando toda la luz que encontraba. Su hambre era infinita e insaciable. Se alió con Melkor para atacar los Dos Árboles de Valinor. Juntos cruzaron el Pelóri por Hyarmentir en la noche oscura. Ungoliant fue quien verdaderamente devoró la luz de los Árboles, creciendo enormemente en poder y tamaño. Después, cuando Melkor intentó escapar, Ungoliant lo atrapó en su red, exigiéndole parte de los Silmarils. Melkor huyó dejando a Ungoliant en Beleriand, donde eventualmente consumida por su propia hambre, se tragó a sí misma en las grietas del mundo.", titles: [{chapter: 9, text: "Aliada de Melkor"}, {chapter: 9, text: "Devoradora de Luz"}, {chapter: 9, text: "Destructora de los Árboles"}], notableDeeds: [{chapter: 9, text: "Se alió con Melkor en Avathar"}, {chapter: 9, text: "Cruzó el Pelóri por Hyarmentir"}, {chapter: 9, text: "Devoró la luz de los Dos Árboles"}, {chapter: 9, text: "Tejió la Oscuridad No-Luz"}], importance: "HIGH", firstChapter: 9, relationships: [{characterId: "melkor", type: "ally"}], locations: ["Avathar", "Pelóri", "Beleriand"], events: ["Destrucción de los Dos Árboles"], greatTales: ["destruccion-dos-arboles"] },
+
+  // Chapter 9: The Seven Sons of Fëanor
+  { id: "maedhros", name: "Maedhros", aliases: ["Maedhros el Alto", "Nelyafinwë", "Russandol"], race: "Elfo Noldor", alignment: "good", role: "Firstborn of Fëanor, Prince of the Noldor", description: "Firstborn of Fëanor. Tallest with reddish hair. In a time great friend of Fingon before Morgoth's lies.", details: "Maedhros was the firstborn son of Fëanor and Nerdanel. He was the tallest of his brothers with reddish hair tinged with copper. In his youth, he was a great friend of Fingon, son of Fingolfin, and between them there was deep affection. However, the lies and corruption sown by Melkor would eventually turn even this great friendship to sorrow. During the Siege of Angband, Maedhros was betrayed and captured by Morgoth, and was hung from the heights of Thangorodrim until rescued by Fingon in a daring feat of valor.", titles: [{chapter: 9, text: "Hijo primogénito de Fëanor"}], notableDeeds: [{chapter: 9, text: "Fue capturado por Morgoth"}], importance: "HIGH", firstChapter: 9, relationships: [{characterId: "feanor", type: "father"}, {characterId: "nerdanel", type: "mother"}, {characterId: "maglor", type: "sibling"}, {characterId: "celegorm", type: "sibling"}, {characterId: "caranthir", type: "sibling"}, {characterId: "curufin", type: "sibling"}, {characterId: "amrod", type: "sibling"}, {characterId: "amras", type: "sibling"}, {characterId: "fingon", type: "ally"}], locations: ["Taniquetil", "Helcaraxë", "Angband"], events: ["Reconciliación con Fingon"], greatTales: [] },
+  { id: "maglor", name: "Maglor", aliases: ["Maglor el Poderoso Cantor", "Kanafinwë"], race: "Elfo Noldor", alignment: "good", role: "Second son of Fëanor, greatest singer of the Noldor", description: "Second son of Fëanor. Greatest singer among the Noldor. Poet and musician of renown.", details: "Maglor was the second son of Fëanor and Nerdanel, and was renowned as the greatest singer among all the Noldor. His voice was so beautiful that even the Valar themselves would cease their work to listen. He was also a skilled poet and musician, composing many songs of lament and sorrow. Though he possessed the same fierce determination as his father, his greater sensitivity to beauty tempered his nature. He was deeply affected by the tragedy of his family and the fate that befell them.", titles: [{chapter: 9, text: "Gran cantor y segundo hijo de Fëanor"}], notableDeeds: [], importance: "MEDIUM", firstChapter: 9, relationships: [{characterId: "feanor", type: "father"}, {characterId: "nerdanel", type: "mother"}, {characterId: "maedhros", type: "sibling"}, {characterId: "celegorm", type: "sibling"}, {characterId: "caranthir", type: "sibling"}, {characterId: "curufin", type: "sibling"}, {characterId: "amrod", type: "sibling"}, {characterId: "amras", type: "sibling"}], locations: ["Taniquetil"], events: [], greatTales: [] },
+  { id: "celegorm", name: "Celegorm", aliases: ["Celegorm el Rubio", "Tyelkormo"], race: "Elfo Noldor", alignment: "good", role: "Third son of Fëanor, hunter and warrior", description: "Third son of Fëanor. Blonde and fair. Impulsive and violent of the brothers. Companion of Huan, the great hound of Valinor.", details: "Celegorm was the third son of Fëanor and Nerdanel, known for his blonde hair and fair face. He was impulsive and passionate, more quick to violence than his other brothers. He was famously the companion of Huan, the great hound of Valinor, most mightiest and most famous of dogs. Celegorm was a skilled hunter and warrior, traits he shared with his close brother Caranthir. His friendship with Huan was one of the most celebrated bonds between Elf and beast in the Elder Days.", titles: [{chapter: 9, text: "Tercero hijo de Fëanor"}], notableDeeds: [], importance: "MEDIUM", firstChapter: 9, relationships: [{characterId: "feanor", type: "father"}, {characterId: "nerdanel", type: "mother"}, {characterId: "maedhros", type: "sibling"}, {characterId: "maglor", type: "sibling"}, {characterId: "caranthir", type: "sibling"}, {characterId: "curufin", type: "sibling"}, {characterId: "amrod", type: "sibling"}, {characterId: "amras", type: "sibling"}], locations: ["Taniquetil"], events: [], greatTales: [] },
+  { id: "caranthir", name: "Caranthir", aliases: ["Caranthir el Oscuro", "Morifinwë"], race: "Elfo Noldor", alignment: "good", role: "Fourth son of Fëanor, dark and stern", description: "Fourth son of Fëanor. The harshest and least patient. Dark mood and choleric temperament.", details: "Caranthir was the fourth son of Fëanor and Nerdanel, known for his dark temperament and stern nature. He was the harshest of his brothers and the least patient, quick to anger and slow to forgive. His mood was dark and his temperament choleric, traits that often led him into conflict. Despite this, he was a capable warrior and leader, and his brothers respected his strength and determination. He was also known for his close bond with his brother Celegorm, and together they were formidable hunters and fighters.", titles: [{chapter: 9, text: "Cuarto hijo de Fëanor"}], notableDeeds: [], importance: "MEDIUM", firstChapter: 9, relationships: [{characterId: "feanor", type: "father"}, {characterId: "nerdanel", type: "mother"}, {characterId: "maedhros", type: "sibling"}, {characterId: "maglor", type: "sibling"}, {characterId: "celegorm", type: "sibling"}, {characterId: "curufin", type: "sibling"}, {characterId: "amrod", type: "sibling"}, {characterId: "amras", type: "sibling"}], locations: ["Taniquetil"], events: [], greatTales: [] },
+  { id: "curufin", name: "Curufin", aliases: ["Curufin el Hábil", "Curufinwë"], race: "Elfo Noldor", alignment: "good", role: "Fifth son of Fëanor, craftsman and father of Celebrimbor", description: "Fifth son of Fëanor. Most resembled his father in nature. Father of Celebrimbor, the greatest craftsman of the Second Age.", details: "Curufin was the fifth son of Fëanor and Nerdanel, and resembled his father more closely in nature and temperament than any of his brothers. He inherited much of Fëanor's skill in craftsmanship and art, and was noted for his expertise in the making of jewelry and fine things. He had a son, Celebrimbor, who would become the greatest craftsman of the Second Age, learning much from the skills his father possessed. Curufin was ambitious and proud, much like his father, but he retained a capacity for wisdom that sometimes tempered his pride.", titles: [{chapter: 9, text: "Quinto hijo de Fëanor"}], notableDeeds: [], importance: "MEDIUM", firstChapter: 9, relationships: [{characterId: "feanor", type: "father"}, {characterId: "nerdanel", type: "mother"}, {characterId: "maedhros", type: "sibling"}, {characterId: "maglor", type: "sibling"}, {characterId: "celegorm", type: "sibling"}, {characterId: "caranthir", type: "sibling"}, {characterId: "amrod", type: "sibling"}, {characterId: "amras", type: "sibling"}], locations: ["Taniquetil"], events: [], greatTales: [] },
+  { id: "amrod", name: "Amrod", aliases: ["Pityafinwë", "Ambarussa"], race: "Elfo Noldor", alignment: "good", role: "Sixth son of Fëanor, twin of Amras, great hunter", description: "Sixth son of Fëanor. Twin of Amras. Youngest of the seven. Great hunters, skilled in woodcraft.", details: "Amrod was the sixth son of Fëanor and Nerdanel, and was the twin brother of Amras. Together, they were the youngest of the seven sons, and were known as great hunters and masters of woodcraft. Both brothers were skilled in the ways of the forest and the wilderness, and delighted in hunting and tracking game. Their shared nature as twins created a deep bond between them, and they often acted as one mind in two bodies. Though they shared the same passion for the great quests as their brothers, they were perhaps less driven by the darkness of fate.", titles: [{chapter: 9, text: "Sexto hijo de Fëanor, gemelo de Amras"}], notableDeeds: [], importance: "LOW", firstChapter: 9, relationships: [{characterId: "feanor", type: "father"}, {characterId: "nerdanel", type: "mother"}, {characterId: "maedhros", type: "sibling"}, {characterId: "maglor", type: "sibling"}, {characterId: "celegorm", type: "sibling"}, {characterId: "caranthir", type: "sibling"}, {characterId: "curufin", type: "sibling"}, {characterId: "amras", type: "sibling"}], locations: ["Taniquetil"], events: [], greatTales: [] },
+  { id: "amras", name: "Amras", aliases: ["Telufinwë", "Ambarussa"], race: "Elfo Noldor", alignment: "good", role: "Seventh son of Fëanor, twin of Amrod, great hunter", description: "Seventh son of Fëanor. Twin of Amrod. Youngest of the seven. Great hunters, skilled in woodcraft.", details: "Amras was the seventh and final son of Fëanor and Nerdanel, and was the twin brother of Amrod. Together with his brother, he was the youngest of the seven sons, and was renowned as a great hunter and master of woodcraft. The twins were inseparable, and their bond was as strong as that of any siblings in the Elder Days. They shared a love of the wilderness and the hunting of great beasts, and were expert trackers and bowmen. Like their brothers, they were caught up in the terrible fate that bound them to the Oath of Fëanor, though their youth and their closeness to each other provided some measure of solace in the dark times that would come.", titles: [{chapter: 9, text: "Séptimo hijo de Fëanor, gemelo de Amrod"}], notableDeeds: [], importance: "LOW", firstChapter: 9, relationships: [{characterId: "feanor", type: "father"}, {characterId: "nerdanel", type: "mother"}, {characterId: "maedhros", type: "sibling"}, {characterId: "maglor", type: "sibling"}, {characterId: "celegorm", type: "sibling"}, {characterId: "caranthir", type: "sibling"}, {characterId: "curufin", type: "sibling"}, {characterId: "amrod", type: "sibling"}], locations: ["Taniquetil"], events: [], greatTales: [] }
 ];
 
 export const locationsData: Location[] = [
@@ -1059,82 +1071,70 @@ export const themesData: Theme[] = [
 
 export const flowNodesData: FlowNode[] = [
   // Level 0: Ilúvatar (centered, supreme creator)
-  { id: "iluvatar", characterId: "iluvatar", position: { x: 1050, y: 0 } },
+  { id: "iluvatar", characterId: "iluvatar", position: { x: 800, y: 0 } },
 
-  // Level 1: All 14 Valar in SAME horizontal line - well separated
-  // Melkor (The adversary, at left)
-  { id: "melkor", characterId: "melkor", position: { x: 100, y: 150 } },
+  // Opposing Forces at top
+  // Melkor (The adversary, far left)
+  { id: "melkor", characterId: "melkor", position: { x: -150, y: 100 } },
 
-  // Pair 1: Manwë and Varda (King and Queen)
-  { id: "manwe", characterId: "manwe", position: { x: 320, y: 150 } },
-  { id: "varda", characterId: "varda", position: { x: 540, y: 150 } },
+  // Ungoliant (ally of Melkor)
+  { id: "ungoliant", characterId: "ungoliant", position: { x: -250, y: 250 } },
 
-  // Pair 2: Aulë and Yavanna (Crafter and Life)
-  { id: "aule", characterId: "aule", position: { x: 760, y: 150 } },
-  { id: "yavanna", characterId: "yavanna", position: { x: 980, y: 150 } },
+  // Manwë (King of Valar, center-right)
+  { id: "manwe", characterId: "manwe", position: { x: 550, y: 100 } },
 
-  // Ulmo (Ally of Manwë)
-  { id: "ulmo", characterId: "ulmo", position: { x: 1200, y: 150 } },
+  // VERTICAL GENEALOGY LAYOUT
 
-  // Pair 3: Mandos and Vairë (Death and History)
-  { id: "mandos", characterId: "mandos", position: { x: 1420, y: 150 } },
-  { id: "vaire", characterId: "vaire", position: { x: 1640, y: 150 } },
+  // FËANOR FAMILY COLUMN (x: 100) - Vertical alignment
+  { id: "feanor", characterId: "feanor", position: { x: 100, y: 50 } },
+  { id: "maedhros", characterId: "maedhros", position: { x: 100, y: 150 } },
+  { id: "maglor", characterId: "maglor", position: { x: 100, y: 230 } },
+  { id: "celegorm", characterId: "celegorm", position: { x: 100, y: 310 } },
+  { id: "caranthir", characterId: "caranthir", position: { x: 100, y: 390 } },
+  { id: "curufin", characterId: "curufin", position: { x: 100, y: 470 } },
+  { id: "amrod", characterId: "amrod", position: { x: 100, y: 550 } },
+  { id: "amras", characterId: "amras", position: { x: 100, y: 630 } },
 
-  // Pair 4: Irmo and Estë (Dreams and Rest)
-  { id: "irmo", characterId: "irmo", position: { x: 1860, y: 150 } },
-  { id: "este", characterId: "este", position: { x: 2080, y: 150 } },
+  // FINGOLFIN FAMILY COLUMN (x: 350) - Vertical alignment
+  { id: "fingolfin", characterId: "fingolfin", position: { x: 350, y: 50 } },
+  { id: "fingon", characterId: "fingon", position: { x: 350, y: 180 } },
+  { id: "turgon", characterId: "turgon", position: { x: 350, y: 310 } },
+  { id: "aredhel", characterId: "aredhel", position: { x: 350, y: 440 } },
 
-  // Nienna (Compassion)
-  { id: "nienna", characterId: "nienna", position: { x: 2300, y: 150 } },
+  // Supporting Valar and Maiar (right side)
+  { id: "varda", characterId: "varda", position: { x: 550, y: 180 } },
 
-  // Pair 5: Tulkas and Nessa (Strength and Dance)
-  { id: "tulkas", characterId: "tulkas", position: { x: 2520, y: 150 } },
-  { id: "nessa", characterId: "nessa", position: { x: 2740, y: 150 } },
+  // Extended family and other characters
+  { id: "finwe", characterId: "finwe", position: { x: -50, y: -50 } },
+  { id: "miriel", characterId: "miriel", position: { x: -150, y: -50 } },
+  { id: "indis", characterId: "indis", position: { x: 50, y: -50 } },
+  { id: "nerdanel", characterId: "nerdanel", position: { x: 0, y: -80 } },
+  { id: "mahtan", characterId: "mahtan", position: { x: -100, y: -120 } },
 
-  // Pair 6: Oromë and Vána (Hunt and Youth)
-  { id: "orome", characterId: "orome", position: { x: 2960, y: 150 } },
-  { id: "vana", characterId: "vana", position: { x: 3180, y: 150 } },
+  // Thingol family (separate genealogy)
+  { id: "thingol", characterId: "thingol", position: { x: 750, y: 200 } },
+  { id: "melian", characterId: "melian", position: { x: 700, y: 100 } },
+  { id: "luthien", characterId: "luthien", position: { x: 750, y: 350 } },
 
-  // Level 2: Finwë and his spouses (same level - y: 500)
-  { id: "miriel", characterId: "miriel", position: { x: 0, y: 500 } },
-  { id: "finwe", characterId: "finwe", position: { x: 200, y: 500 } },
-  { id: "indis", characterId: "indis", position: { x: 400, y: 500 } },
+  // Finarfin family
+  { id: "finarfin", characterId: "finarfin", position: { x: 600, y: 50 } },
+  { id: "galadriel", characterId: "galadriel", position: { x: 600, y: 200 } },
 
-  // Level 2b: Other Maiar and Elven characters
-  { id: "olorin", characterId: "olorin", position: { x: 1600, y: 400 } },
-  { id: "melian", characterId: "melian", position: { x: 700, y: 400 } },
-  { id: "thingol", characterId: "thingol", position: { x: 1000, y: 400 } },
+  // Later characters
+  { id: "beren", characterId: "beren", position: { x: 900, y: 350 } },
+  { id: "earendil", characterId: "earendil", position: { x: 850, y: 500 } },
+  { id: "turin", characterId: "turin", position: { x: 1000, y: 300 } },
 
-  // Level 2.5: Mahtan (father of Nerdanel) - left side below Míriel
-  { id: "mahtan", characterId: "mahtan", position: { x: -200, y: 550 } },
-
-  // Level 3: Children of Finwë and Nerdanel (y: 700)
-  { id: "nerdanel", characterId: "nerdanel", position: { x: -200, y: 700 } },
-  { id: "feanor", characterId: "feanor", position: { x: 0, y: 700 } },
-  { id: "fingolfin", characterId: "fingolfin", position: { x: 200, y: 700 } },
-  { id: "finarfin", characterId: "finarfin", position: { x: 400, y: 700 } },
-  { id: "luthien", characterId: "luthien", position: { x: 850, y: 600 } },
-  { id: "turin", characterId: "turin", position: { x: 1250, y: 600 } },
-
-  // Level 4: Later generations
-  { id: "galadriel", characterId: "galadriel", position: { x: 400, y: 800 } },
-  { id: "beren", characterId: "beren", position: { x: 900, y: 800 } },
-  { id: "earendil", characterId: "earendil", position: { x: 1250, y: 800 } },
-  { id: "rumil", characterId: "rumil", position: { x: 1300, y: 400 } },
-
-  // Chapter 9: Ungoliant (Dark entity)
-  { id: "ungoliant", characterId: "ungoliant", position: { x: -100, y: 280 } }
+  // Other Maiar
+  { id: "olorin", characterId: "olorin", position: { x: 900, y: 100 } },
+  { id: "rumil", characterId: "rumil", position: { x: 200, y: -50 } }
 ];
 
 export const flowEdgesData: FlowEdge[] = [
   // Level 0-1: Ilúvatar creates Valar
   // Valar relationships - Spouses only (clean, no clutter)
   { id: "e-manwe-varda", source: "manwe", target: "varda", label: "esposos" },
-  { id: "e-aule-yavanna", source: "aule", target: "yavanna", label: "esposos" },
-  { id: "e-mandos-vaire", source: "mandos", target: "vaire", label: "esposos" },
-  { id: "e-irmo-este", source: "irmo", target: "este", label: "esposos" },
-  { id: "e-tulkas-nessa", source: "tulkas", target: "nessa", label: "esposos" },
-  { id: "e-orome-vana", source: "orome", target: "vana", label: "esposos" },
+
   // Level 1-2: Other relationships from Ainulindalë forward
   { id: "e-finwe-feanor", source: "finwe", target: "feanor", label: "hijo" },
   { id: "e-finwe-fingolfin", source: "finwe", target: "fingolfin", label: "hijo" },
@@ -1152,6 +1152,20 @@ export const flowEdgesData: FlowEdge[] = [
   { id: "e-indis-finarfin", source: "indis", target: "finarfin", label: "hijo" },
   { id: "e-mahtan-nerdanel", source: "mahtan", target: "nerdanel", label: "hija" },
   { id: "e-feanor-nerdanel", source: "feanor", target: "nerdanel", label: "esposos" },
+
+  // Chapter 9: The Seven Sons of Fëanor
+  { id: "e-feanor-maedhros", source: "feanor", target: "maedhros", label: "hijo" },
+  { id: "e-feanor-maglor", source: "feanor", target: "maglor", label: "hijo" },
+  { id: "e-feanor-celegorm", source: "feanor", target: "celegorm", label: "hijo" },
+  { id: "e-feanor-caranthir", source: "feanor", target: "caranthir", label: "hijo" },
+  { id: "e-feanor-curufin", source: "feanor", target: "curufin", label: "hijo" },
+  { id: "e-feanor-amrod", source: "feanor", target: "amrod", label: "hijo" },
+  { id: "e-feanor-amras", source: "feanor", target: "amras", label: "hijo" },
+
+  // Fingolfin family relationships
+  { id: "e-fingolfin-fingon", source: "fingolfin", target: "fingon", label: "hijo" },
+  { id: "e-fingolfin-turgon", source: "fingolfin", target: "turgon", label: "hijo" },
+  { id: "e-fingolfin-aredhel", source: "fingolfin", target: "aredhel", label: "hija" },
 
   // Chapter 9: Melkor and Ungoliant alliance
   { id: "e-melkor-ungoliant", source: "melkor", target: "ungoliant", label: "aliados" }
